@@ -224,7 +224,7 @@ footer > div.bottom-footer {
     margin: 7px 10px 0 10px;
 }
 
-footer > div.bottom-footer > div.footer-logo > img {
+footer > div.bottom-footer /* > div.footer-logo */ > img {
     width: 12px;
 }
 
@@ -232,7 +232,7 @@ footer > div.bottom-footer > span {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
     font-weight: bold;
-    margin-right: 10px;
+    margin: auto;
 }
 
 footer > div.bottom-footer > p {
