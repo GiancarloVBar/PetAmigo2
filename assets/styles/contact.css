@@ -59,7 +59,7 @@ header > nav.logo > a > img {
     width: 25px;
 }
 
-img {
+header > img {
     width: 20px;
     margin-right: 10px;
 }
@@ -308,6 +308,10 @@ RESPONSIVIDADE - 376px a 650px - MOBILE L
 @media (min-width: 376px) {
     header {
         height: 60px;
+    }
+
+    header > img {
+        width: 25px;
     }
 
     header > nav.logo {
