@@ -171,7 +171,9 @@ section.blue-index > div.formulario > form > div.submit > button {
     width: 50px;
     height: 20px;
     border-radius: 5px;
+    margin-bottom: 5px;
     margin-left: 125px;
+    cursor: pointer;
 }
 
 section.blue-index > div.formulario > form > div.submit > button:hover {
@@ -249,6 +251,11 @@ footer > div > nav > ul {
 
 footer > div > nav > ul > li > a {
     color: #1a5163;
+
+}
+
+footer > div > nav > ul > li > a:hover {
+    font-weight: bold;
 }
 
 footer > div.bottom-footer {
@@ -358,6 +365,7 @@ RESPONSIVIDADE - 376px a 650px - MOBILE L
         font-size: 12px;
         width: 55px;
         height: 22px;
+        /* margin-bottom: 5px; */
         margin-left: 160px;
     }
 
@@ -608,6 +616,14 @@ RESPONSIVIDADE - 769px a 1024px - Desktop HD
         font-size: 14px;
         width: 310px;
         margin: 9px;
+    }
+
+    section.blue-index > div.formulario > form > div.submit > button {
+        font-size: 15px;
+        width: 67px;
+        height: 30px;
+        /* margin-bottom: 5px; */
+        margin-left: 240px;
     }
 
     section.blue-index > div.dog-contact > img {
