@@ -178,13 +178,38 @@ FOOTER - STYLES
 ------------------------------------------------------
 */
 
-footer > div {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    margin: 7px 0 7px 4%;
-    font-size: 6px;
+footer {
     color: #1a5163;
+    font-family: 'Baloo 2', cursive;
+}
+
+footer > div.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: 7px;
+}
+
+footer > div.footer-menu > nav {
+    flex-grow: 1;
+}
+
+footer > div.footer-menu > nav > h3 {
+    font-weight: bold;
+    font-size: 8px;
+}
+
+footer > div.footer-menu > nav > ul {
+    list-style: none;
+}
+
+footer > div.footer-menu > nav > ul > li > a {
+    color: #1a5163;
+    font-size: 8px;
+}
+
+footer > div.footer-menu > nav > ul > li > a:hover {
+    font-weight: bold;
 }
 
 footer > div.stroke {
@@ -194,45 +219,28 @@ footer > div.stroke {
     margin: auto;
 }
 
-footer > div > nav {
-    flex-grow: 1;
-}
-
-footer > div > nav > h3, ul {
-    font-family: 'Baloo 2', cursive;
-}
-
-footer > div > nav > h3 {
-    font-weight: bold;
-}
-
-footer > div > nav > ul {
-    list-style: none;
-}
-
-footer > div > nav > ul > li > a {
-    color: #1a5163;
-}
 
 footer > div.bottom-footer {
     display: flex;
-    justify-content: center;
-    margin-top: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 footer > div.bottom-footer > div.footer-logo > img {
     width: 12px;
+    margin: auto;
 }
 
 footer > div.bottom-footer > span {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
     font-weight: bold;
-    margin-right: 7px;
+    margin: auto;
 }
 
 footer > div.bottom-footer > p {
     font-size: 6px;
+    margin: auto;
 }
 
 
@@ -247,10 +255,8 @@ RESPONSIVIDADES
 RESPONSIVIDADE - 280px a 375px - MOBILE S
 */
 
-@media (min-width: 280px) {
-    footer > div {
-        font-size: 8px;
-    }
+@media (min-width: 281px) {
+    
 }
 
 /* 
