@@ -185,22 +185,23 @@ footer {
 
 footer > div.footer-menu {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     text-indent: 7px;
 }
 
 footer > div.footer-menu > nav {
     flex-grow: 1;
+    margin-bottom: 7px;
 }
 
 footer > div.footer-menu > nav > h3 {
     font-weight: bold;
     font-size: 8px;
+    margin-bottom: 5px;
 }
 
 footer > div.footer-menu > nav > ul {
     list-style: none;
+    line-height: 70%;;
 }
 
 footer > div.footer-menu > nav > ul > li > a {
@@ -221,7 +222,8 @@ footer > div.stroke {
 
 footer > div.bottom-footer {
     display: flex;
-    margin: 7px 10px 0 10px;
+    justify-content: center;
+    margin: 7px 10px 7px 10px;
 }
 
 footer > div.bottom-footer /* > div.footer-logo */ > img {
@@ -232,7 +234,8 @@ footer > div.bottom-footer > span {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
     font-weight: bold;
-    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 footer > div.bottom-footer > p {
