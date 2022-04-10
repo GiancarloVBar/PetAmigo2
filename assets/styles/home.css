@@ -8,14 +8,6 @@
 }
 
 
-/* .teste1{
-    font-family: 'Baloo 2', cursive;
-}
-
-.teste2{
-    font-family: 'Roboto', sans-serif;
-} */
-
 /* 
 ------------------------------------------------------
 HEADER - STYLES
@@ -201,13 +193,14 @@ footer > div.footer-menu > nav > h3 {
 
 footer > div.footer-menu > nav > ul {
     list-style: none;
-    line-height: 70%;;
+    line-height: 70%;
 }
 
 footer > div.footer-menu > nav > ul > li > a {
     color: #1a5163;
     font-size: 8px;
 }
+
 
 footer > div.footer-menu > nav > ul > li > a:hover {
     font-weight: bold;
@@ -234,12 +227,12 @@ footer > div.bottom-footer > span {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
     font-weight: bold;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: auto 5px auto 5px;
 }
 
 footer > div.bottom-footer > p {
     text-align: center;
+    margin: auto 5px auto 5px;
     font-size: 6px;
 }
 
@@ -252,11 +245,33 @@ RESPONSIVIDADES
 ************************************* */
 
 /* 
-RESPONSIVIDADE - 280px a 375px - MOBILE S
+RESPONSIVIDADE - 320px a 375px - MOBILE S
 */
 
-@media (min-width: 281px) {
+@media (min-width: 320px) {
+    footer > div.footer-menu {
+        text-indent: 12%;
+    }
     
+    footer > div.footer-menu > nav > h3 {
+        font-size: 10px;
+    }
+
+    footer > div.footer-menu > nav > ul > li > a {
+        font-size: 9px;
+    }
+
+    footer > div.bottom-footer /* > div.footer-logo */ > img {
+        width: 15px;
+    }
+
+    footer > div.bottom-footer > span {
+        font-size: 12px;
+    }
+
+    footer > div.bottom-footer > p {
+        font-size: 7px;
+    }
 }
 
 /* 
@@ -281,35 +296,58 @@ RESPONSIVIDADE - 376px a 650px - MOBILE L
     }
 
     section.blue-index {
-        height: 270px;
+        height: 235px;
     }
 
-    section.blue-index > h1 {
-        font-size: 30px;
+    section.blue-index > div.title > h1 {
+        font-size: 26px;
     }
 
-    section.blue-index > h2 {
-        font-size: 23px;
+    section.blue-index > div.title > h2 {
+        font-size: 20px;
     }
 
-    section.blue-index > p {
-        font-size: 17px;
+    section.blue-index > div.title > p {
+        font-size: 15px;
+    }
+
+    section.blue-index > div.search {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        height: 33px;
+    }
+
+    .pet > form > select, .estado > form > select, .tamanho > form > select {
+        font-size: 12px;
+        border-radius: 6px;
     }
 
     /* main */
 
-    /* footer > div {
+    footer > div.footer-menu {
+        text-indent: 13%;
+    }
+    
+    footer > div.footer-menu > nav > h3 {
         font-size: 11px;
     }
 
-    footer > div.bottom-footer > div.footer-logo > img {
+    footer > div.footer-menu > nav > ul > li > a {
+        font-size: 10px;
+    }
+
+    footer > div.bottom-footer /* > div.footer-logo */ > img {
         width: 17px;
     }
 
     footer > div.bottom-footer > span {
-        font-size: 11px;
+        font-size: 13px;
     }
- */
+
+    footer > div.bottom-footer > p {
+        font-size: 8px;
+    }
+
 }
 
 /* 
@@ -409,22 +447,34 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
 
     /* main */
 
-    /* footer > div {
-        font-size: 16px;
-        margin: 7px 0 7px 10%;
+    footer > div.footer-menu {
+        text-indent: 17%;
     }
 
-    footer > div.bottom-footer > div.footer-logo > img {
-        width: 20px;
+    footer > div.footer-menu > nav > ul {
+        line-height: 90%;
+    }
+    
+    footer > div.footer-menu > nav > h3 {
+        font-size: 13px;
+    }
+
+    footer > div.footer-menu > nav > ul > li > a {
+        font-size: 11px;
+    }
+
+    footer > div.bottom-footer /* > div.footer-logo */ > img {
+        width: 19px;
     }
 
     footer > div.bottom-footer > span {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     footer > div.bottom-footer > p {
-        font-size: 10px;
-    } */
+        font-size: 9px;
+    }
+
 }
 
 
@@ -476,6 +526,36 @@ RESPONSIVIDADE - 769px a 1024px - Desktop HD
 
     section.blue-index > p {
         font-size: 20px;
+    }
+
+    /* main */
+
+    footer > div.footer-menu {
+        text-indent: 25%;
+    }
+
+    footer > div.footer-menu > nav > ul {
+        line-height: 110%;
+    }
+    
+    footer > div.footer-menu > nav > h3 {
+        font-size: 15px;
+    }
+
+    footer > div.footer-menu > nav > ul > li > a {
+        font-size: 13px;
+    }
+
+    footer > div.bottom-footer /* > div.footer-logo */ > img {
+        width: 22px;
+    }
+
+    footer > div.bottom-footer > span {
+        font-size: 17px;
+    }
+
+    footer > div.bottom-footer > p {
+        font-size: 11px;
     }
 
 }
