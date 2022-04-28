@@ -59,6 +59,10 @@ header > img {
     color: #fc9685 !important;
 }
 
+.logo h2{
+   display: inline-block;
+   vertical-align:top;
+}
 /* 
 ------------------------------------------------------
 SECTION - STYLES
@@ -86,7 +90,7 @@ section.blue-index > div.title {
     align-items: center;
 }
 
-section.blue-index > div.title > h1, h2, p {
+section.blue-index > div.title > h1, h2, p, span {
     font-family: 'Baloo 2', cursive;
 }
 
@@ -509,7 +513,7 @@ RESPONSIVIDADE - 769px a 1024px - Desktop HD
     }
 
     header > nav.login > button > a {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     section.blue-index {
