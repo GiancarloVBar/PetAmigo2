@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title><%= title %></title>
 
-    <link rel="stylesheet" href="./stylesheets/global.css">
-    <link rel="stylesheet" href="./stylesheets/signuppf.css">
+    <title>
+        <%= title %>
+    </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/signuppf.css">
+    <link rel="stylesheet" href="./stylesheets/global.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
@@ -32,128 +35,180 @@
 <body>
 
     <%- include('./partials/header') %>
-    <section class="main">
-        <div class="form">
-            <h1>Cadastrar-se</h1>
-            <form id="login-form">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <h2 class="col-sm-3"><label for="fisica">Pessoa
-                                Física</label></h2>
-                        <a class="col-sm-1" href="/signuppf">
-                            <button type="button" class="btn fisica"></button>
-                        </a>
+        <section class="main">
+            <div class="form">
+                <h1>Cadastrar-se</h1>
+                <form id="login-form">
+                    <div class="col-sm-12">
+                        <div class="row options">
+                            <div class="col-sm-6 d-flex">
+                                <h2 class="col-sm-6">
+                                    <label for="fisica" id="pflabel">Pessoa Física</label>
+                                </h2>
+                                <a class="col-sm-1" href="/signuppf">
+                                    <button type="button" class="btn fisica"></button>
+                                </a>
+                            </div>
 
-                        <h2 class="col-sm-3"><label for="ong" id="onglabel">ONG</label></h2>
-                        <a class="col-sm-1">
-                            <button type="button" class="btn ong
-                                    active"></button>
-                        </a>
+                            <div class="col-sm-6 d-flex">
+                                <h2 class="col-sm-4">
+                                    <label for="ong" id="onglabel">ONG</label>
+                                </h2>
+                                <a class="col-sm-1" href="/signupong">
+                                    <button type="button" class="btn ong active"></button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-sm-12">
-                    <label for="razaoSocial">Razão Social:</label>
-                    <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required>
-                </div>
-
-                <div class="col-sm-5">
-                    <label for="cnpj">CNPJ:</label>
-                    <input type="text" name="cnpj" id="cnpj" required>
-                </div>
-
-                <div class="col-sm-6">
-                    <label for="responsavel">Pessoa Responsável:</label>
-                    <input type="text" name="responsavel" id="responsavel" required>
-                </div>
-
-                <div class="col-sm-4">
-                    <label for="rua">Rua:</label>
-                    <input type="text" name="rua" id="rua" required>
-                </div>
-
-                <div class="col-sm-4">
-                    <label for="bairro">Bairro:</label>
-                    <input type="text" name="bairro" id="bairro" required>
-                </div>
-
-                <div class="col-sm-3">
-                    <label for="cep">CEP:</label>
-                    <input type="text" name="cep" id="cep" required>
-                </div>
-
-                <div class="col-sm-4 estado">
-                    <label for="UF">Estado:</label>
-                    <select id="UF" name="UF">
-                        <option value="">Selecione</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espirito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-                </div>
-
-                <div class="col-sm-4">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" required>
-                </div>
-
-                <div class="col-sm-3">
-                    <label for="rua">Rua:</label>
-                    <input type="text" name="rua" id="rua" required>
-                </div>
-
-                <div class="col-sm-4">
-                    <label for="bairro">Bairro:</label>
-                    <input type="text" name="bairro" id="bairro" required>
-                </div>
-
-                <div class="col-sm-4">
-                    <label for="cep">CEP:</label>
-                    <input type="text" name="cep" id="cep" required>
-                </div>
-
-                <div class="col-sm-3"></div>
-
-                <div class="col-sm-12">
-                    <div class="row">
-                        <input class="col-sm-1" type="checkbox" name="termos" id="termos" required>
-                        <label class="col-sm-11 termos" for="termos">Eu
-                            li e aceito os Termos de uso.</label>
+                    <div class="row col-sm-12">
+                        <div class="col-sm-12">
+                            <label for="razaoSocial">Nome ou Razão Social:</label>
+                            <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required>
+                        </div>
                     </div>
-                </div>
 
-                <div class="full-box">
-                    <input class="mb-4" type="submit" name="btn-submit" value="Cadastrar">
-                </div>
-            </form>
-        </div>
-    </section>
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-6">
+                            <label for="responsavel">Nome Completo do Responsável:</label>
+                            <input type="text" name="responsavel" id="responsavel" required>
+                        </div>
 
-    <%- include('./partials/footer') %>
-    <script src="./javascripts/header.js"></script>
+                        <div class="col-sm-6">
+                            <label for="cnpj">CNPJ:</label>
+                            <input type="text" name="cnpj" id="cnpj" required>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-3">
+                            <label for="telefone">Telefone:</label>
+                            <input type="phone" name="telefone" id="telefone" required>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="password">Senha:</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-2">
+                            <label for="cep">CEP:</label>
+                            <input type="text" name="cep" id="cep" required>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <label for="rua">Endereço:</label>
+                            <input type="text" name="rua" id="rua" required>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="numero">Número:</label>
+                            <input type="text" name="numero" id="numero" required>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-2">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" name="complemento" id="complemento">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" name="bairro" id="bairro" required>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" required>
+                        </div>
+
+                        <div class="col-sm-2 estado">
+                            <label for="UF">Estado:</label>
+                            <select id="UF" name="UF">
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espirito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-6">
+                            <label for="local">Tipo de Local:</label>
+                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="funcionamento">Há quantos anos a sua ONG funciona?</label>
+                            <input type="text" name="funcionamento" id="funcionamento" required>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12">
+                        <div class="col-sm-12">
+                            <label for="animais">Quantos e quais animais a ONG possui?</label>
+                            <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos">
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 mb-4">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="historia">Nos conte a história da ONG</label>
+                                <textarea class="form-control" id="historia" rows="12"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12">
+                        <div class="row col-sm-10">
+                            <label class="container" for="termos">
+                                <input type="checkbox" name="termos" id="termos">
+                                <span class="checkmark"></span>
+                                Eu li e aceito os Termos de uso.
+                            </label>
+                        </div>
+                        <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Cadastrar-se">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <%- include('./partials/footer') %>
+            <script src="./javascripts/header.js"></script>
 </body>
+
 </html>
