@@ -11,6 +11,7 @@ const loginRouter = require('./routes/login');
 const servicesRouter = require('./routes/services');
 const signupRouter = require('./routes/signup');
 const footerRouter = require('./routes/footer');
+const accountRouter = require('./routes/account');
 
 const usersRouter = require('./routes/users');
 
@@ -33,6 +34,7 @@ app.use('/contato', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
 app.use('/services', servicesRouter);
+app.use('/', accountRouter);
 
 
 app.use('/users', usersRouter);

@@ -34,31 +34,8 @@
 
         <section class="main">
             <div class="form">
-                <h1>Cadastrar-se</h1>
-                <form id="login-form">
-                    <div class="col-sm-12">
-                        <div class="row options">
-                            <div class="col-sm-6 d-flex">
-                                <h2 class="col-sm-6">
-                                    <label for="fisica" id="pflabel">Pessoa Física</label>
-                                </h2>
-                                <a class="col-sm-1" href="/signuppf">
-                                    <button type="button" class="btn fisica
-                                        active"></button>
-                                </a>
-                            </div>
-
-                            <div class="col-sm-6 d-flex">
-                                <h2 class="col-sm-4">
-                                    <label for="ong" id="onglabel">ONG</label>
-                                </h2>
-                                <a class="col-sm-1" href="/signupong">
-                                    <button type="button" class="btn ong"></button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
+                <h1>Meus Dados</h1>
+                <form class="mb-3" id="account-form">
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="nome">Nome Completo:</label>
@@ -189,16 +166,51 @@
                             <input type="text" name="pet" id="pet" required placeholder="Ex: Sim, dois cachorros">
                         </div>
                     </div>
+                    
+                    <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Atualizar">
+                </form>
+                <h1 class="pets">Dados do(s) meu(s) bichinho(s)</h1>
+                <form id="pets-form">
+                    <div class="row col-sm-12">
+                        <div class="col-sm-4">
+                            <label for="nome_pet">Nome:</label>
+                            <input type="text" name="nome_pet" id="nome_pet" required>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="tipo_pet">Tipo de pet:</label>
+                            <input type="text" name="tipo_pet" id="tipo_pet" required>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="raca_pet">Raça:</label>
+                            <input type="text" name="raca_pet" id="raca_pet" required>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="porte_pet">Porte:</label>
+                            <input type="text" name="porte_pet" id="porte_pet" required>
+                        </div>
+                    </div>
 
                     <div class="row col-sm-12">
-                        <div class="row col-sm-10">
-                            <label class="container" for="termos">
-                                <input type="checkbox" name="termos" id="termos">
-                                <span class="checkmark"></span>
-                                Eu li e aceito os Termos de uso.
-                            </label>
+                        <div class="col-sm-2">
+                            <label for="cor_pet">Cor:</label>
+                            <input type="text" name="cor_pet" id="cor_pet" required>
                         </div>
-                        <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Cadastrar-se">
+
+                        <div class="col-sm-3">
+                            <label for="nascimento_pet">Data de Nascimento:</label>
+                            <input type="date" name="nascimento_pet" id="nascimento_pet" required>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="sexo_pet">Sexo:</label>
+                            <input type="text" name="sexo_pet" id="sexo_pet" required>
+                        </div>
+                    </div>
+                    <div class="row col-sm-12 justify-content-end">
+                        <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Incluir outro Pet">
                     </div>
                 </form>
             </div>
