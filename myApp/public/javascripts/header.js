@@ -26,10 +26,10 @@ let login = false;
 
 // Lógica Login 
 
-let loginDesktop = false;
+let loginDesktop = true;
 if(loginDesktop){
-  cadastrar.textContent = 'Sair';
-  entrar.style.display = 'none'
+  cadastrar.textContent = 'Minha Conta';
+  entrar.textContent = 'Sair'
 }else{
   cadastrar.textContent = 'Cadastre-se' 
   entrar.style.display = 'Entrar'

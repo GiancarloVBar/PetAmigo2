@@ -5,6 +5,9 @@ const IndexController = {
     },
     testeView: (req,res)=>{
         res.render('teste', { title: 'TESTE' });
+    },
+    searchView: (req,res)=>{
+        res.render('search', { title: 'Procura' });
     }
 }
 

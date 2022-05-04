@@ -271,7 +271,7 @@ HEADER - STYLES
 
 /* JAVASCRIPT */
 #login.logado{
-   flex-direction: row-reverse;
+   flex-direction: row;
    justify-content: center;
 }
 
