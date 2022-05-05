@@ -47,7 +47,7 @@ class user extends Model {
             outros_pets: {
                 type: DataType.STRING(100),
                 allowNull: false
-            },
+            }
 
         },{
             sequelize: connection
