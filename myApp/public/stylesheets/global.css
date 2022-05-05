@@ -118,7 +118,9 @@ HEADER - STYLES
 ------------------------------------------------------
 */
 
-header {
+  /* HEADER */
+
+  #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,15 +132,8 @@ header {
     z-index: 999;
 }
 
-header > nav.main-menu > a:hover {
-    color: #fc9685;
-}
-
-header > nav.main-menu, nav.login {
-    display: none;
-}
-
-header > nav.logo {
+/* LOGO */
+#logo {
     display: flex;
     align-items: center;
     font-family: 'Baloo 2', cursive;
@@ -146,28 +141,149 @@ header > nav.logo {
     margin-left: 10px;
 }
 
-header > nav.logo > a, h2 {
-    margin-left: 5px;
-    
+#logo > a, span{
+    margin-left: 5px;   
 }
 
-header > nav.logo > a > img {
+#logo > a > img {
     width: 25px;
 }
 
-header > img {
-    width: 20px;
-    margin-right: 10px;
+
+#logo h2{
+   display: inline-block;
+   vertical-align:top;
+}
+
+
+/* LOGIN */
+
+#login {
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+#login > a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fc9685;
+}
+
+#login > a:hover {
+    color: #fc745f;
+    transition: color 0.30s;
+}
+
+#login > button {
+    height: 30px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: #fc9685;
+    margin-left: 10px;
+}
+
+#login > button:hover {
+    background-color: #fc745f;
+    transition: background-color 0.30s;
+}
+
+#login > button > a {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+
+/* NAVBAR */
+#nav{
+    display: none;
+}
+
+/* MENU */
+#menu{
+    list-style: none;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    /* display: none; */
+}
+
+#menu a:visited{
+    color:inherit;
+}
+
+#header.on #nav{
+    display: flex;
+    position: absolute;
+    background-color: #1a5163;
+    top:44px;
+    flex-direction: column;
+    line-height: 15vh;
+    right:0;
+    height: calc(100vh - 45px);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+#header.on #login{
+    display: flex;
+   justify-content: center;
+}
+
+/* MENU HANBURGER */
+#hamburger{
+    width:20px;
+    border-top:2px solid #FC9685;
+    color:#FC9685;
+    background-color: #1a5163;
+    position: absolute;
+    right: 10px;
+    top:15px;
+}
+#hamburger::after, #hamburger::before {
+    content: '';
+    width:20px;
+    height: 2px;
+    background-color: currentColor;
+    display: block;
+    margin-top: 5px;
+    border-radius: 10px;
+    transition: .1s ease;
+    position: relative;
+}
+
+#header.on #hamburger{
+    border-top-color:transparent;
+    top:8px;
+}
+#header.on #hamburger::before{
+   transform: rotate(135deg);
+   top:7px
+}
+#header.on #hamburger::after{
+   transform: rotate(-135deg);
+   
+}
+
+/* JAVASCRIPT */
+#login.logado{
+   flex-direction: row;
+   justify-content: center;
+}
+
+#login.logado #entrar{
+    margin-left: 10px;
 }
 
 .active {
     color: #fc9685 !important;
 }
 
-.logo h2{
-   display: inline-block;
-   vertical-align:top;
-}
+
 
 /* 
 ------------------------------------------------------
@@ -280,19 +396,23 @@ RESPONSIVIDADE - 376px a 650px - MOBILE L
 */
 
 @media (min-width: 376px) {
-  header {
+  #header {
       height: 60px;
   }
 
-  header > img {
+  #header.on #nav{
+    height: calc(100vh - 61px);
+  }
+
+  #header > img {
       width: 25px;
   }
 
-  header > nav.logo {
+  #header #logo {
       font-size: 12px;
   }
   
-  header > nav.logo > a > img {
+  #header #logo > a > img {
       width: 30px;
   }
 
@@ -356,78 +476,66 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
 */
 
 @media (min-width: 650px) {
-  header {
+  #header {
       height: 65px;
-      justify-content: center;
   }
 
-  header > img {
-      display: none;
+  #menu{
+      display: flex;
+      font-size: 13px;
+      margin-top: 6px;
+      position: relative;
+     right: calc(50vw - 330px);
   }
+  
+   #hamburger{
+       display: none;
+   }
 
-  header > nav.logo {
+    #nav{
+        margin-right: 15px;
+    }
+
+    #menu li{
+        margin: 0 15px;
+    }
+
+   #nav,#login{
+       display: flex;
+   }
+
+  #header > nav#logo {
       font-size: 15px;
       flex-grow: 1;
   }
   
-  header > nav.logo > a > img {
+  #header > nav#logo > a > img {
       width: 35px;
   }
-
-  header > nav.main-menu, nav.login {
-      display: flex;
-      /* justify-content: center; */
-  }
   
-  header > nav.main-menu {
-      justify-content: space-around;
-      font-size: 12px;
-      flex-grow: 2;
-  }
-  
-  header > nav.main-menu > a {
-      color: #ffffff;
-      font-family: 'Roboto', sans-serif;
-      font-weight: bold;
-  }
-
-  header > nav.login {
-      justify-content: flex-end;
+  #header > #login {
+     
       align-items: center;
       margin-right: 20px;
-      flex-grow: 1;
   }
 
-  header > nav.login > a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 12px;
-      color: #fc9685;
-  }
 
-  header > nav.login > a:hover {
+  #header > #login > a:hover {
       color: #fc745f;
       transition: color 0.30s;
   }
   
-  header > nav.login > button {
-      height: 30px;
-      width: 110px;
-      border-radius: 5px;
-      background-color: #fc9685;
-      margin-left: 10px;
-  }
 
-  header > nav.login > button:hover {
+  #header > #login > button:hover {
       background-color: #fc745f;
       transition: background-color 0.30s;
   }
 
-  header > nav.login > button > a {
+  #header > #login > button > a {
       font-family: 'Roboto', sans-serif;
       color: #ffffff;
       font-size: 12px;
       font-weight: bold;
-      
   }
 
   section.blue-index {
@@ -484,32 +592,32 @@ RESPONSIVIDADE - 769px a 1024px - Desktop HD
 */
 
 @media (min-width: 769px) {
-  header {
+  #header {
       height: 75px;
   }
 
-  header > nav.logo {
+  #logo {
       font-size: 18px;
   }
 
-  header > nav.logo > a > img {
+  #logo > a > img {
       width: 40px;
   }
 
-  header > nav.main-menu {
+  #menu {
       font-size: 15px;
   }
 
-  header > nav.login > a {
+  #login > a {
       font-size: 15px;
   }
 
-  header > nav.login > button {
+  #login > button {
       height: 35px;
       width: 115px;
   }
 
-  header > nav.login > button > a {
+  #login > button > a {
       font-size: 14px;
   }
 
