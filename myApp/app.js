@@ -8,7 +8,6 @@ const indexRouter = require('./routes/index');
 const contactRouter = require('./routes/contact');
 const aboutRouter = require('./routes/about');
 const loginRouter = require('./routes/login');
-const servicesRouter = require('./routes/services');
 const signupRouter = require('./routes/signup');
 const footerRouter = require('./routes/footer');
 
@@ -32,7 +31,6 @@ app.use('/', signupRouter);
 app.use('/contato', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
-app.use('/services', servicesRouter);
 
 
 app.use('/users', usersRouter);
