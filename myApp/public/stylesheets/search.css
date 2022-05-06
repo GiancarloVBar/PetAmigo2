@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+   --azul-escuro: #1a5163;
+   --azul-claro: #e1eff3;
+   --laranja-rosa: #fc9685;
+   --branco: #ffffff;
+
+   --fonte-baloo-2: 'Baloo 2', cursive;
+   --fonte-roboto: 'Roboto', sans-serif;
+
+   font-size: 62.5%; /*1 rem = 10px*/
+}
+
+* {
+   box-sizing: border-box;
+   border: 0;
+   outline: 0;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   width: 100%;
+   height: auto;
+}
+
+/*CORPO DA PÁGINA*/
+.blue-index {
+   height: 365px;
+
+   background-color: var(--azul-escuro);
+}
+
+/*DADOS DOS ANIMAIS*/
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main .ficha {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main .ficha img {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.ficha .dados {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.ficha .dados .campo h4 {
+   font-family: var(--fonte-baloo-2);
+   font-size: 1.2rem;
+   line-height: 1.9rem;
+   text-align: left;
+   letter-spacing: 10%;
+
+   color: #1a5163;
+}
+
+.ficha .dados .campo .dado {
+   border: 0.5px solid var(--azul-escuro);
+
+   width: 25rem;
+   height: 2.5rem;
+
+   border-radius: 5px;
+}
+
+ficha .dados .campo .dado p {
+}
+
+.ficha .ver_mais {
+}

@@ -1,23 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/global.css">
-    <title><%= title %></title>
-</head>
-<body>
-    
-    <!-- HEADER -->
-    <%- include('./partials/header') %>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/stylesheets/global.css" />
+      <link rel="stylesheet" href="/stylesheets/search.css" />
+      <title><%= title %></title>
+   </head>
+   <body>
+      <!-- HEADER -->
+      <%- include('./partials/header') %>
 
+      <!-- PESQUISA DOS ANIMAIS -->
+      <section class="blue-index"></section>
+      <!--FICHA DOS ANIMAIS-->
+      <main class="dados-animais">
+         <section class="ficha">
+            <img src="./images/search/dog.png" alt="Foto do pet" />
 
-    <!-- Seu código aqui -->
+            <div class="dados">
+               <div class="campo">
+                  <h4>Nome:</h4>
+                  <div class="dado">
+                     <p>Bob</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Espécie:</h4>
+                  <div class="dado">
+                     <p>Cachorro</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Raça:</h4>
+                  <div class="dado">
+                     <p>Sem raça definida</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Tamanho:</h4>
+                  <div class="dado">
+                     <p>Médio porte</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Cor:</h4>
+                  <div class="dado">
+                     <p>Preto/marrom/branco</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Data de nascimento:</h4>
+                  <div class="dado">
+                     <p>06/2020</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Sexo:</h4>
+                  <div class="dado">
+                     <p>Macho</p>
+                  </div>
+               </div>
+               <button type="button" class="ver_mais">Ver mais</button>
+            </div>
+         </section>
+         <section class="ficha">
+            <img src="./images/search/dog2.png" alt="Foto do pet" />
 
-
-    <!-- FOOTER -->
-    <%- include('./partials/footer') %>
-    <script src="/javascripts/header.js"></script>
-</body>
+            <div class="dados">
+               <div class="campo">
+                  <h4>Nome:</h4>
+                  <div class="dado">
+                     <p>Bob</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Espécie:</h4>
+                  <div class="dado">
+                     <p>Cachorro</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Raça:</h4>
+                  <div class="dado">
+                     <p>Sem raça definida</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Tamanho:</h4>
+                  <div class="dado">
+                     <p>Médio porte</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Cor:</h4>
+                  <div class="dado">
+                     <p>Preto/marrom/branco</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Data de nascimento:</h4>
+                  <div class="dado">
+                     <p>06/2020</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Sexo:</h4>
+                  <div class="dado">
+                     <p>Macho</p>
+                  </div>
+               </div>
+               <button type="button" class="ver_mais">Ver mais</button>
+            </div>
+         </section>
+      </main>
+      <!-- FOOTER -->
+      <%- include('./partials/footer') %>
+      <script src="/javascripts/header.js"></script>
+   </body>
 </html>
