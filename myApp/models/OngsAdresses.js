@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-class userAdress extends Model {
+class ongAdress extends Model {
     static init(connection) {
         super.init({
             cep: {
@@ -42,4 +42,4 @@ class userAdress extends Model {
     }
 }
 
-module.exports = userAdress;
+module.exports = ongAdress;

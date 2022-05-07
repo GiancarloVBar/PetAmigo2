@@ -3,12 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 class user extends Model {
     static init(connection) {
         super.init({
-            id_pessoa: {
-                type: DataTypes.INTEGER,
-                autoIncrement: true,
-                primaryKey: true
-            },
-            nome: {
+             nome: {
                 type: DataType.STRING(50),
                 allowNull: false
             },
