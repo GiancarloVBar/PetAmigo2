@@ -1,10 +1,14 @@
+const  { siglas, nomeEstados, menuTamanho, menuPet }  = require('../public/javascripts/info')
 
 const IndexController = {
     indexView: (req,res)=>{
         res.render('index', 
         {
              title: 'PetAmigo',
-             menu: ['Cachorros', 'Gatos', 'Roedores', 'Pássaros', 'Capivaras', 'Iguanas', 'Ariranhas']
+             menuPet,
+             menuTamanho,
+             siglas,
+             nomeEstados
         });
     },
     

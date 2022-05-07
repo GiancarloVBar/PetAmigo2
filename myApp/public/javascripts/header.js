@@ -1,3 +1,5 @@
+
+
 const btnMobile = document.getElementById('btn-mobile');
 const body = document.getElementsByTagName('body');
 
@@ -59,3 +61,4 @@ if(pathName == '/'){
     }
 }
 window.addEventListener('load', mudaClasse);
+

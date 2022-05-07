@@ -2,7 +2,7 @@ const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
 
 const optionsList = document.querySelectorAll(".option");
-const imgSeta = document.querySelector('#seta')
+const imgSeta = document.querySelector('.imgSeta')
 
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("ativo");

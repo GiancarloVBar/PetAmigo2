@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <div class="par">
+    <p>Localizacao</p>
+</div>
+    <div class="select-box">
+        <div class="options-container">
+            <% menuPet.forEach(item => { %>
+            <div class="option">
+            <img src="./images/pet-icon.svg" alt="icone animal">
+          <input
+            type="radio"
+            class="radio"
+            id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+            name="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+          />
+          <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
+        <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
+
+        </div>
+        <% });%> 
+      </div>  
+
+      <div class="selected">
+        <img src="./images/pet-icon.svg" alt="icone animal">
+        Selecionar
+        <img class="imgSeta" src="./images/seta-icon.svg" alt="icone seta">
+
+      </div>
+    </div>
+  </div>
+  
