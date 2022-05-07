@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-class ongAdress extends Model {
+class userAddress extends Model {
     static init(connection) {
         super.init({
             cep: {
@@ -40,6 +40,13 @@ class ongAdress extends Model {
             sequelize: connection
         })
     }
+
+    static associate(models) {
+        this.hasMany(models.user,{
+            foreignKey: "user_id",
+            as: "address_user"
+        })
+    }
 }
 
-module.exports = ongAdress;
+module.exports = userAddress;

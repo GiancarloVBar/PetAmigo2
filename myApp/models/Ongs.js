@@ -47,6 +47,19 @@ class ong extends Model {
             sequelize: connection
         })
     }
+
+    static associate(Model) {
+        this.hasMany(Model.pet, {
+            foreignKey: "pet_id",
+            as: "ong_pet"
+        }),
+        this.belongsTo(Model.ongAdress, {
+            foreignKey: "ongAddress_id",
+            as: "ongAddress_ong"
+        })
+        
+    }
+
 }
 
 module.exports = ong;

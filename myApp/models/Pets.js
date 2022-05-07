@@ -39,6 +39,17 @@ class pet extends Model {
             sequelize: connection
         })
     }
+
+    static associate(Model) {
+        this.belongsTo(Model.user, {
+            foreignKey: "user_id",
+            as: "pet_user"
+        }),
+        this.belongsTo(Model.ong, {
+            foreignKey: "ong_id",
+            as: "pet_ong"
+        })
+    }
 }
 
 module.exports = pet;
