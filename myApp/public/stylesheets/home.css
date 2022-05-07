@@ -25,3 +25,20 @@
     display: flex;
     letter-spacing: 0.1em;
 }
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a5163;
+}
+
+.search-box{
+    margin-top: 20px;
+    color: white;
+    border: 1px solid  white;
+    border-radius:5px ;
+    background-color: #1a5163;
+    padding: 5px 20%;
+}
+

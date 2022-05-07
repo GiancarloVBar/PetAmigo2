@@ -36,7 +36,6 @@ let siglas = estados.map(e=>{
 const nomeEstados = estados.map(e=>{
      return Object.values(e).toString()
 })
-console.log(siglas)
 const menuPet = ['Cachorros', 'Gatos', 'Roedores', 'Pássaros', 'Capivaras', 'Iguanas', 'Ariranhas']
 
 const menuTamanho =  ['Pequeno', 'Médio', 'Grande'];
