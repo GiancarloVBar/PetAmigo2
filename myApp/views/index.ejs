@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./stylesheets/global.css">
   <link rel="stylesheet" href="./stylesheets/home.css">
+  <link rel="stylesheet" href="./stylesheets/dropdown.css">
 
 
 
@@ -18,111 +19,55 @@
     <!-- HEADER -->
     <%- include('./partials/header') %>
     
-    <!-- PARTE AZUL PADRÃO EM TODAS AS PÁGINAS -->
-    <section class="blue-index">
+    <!-- ESPAÇO -->
+    <div class="space"></div>
 
-        <div class="title">
-            <h1>PetAmigo</h1>
-            <h2>Adote um pet para o seu lar!</h2>
-            <p>Você pode encontrar um amigo para o seu </p>
-            <p>Pet e fazer novas amizades.</p>
-        </div>
-
-        <div class="search">
-
-            <!-- flex 1 -->
-            <div class="pet">
-                <form action="">
-
-                    <!-- <label for="pet">Pet</label> -->
-
-                    <select name="pet" id="pet">
-                        <option value="blanck" selected disabled>
-                            Pet
-                        </option>
-                        <option value="dog">Cachorros</option>
-                        <option value="cat">Gatos</option>
-                        <option value="fish">Peixes</option>
-                        <option value="bird">Pássaros</option>
-                    </select>
-
-                </form>
-            </div>
-
-            <!-- flex 2 -->
-            <div class="estado">
-                <form action="">
-
-                    <!-- <label for="estado">Estado</label> -->
-
-                    <select name="estado" id="estado">
-                        <option value="blanck" selected disabled>
-                            Estado
-                        </option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-
-                </form>
-            </div>
-
-            <!-- flex 3 -->
-            <div class="tamanho">
-                <form action="">
-
-                    <!-- <label for="tamanho">Tamanho</label> -->
-
-                    <select name="tamanho" id="tamanho">
-                        <option value="blanck" selected disabled>
-                            Tamanho
-                        </option>
-                        <option value="peq">Pequeno</option>
-                        <option value="med">Médio</option>
-                        <option value="gra">Grande</option>
-                    </select>
-
-                </form>
-            </div>
-            
-        </div>
-
-    </section>
-
-    <!-- CONTEÚDO -->
-    <main class="index-content">
+    <div class="top-container">
+        <h1>Pet Amigo
+        </h1>
+        <p>Adote um pet <br> para o seu lar</p>
+    </div>
     
+    <!-- DROPDOWN MENU -->
+    <div class="container">
+        <div class="par">
+        <p>Pet</p>
+    </div>
+        <div class="select-box">
+            <div class="options-container">
+                <% menu.forEach(item => { %>
+                <div class="option">
+                <img src="./images/pet-icon.svg" alt="icone animal">
+              <input
+                type="radio"
+                class="radio"
+                id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+                name="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+              />
+              <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
+            <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
 
-    </main>
+            </div>
+            <% });%> 
+          </div>  
+  
+          <div class="selected">
+            <img src="./images/pet-icon.svg" alt="icone animal">
+            Selecionar
+            <img id="seta" src="./images/seta-icon.svg" alt="icone seta">
 
+          </div>
+        </div>
+      </div>
+
+    <!-- ESPAÇO -->
+    <div class="space"></div>
+    
     <!--FOOTER -->
     <%- include('./partials/footer') %>
+
+
     <script src="./javascripts/header.js"></script>
-
+    <script src="./javascripts/dropdown.js"></script>
 </body>
-
 </html>

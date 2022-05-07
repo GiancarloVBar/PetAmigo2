@@ -1,14 +1,13 @@
 
 const IndexController = {
     indexView: (req,res)=>{
-        res.render('index', { title: 'PetAmigo' });
+        res.render('index', 
+        {
+             title: 'PetAmigo',
+             menu: ['Cachorros', 'Gatos', 'Roedores', 'Pássaros', 'Capivaras', 'Iguanas', 'Ariranhas']
+        });
     },
-    testeView: (req,res)=>{
-        res.render('teste', { title: 'TESTE' });
-    },
-    searchView: (req,res)=>{
-        res.render('search', { title: 'Procura' });
-    }
+    
 }
 
 module.exports = IndexController;
