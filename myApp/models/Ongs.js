@@ -48,12 +48,12 @@ class ong extends Model {
         })
     }
 
-    static associate(Model) {
-        this.hasMany(Model.pet, {
+    static associate(models) {
+        this.hasMany(model.pet, {
             foreignKey: "pet_id",
             as: "ong_pet"
         }),
-        this.belongsTo(Model.ongAdress, {
+        this.belongsTo(model.ongAdress, {
             foreignKey: "ongAddress_id",
             as: "ongAddress_ong"
         })

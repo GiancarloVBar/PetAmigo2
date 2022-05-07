@@ -42,7 +42,7 @@ class userAddress extends Model {
     }
 
     static associate(models) {
-        this.hasMany(models.user,{
+        this.hasMany(model.user,{
             foreignKey: "user_id",
             as: "address_user"
         })

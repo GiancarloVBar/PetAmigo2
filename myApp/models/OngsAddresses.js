@@ -41,8 +41,8 @@ class ongAddress extends Model {
         })
     }
 
-    static associate(Model) {
-        this.hasMany(Model.ong, {
+    static associate(models) {
+        this.hasMany(model.ong, {
             foreignKey: "ong_id",
             as: "ong_ongAddress"
         })
@@ -50,4 +50,4 @@ class ongAddress extends Model {
 
 }
 
-module.exports = ongsAddress;
+module.exports = ongAddress;

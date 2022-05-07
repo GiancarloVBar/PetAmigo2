@@ -49,12 +49,12 @@ class user extends Model {
         })
     }
 
-    static associate(Model) {
-        this.belongsTo(Model.userAddress, {
+    static associate(models) {
+        this.belongsTo(model.userAddress, {
             foreignKey: "address_id",
             as: "user_address"
         }),
-        this.hasMany(Model.pet, {
+        this.hasMany(model.pet, {
             foreignKey: "pet_id",
             as: "user_pet"
         })

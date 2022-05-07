@@ -40,12 +40,12 @@ class pet extends Model {
         })
     }
 
-    static associate(Model) {
-        this.belongsTo(Model.user, {
+    static associate(models) {
+        this.belongsTo(model.user, {
             foreignKey: "user_id",
             as: "pet_user"
         }),
-        this.belongsTo(Model.ong, {
+        this.belongsTo(model.ong, {
             foreignKey: "ong_id",
             as: "pet_ong"
         })
