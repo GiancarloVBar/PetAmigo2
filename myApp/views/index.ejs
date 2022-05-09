@@ -30,22 +30,62 @@
     </div>
     
     <!-- DROPDOWN MENU -->
+    <form class="form-home"  method="POST">
     <%- include('./partials/menuPet') %>
     <%- include('./partials/tamanhoPet') %>
     <%- include('./partials/localizacao') %>
     
-
     <div class="search-container">
         <button type="submit" class="search-box">
                 <img src="./images/lupa-icon.svg" alt="">
                 Buscar
              </button> 
     </div>
-    
+</form>    
    
-
-    <!-- ESPAÇO -->
-    <div class="space"></div>
+    <!-- Middle Container -->
+    <div class="middle-container">
+        <div class="pet-text-container">
+            <p  class="p1" >Por que usar o <span class="color">PetAmigo</span>?</p>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Libero, obcaecati? Est eligendi provident officia quas. 
+                Deleniti nemo harum voluptatum eveniet dolorum amet animi 
+                optio, molestias dolorem. Animi sit corrupti et?</p>
+        </div>
+        <div class="pet-img-container">
+            <img class="star" src="./images/star.svg" alt="estrela">
+            <img class="star2 "src="./images/star.svg" alt="estrela">
+            <img src="./images/dog-home.svg" alt="imagem de cachorro">
+        </div>
+        <div class="trust-container">
+            <div class="star-container">
+                <p class="p-trust-star">
+                    <img src="./images/big-star.svg" alt="estrela grande">Trustpilot
+                </p>
+            </div>
+        
+            <p class="p-trust">Baseado em<span class="color">1000</span> reviews no<br>Trust Pilot</p>
+            <p class="p-trust">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, repellendus totam sequi id, neque dolorem ullam fuga 
+                eos sed quo, nam iure reprehenderit deleniti. 
+            </p>
+            <p class="p-trust p-trust-4 color" >
+                <a href="https://br.trustpilot.com/">Visite o site
+                    <img src="./images/hand-icon.svg" alt="mãozinha">
+                </a>
+            </p>
+        </div>
+        <div class="parceiros">
+            <p class="parceiros-p">
+                Nossos parceiros:
+            </p>
+        </div>
+    </div>
+    
+    <div class="feedback">
+        <img src="./images/cara-estranho.svg" alt="cara estranho">
+    </div>
     
     <!--FOOTER -->
     <%- include('./partials/footer') %>
