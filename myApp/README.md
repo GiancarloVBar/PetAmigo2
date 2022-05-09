@@ -39,6 +39,5 @@ Os NODEMODULES não estão presentes, portanto é necessário dar o comando
 'npm install' na pasta myapp no seu terminal. Todas as dependencias
 serão instaladas.
 
-Para subir o servidor, basta dar 'npm start' 
-
-
+Para subir o servidor, é necessário iniciar o banco de dados com os comandos 'npx sequelize db:create'
+e o comando 'npx sequelize db:migrate' para criar as tabelas. Após isso basta executar o comando 'npm start' 

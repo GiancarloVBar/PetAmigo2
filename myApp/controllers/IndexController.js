@@ -2,7 +2,7 @@ const  { siglas, nomeEstados, menuTamanho, menuPet }  = require('../public/javas
 
 const IndexController = {
     indexView: (req,res)=>{
-        console.log(req.session.usuario)
+        
         res.render('index', {
             title: 'PetAmigo',
             menuPet,
