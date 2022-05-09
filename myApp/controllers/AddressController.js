@@ -8,11 +8,10 @@ module.exports = {
 
         const user = await User.findByPk(user_id);
 
-        if(!user) {
-            return res.status(400).json( { error: 'Usuário não encontrado' });
-            }else{
+        // if(!user) {
+        //     return res.status(400).json( { error: 'Usuário não encontrado' });
+        //     }else{
 
-            
             const address = await Address.create({
                 cep,
                 endereco,
@@ -25,6 +24,13 @@ module.exports = {
                 user_id
             });
             return res.json(address)
-            }
+    },
+    async index (req,res) {
+        const { user_id } = req.params;
+        const user = await User.findByPk(user_id,{
+            include: { association: 'addresses' }
+        });
+        res.json(user)
+
     }
 }

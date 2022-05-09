@@ -46,7 +46,7 @@ class useraddress extends Model {
     static associate(models) {
         this.belongsTo(models.users,{
             foreignKey: "user_id",
-            as: "address_user"
+            as: "user"
         })
     }
 }

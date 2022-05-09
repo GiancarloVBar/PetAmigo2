@@ -8,6 +8,8 @@ const UsersAddresses = require('../../models/UsersAddresses')
 
 User.init(connection);
 UsersAddresses.init(connection);
+
+User.associate(connection.models)
 UsersAddresses.associate(connection.models)
 
 
