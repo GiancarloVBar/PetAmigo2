@@ -4,13 +4,17 @@ const User = require('../models/Users');
 module.exports = {
     async address_store(req,res){
         const { user_id } = req.params;
-        const { endereco, numero, complemento, bairro, cidade, estado, tipo_local } = req.body;
+        const {cep,  endereco, numero, complemento, bairro, cidade, estado, tipo_local } = req.body;
 
         const user = await User.findByPk(user_id);
 
         if(!user) {
             return res.status(400).json( { error: 'Usuário não encontrado' });
+            }else{
+
+            
             const address = await Address.create({
+                cep,
                 endereco,
                 numero,
                 complemento,
@@ -21,6 +25,6 @@ module.exports = {
                 user_id
             });
             return res.json(address)
-        }
+            }
     }
 }

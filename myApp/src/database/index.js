@@ -8,7 +8,7 @@ const UsersAddresses = require('../../models/UsersAddresses')
 
 User.init(connection);
 UsersAddresses.init(connection);
-
+UsersAddresses.associate(connection.models)
 
 
 module.exports = connection;

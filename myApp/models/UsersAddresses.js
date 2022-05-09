@@ -4,8 +4,8 @@ class useraddress extends Model {
     static init(connection) {
         super.init({
             cep: {
-                type: DataTypes.INTEGER(8),
-                allowNull: false
+                type: DataTypes.STRING(8),
+                allowNull: true
             },
             endereco: {
                 type: DataTypes.STRING(100),
@@ -37,12 +37,14 @@ class useraddress extends Model {
             }
 
         },{
-            sequelize: connection
+            sequelize: connection,
+            freezeTableName: true
+        
         })
     }
 
     static associate(models) {
-        this.belongsTo(model.users,{
+        this.belongsTo(models.users,{
             foreignKey: "user_id",
             as: "address_user"
         })

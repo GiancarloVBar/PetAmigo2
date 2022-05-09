@@ -1,7 +1,5 @@
 'use strict';
 
-const { sequelize } = require("../../../models/Users");
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('useraddress',{
@@ -19,8 +17,8 @@ module.exports = {
         onDelete: 'CASCADE'
       },
       cep: {
-        type: Sequelize.INTEGER(8),
-        allowNull: false
+        type: Sequelize.STRING(8),
+        allowNull: true
     },
     endereco: {
         type: Sequelize.STRING(100),
@@ -58,7 +56,6 @@ module.exports = {
       type:Sequelize.DATE(),
       allowNull: false,
     }
-
      
     })
   },
