@@ -357,6 +357,11 @@ footer > div.bottom-footer > p {
     font-size: 6px;
 }
 
+.alert {
+    padding-top: 96px;
+    margin: 0px;
+}
+
 /* *************************************
 RESPONSIVIDADES
 ************************************* */

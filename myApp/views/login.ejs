@@ -30,12 +30,16 @@
 <body>
 
     <%- include('./partials/header') %>
-
+    <% if(error){ %>
+        <div class="alert alert-danger" role="alert" id="loginAlert">
+            <p style="text-align: center;"><%= error %></p>
+        </div>
+    <% } %>
     <section class="main">
         <div class="form-left">
             <h2>Entrar</h2>
             <div>
-                <form id="login-form">
+                <form action="/login/signin" method="post" id="login-form">
                     <div class="full-box">
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email"
