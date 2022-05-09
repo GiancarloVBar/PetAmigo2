@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const UsersController = require('../controllers/UsersController');
+const AddressController = require('../controllers/AddressController');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+router.post('/', UsersController.store);
+router.post('/address/:user_id', AddressController.address_store);
 
 module.exports = router;
+

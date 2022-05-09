@@ -1,28 +1,40 @@
+<header id="header">
+    <!-- LOGO -->
+    <nav id="logo">
+        <a href="/">
+            <img src="./images/pata-logo.svg" alt="logo">
+        </a>
+        <span>PetAmigo</span>
+    </nav>
 
-    <header>
-        <nav class="logo">
-           
-                <a href="/">
-                    <img src="./images/pata-logo.svg" alt="logo">
-                </a>
-                <span>PetAmigo</span>  
-         
-        </nav>
+    <!-- NAV-BAR -->
+    <nav id="nav">
+        <ul id="menu">
+            <li><a href="/" id="inicio">Início</a></li>
+            <li> <a href="/comoFunciona" id="comofunciona">Como Funciona</a></li>
+            <li><a href="/about" id="about">Sobre Nós</a></li>
+            <li><a href="/contato" id="contato">Contato</a></li>
+        </ul>
+        <!-- BOTÃO  -->
+        <div class="logado" id="login">
+            <% if(usuario){ %>
+                <a id="entrar" href="/logout">Sair</a>
 
-        <nav class="main-menu">
-            <a href="/" id="inicio">Início</a>
-            <a href="/services" id="services">Nossos Serviços</a>
-            <a href="/about" id="about">Sobre Nós</a>
-            <a href="/contato" id="contato">Contato</a>
-        </nav>
+                <button type="button">
+                    <a id="cadastrar" href="/signuppf">Minha Conta</a>
+                </button>
+            <% } else {%>
+                <a id="entrar" href="/login">Entrar</a>
 
-        <nav class="login">
-            <a href="/login">ENTRAR</a>
+                <button type="button">
+                    <a id="cadastrar" href="/signuppf">Cadastre-se</a>
+                </button>
+            <% } %>
+        </div>
+    </nav>
 
-            <button type="button">
-                <a href="/signuppf">CADASTRE-SE</a>
-            </button>
-        </nav>
-
-        <img src="./images/ham-menu.svg" alt="">
-    </header>
+    <!-- MENU HAMBURGER-->
+    <button id="btn-mobile">
+        <div id="hamburger"></div>
+    </button>
+</header>
