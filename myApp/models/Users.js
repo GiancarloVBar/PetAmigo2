@@ -50,13 +50,9 @@ class users extends Model {
     }
 
     static associate(models) {
-        this.hasOne(model.useraddress, {
-            foreignKey: "address_id",
-            as: "user_address"
-        }),
-        this.hasMany(model.pet, {
-            foreignKey: "pet_id",
-            as: "user_pet"
+        this.hasMany(models.useraddress, {
+            foreignKey: "user_id",
+            as: "addresses"
         })
     }
 }
