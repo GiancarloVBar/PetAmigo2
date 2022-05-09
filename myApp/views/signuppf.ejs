@@ -26,7 +26,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="./javascripts/script.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
         <section class="main">
             <div class="form">
                 <h1>Cadastrar-se</h1>
-                <form id="login-form">
+                <form id="login-form" method="POST">
                     <div class="col-sm-12">
                         <div class="row options">
                             <div class="col-sm-6 d-flex">
@@ -74,7 +73,7 @@
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="senha" id="password" required>
                         </div>
 
                         <div class="col-sm-4">
@@ -86,7 +85,7 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="data">Data de Nascimento:</label>
-                            <input type="date" name="data" id="data" required>
+                            <input type="date" name="nascimento" id="data" required>
                         </div>
 
                         <div class="col-sm-6">
@@ -103,7 +102,7 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-5">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="rua" id="rua" required>
+                            <input type="text" name="endereco" id="rua" required>
                         </div>
 
                         <div class="col-sm-2">
@@ -130,7 +129,7 @@
 
                         <div class="col-sm-2">
                             <label for="UF">Estado:</label>
-                            <select id="UF" name="UF">
+                            <select id="UF" name="estado">
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -164,7 +163,7 @@
 
                         <div class="col-sm-6">
                             <label for="local">Tipo de Residência:</label>
-                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, apartamento, chácara">
+                            <input type="text" name="tipo_local" id="local" required placeholder="Ex: Casa, apartamento, chácara">
                         </div>
                     </div>
 
@@ -176,17 +175,17 @@
 
                         <div class="col-sm-3">
                             <label for="alergia">Possui alguma alergia ?</label>
-                            <input type="text" name="alergia" id="alergia" required placeholder="Ex: Sim, alergia a pelo de gato">
+                            <input type="text" name="alergias" id="alergia" required placeholder="Ex: Sim, alergia a pelo de gato">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="crianca">Há crianças em sua residência? Quantas?</label>
-                            <input type="text" name="crianca" id="crianca" required placeholder="Ex: Sim, duas">
+                            <input type="text" name="criancas" id="crianca" required placeholder="Ex: Sim, duas">
                         </div>
 
                         <div class="col-sm-3">
                             <label for="pet">Possui outros pets em casa? Quais?</label>
-                            <input type="text" name="pet" id="pet" required placeholder="Ex: Sim, dois cachorros">
+                            <input type="text" name="outros_pets" id="pet" required placeholder="Ex: Sim, dois cachorros">
                         </div>
                     </div>
 
