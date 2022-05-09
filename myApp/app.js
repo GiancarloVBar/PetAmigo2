@@ -39,11 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/', footerRouter);
 app.use('/', signupRouter);
+app.use('/', accountRouter);
 app.use('/contato', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
-app.use('/services', servicesRouter);
-app.use('/', accountRouter);
 
 app.use('/logout', logoutRouter);
 
@@ -62,7 +61,9 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {
+    usuario: req.session.usuario
+  });
 });
 
 module.exports = app;

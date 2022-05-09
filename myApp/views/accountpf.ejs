@@ -39,36 +39,36 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="nome">Nome Completo:</label>
-                            <input type="text" name="nome" id="nome" data-min-length="2" required>
+                            <input type="text" name="nome" id="nome" data-min-length="2" required value="<%= nome %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-4">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" required value="<%= email %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password" id="password" required value="<%= senha %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="cpf">CPF:</label>
-                            <input type="text" name="cpf" id="cpf" required>
+                            <input type="text" name="cpf" id="cpf" required value="<%= cpf %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="data">Data de Nascimento:</label>
-                            <input type="date" name="data" id="data" required>
+                            <input type="date" name="data" id="data" required value="<%= nascimento %>">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="celular">Celular:</label>
-                            <input type="text" name="celular" id="celular" required>
+                            <input type="text" name="celular" id="celular" required value="<%= celular %>">
                         </div>
 
                         <div class="col-sm-3">
@@ -148,22 +148,22 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-2">
                             <label for="profissao">Profissão:</label>
-                            <input type="text" name="profissao" id="profissao" required>
+                            <input type="text" name="profissao" id="profissao" required value="<%= profissao %>">
                         </div>
 
                         <div class="col-sm-3">
                             <label for="alergia">Possui alguma alergia ?</label>
-                            <input type="text" name="alergia" id="alergia" required placeholder="Ex: Sim, alergia a pelo de gato">
+                            <input type="text" name="alergia" id="alergia" required value="<%= alergias %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="crianca">Há crianças em sua residência? Quantas?</label>
-                            <input type="text" name="crianca" id="crianca" required placeholder="Ex: Sim, duas">
+                            <input type="text" name="crianca" id="crianca" required value="<%= criancas %>">
                         </div>
 
                         <div class="col-sm-3">
                             <label for="pet">Possui outros pets em casa? Quais?</label>
-                            <input type="text" name="pet" id="pet" required placeholder="Ex: Sim, dois cachorros">
+                            <input type="text" name="pet" id="pet" required value="<%= outros_pets %>">
                         </div>
                     </div>
                     
