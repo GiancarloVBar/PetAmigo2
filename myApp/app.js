@@ -15,6 +15,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+require('./src/database')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -31,7 +32,6 @@ app.use('/', signupRouter);
 app.use('/contato', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
-
 
 app.use('/users', usersRouter);
 
