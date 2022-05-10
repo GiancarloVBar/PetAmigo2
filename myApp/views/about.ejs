@@ -6,20 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--aqui vai o css da sua página, sem os estilos que estão no global-->
     <link rel="stylesheet" href="./stylesheets/global.css">
-    <title><%= title %></title>
+    <link rel="stylesheet" href="./stylesheets/about.css">
+    <link rel="stylesheet" href="./stylesheets/home.css">
+    <link rel="stylesheet" href="./stylesheets/dropdown.css">
+    <title>Sobre nós - PetAmigo</title>
 </head>
 <body>
-
     <!--HEADER-->
     <%- include('./partials/header') %>
-
     <!--Aqui vai a section-blue, se necessário-->
 
     <!--Aqui vai o main da sua página-->
-
+    <section class="main ">
+        <div class="main-left ">
+            <h1>Nossa missão é unir os pequenos Pets a um novo lar!</h1>
+            <br>
+            <p>Nós da PetAmigo iremos te ajudar a encontrar seu companheiro!<br>Venha se apaixonar com a gente.</p>
+            <br>
+           <a href="./"> <button class="main-button-left">Encontre seu Pet</button></a>
+        </div>
+        <div class="main-right">
+            <div class="border-header"></div>
+            <div class="img"><img class="img-right" src="./images/dog-login.svg" alt=""> 
+            </div>
+        </div>
+        
+</section>
     <!--FOOTER-->
     <%- include('./partials/footer') %>
-
-    <script src="header.js"></script>
+    <script src="./javascripts/header.js"></script>
 </body>
 </html>
