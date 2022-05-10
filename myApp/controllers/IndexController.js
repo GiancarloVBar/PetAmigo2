@@ -11,7 +11,11 @@ const IndexController = {
             nomeEstados,
             usuario: req.session.usuario
         });
-    },
+    }, 
+    searchView: (req,res)=>{
+        res.render('teste', {title: 'Search'});
+    }
+
     
 }
 
