@@ -13,6 +13,9 @@ Pets.init(connection)
 User.init(connection);
 OngsAddresses.init(connection)
 UsersAddresses.init(connection);
+Ongs.init(connection);
+OngsAddresses.init(connection);
+Pets.init(connection);
 
 User.associate(connection.models)
 UsersAddresses.associate(connection.models)
