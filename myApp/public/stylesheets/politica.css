@@ -1,0 +1,26 @@
+.container {
+    background: linear-gradient(45deg, rgba(26, 81, 99, 255), rgba(26, 81, 99, 255));
+    margin-bottom: 10rem;
+    font-family: 'Baloo 2', "roboto";
+    font-style: normal;
+    color: #ffff;
+}
+
+.title {
+    padding: 8rem 0 5rem 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.text {
+    text-align: justify;
+    padding-bottom: 6rem;
+    margin: 0 10rem 0 10rem;
+    font-weight: 300;
+}
+
+@media (max-width: 720px) {
+    .text {
+        margin: 0 2rem 0 2rem;
+    }
+}
