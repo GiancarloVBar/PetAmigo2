@@ -29,7 +29,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -38,7 +37,7 @@
         <section class="main">
             <div class="form">
                 <h1>Cadastrar-se</h1>
-                <form id="login-form">
+                <form action="/signupong" id="login-form" method="POST">
                     <div class="col-sm-12">
                         <div class="row options">
                             <div class="col-sm-6 d-flex">
@@ -64,7 +63,7 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="razaoSocial">Nome ou Razão Social:</label>
-                            <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required>
+                            <input type="text" name="razao_social" id="razaoSocial" data-min-length="2" required>
                         </div>
                     </div>
 
@@ -93,7 +92,7 @@
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="senha" id="password" required>
                         </div>
                     </div>
 
@@ -105,7 +104,7 @@
 
                         <div class="col-sm-8">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="rua" id="rua" required>
+                            <input type="text" name="endereco" id="rua" required>
                         </div>
 
                         <div class="col-sm-2">
@@ -132,7 +131,7 @@
 
                         <div class="col-sm-2 estado">
                             <label for="UF">Estado:</label>
-                            <select id="UF" name="UF">
+                            <select id="UF" name="estado">
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -168,19 +167,19 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-6">
                             <label for="local">Tipo de Local:</label>
-                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara">
+                            <input type="text" name="tipo_local" id="local" required placeholder="Ex: Casa, Chácara">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="funcionamento">Há quantos anos a sua ONG funciona?</label>
-                            <input type="text" name="funcionamento" id="funcionamento" required>
+                            <input type="text" name="anos_de_funcionamento" id="funcionamento" required>
                         </div>
                     </div>
 
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="animais">Quantos e quais animais a ONG possui?</label>
-                            <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos">
+                            <input type="text" name="quantidade_animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos">
                         </div>
                     </div>
 
