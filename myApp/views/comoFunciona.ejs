@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--aqui vai o css da sua página, sem os estilos que estão no global-->
     <link rel="stylesheet" href="./stylesheets/global.css">
-    <title><%= title %></title>
+    <link rel="stylesheet" href="./stylesheets/comofunciona.css">
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
 
     <!--HEADER-->
     <%- include('./partials/header') %>
 
-    <!--Aqui vai a section-blue, se necessário-->
+        <main class="container">
+            <section class="como-funciona">
+                <h1>Como funciona</h1>
+                <div class="content">
+                    <div class="image-bubbles">
+                        <img src="./images/bubble_comofunciona.svg">
+                    </div>
+                    <div class="text">
+                        <p class="ml-95">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p class="ml-95">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                    <div class="image-dog">
+                        <img src="./images/dog-comofunc.svg">
+                    </div>
+                </div>
+            </section>
+            <section class="saiba-mais">
+                <h1>Saiba Mais</h1>
+                <h2>O sucesso do seu negócio é baseado em uma poderosa plataforma de experiência do cliente.</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </section>
+        </main>
 
-    <!--Aqui vai o main da sua página-->
 
-    <!--FOOTER-->
-    <%- include('./partials/footer') %>
+        <!--FOOTER-->
+        <%- include('./partials/footer') %>
 
 </body>
+
 </html>

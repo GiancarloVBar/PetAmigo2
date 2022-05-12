@@ -120,7 +120,7 @@ HEADER - STYLES
 
   /* HEADER */
 
-  #header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,6 +130,10 @@ HEADER - STYLES
     width: 100%;
     position: fixed;
     z-index: 999;
+}
+
+#header a {
+    text-decoration: none;
 }
 
 /* LOGO */

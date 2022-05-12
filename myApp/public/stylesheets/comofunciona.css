@@ -1,0 +1,70 @@
+.container {
+    font-family: 'Baloo 2', "roboto";
+    font-style: normal;
+    color: #fff;
+}
+
+.como-funciona {
+    background: rgba(26, 81, 99, 255);
+}
+
+.como-funciona h1 {
+    text-align: center;
+    padding-top: 8rem;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.content {
+    display: flex;
+    padding-top: 5rem;
+    margin: 0 4rem 0 4rem;
+    padding-bottom: 3rem;
+}
+
+.image-dog img {
+    position: absolute;
+    width: 30rem;
+    height: 40rem;
+    left: 950px;
+    top: 236px;
+}
+
+.image-bubbles img {
+    width: 22.23rem;
+    height: 32.62rem;
+}
+
+.text {
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 7rem;
+    width: 430px;
+}
+
+.ml-95 {
+    margin-left: -95px;
+}
+
+.saiba-mais {
+    margin: 5rem 0 11rem 11rem;
+}
+
+.saiba-mais h1 {
+    color: #FC9685;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.saiba-mais h2 {
+    color: #1A5163;
+    width: 486px;
+    font-weight: 200;
+}
+
+.saiba-mais p {
+    padding-top: 2rem;
+    color: #1A5163;
+    width: 486px;
+}
