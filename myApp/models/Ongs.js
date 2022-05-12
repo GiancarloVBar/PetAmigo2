@@ -53,14 +53,8 @@ class ongs extends Model {
         this.hasMany(models.pets, {
             foreignKey: "ong_id",
             as: "ong_pets"
-        }),
-        this.hasOne(models.ongAddress, {
-            foreignKey: "ong_id",
-            as: "ong_ongAddress"
-        })
-        
+        }) 
     }
-
 }
 
 module.exports = ongs;

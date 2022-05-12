@@ -12,7 +12,15 @@ const AccountController = {
             profissao: req.session.usuario.profissao,
             alergias: req.session.usuario.alergias,
             criancas: req.session.usuario.criancas,
-            outros_pets: req.session.usuario.outros_pets
+            outros_pets: req.session.usuario.outros_pets,
+            cep: req.session.usuario.cep,
+            endereco: req.session.usuario.endereco,
+            numero: req.session.usuario.numero,
+            complemento: req.session.usuario.complemento,
+            bairro: req.session.usuario.bairro,
+            cidade: req.session.usuario.cidade,
+            estado: req.session.usuario.estado,
+            tipo_local: req.session.usuario.tipo_local,
         });
     },
     accountongView: (req,res)=>{

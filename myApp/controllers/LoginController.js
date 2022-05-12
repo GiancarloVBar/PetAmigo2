@@ -15,11 +15,12 @@ const LoginController = {
         email = req.body.email;
         senha = req.body.senha;
 
+        
         const usuario = await User.findOne({
             where: {
                 email: email,
                 senha: senha
-            }
+            },
         });
 
         if (usuario !== null) {
