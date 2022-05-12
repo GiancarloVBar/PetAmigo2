@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-class ong extends Model {
+class ongs extends Model {
     static init(connection) {
         super.init({
             razao_social: {
@@ -44,22 +44,23 @@ class ong extends Model {
                 allowNull: true
             }
         },{
-            sequelize: connection
+            sequelize: connection,
+            freezeTableName: true   
         })
     }
 
     static associate(models) {
-        this.hasMany(model.pet, {
-            foreignKey: "pet_id",
-            as: "ong_pet"
+        this.hasMany(models.pets, {
+            foreignKey: "ong_id",
+            as: "ong_pets"
         }),
-        this.belongsTo(model.ongAdress, {
-            foreignKey: "ongAddress_id",
-            as: "ongAddress_ong"
+        this.hasOne(models.ongAddress, {
+            foreignKey: "ong_id",
+            as: "ong_ongAddress"
         })
         
     }
 
 }
 
-module.exports = ong;
+module.exports = ongs;
