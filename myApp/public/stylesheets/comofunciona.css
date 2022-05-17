@@ -6,6 +6,7 @@
 
 .como-funciona {
     background: rgba(26, 81, 99, 255);
+    margin-bottom: 10rem;
 }
 
 .como-funciona h1 {
@@ -30,41 +31,50 @@
     top: 236px;
 }
 
-.image-bubbles img {
+.image-passos img {
     width: 22.23rem;
-    height: 32.62rem;
+    height: 82.62rem;
 }
 
 .text {
-    font-size: 25px;
+    font-size: 24px;
     display: flex;
     flex-wrap: wrap; 
-    gap: 7rem;
-    width: 430px;
+    gap: 14rem;
+    width: 415px;
 }
 
-.ml-95 {
-    margin-left: -95px;
-}
-
-.saiba-mais {
-    margin: 5rem 0 11rem 11rem;
-}
-
-.saiba-mais h1 {
+.text-box p {
     color: #FC9685;
-    font-size: 2rem;
-    font-weight: 100;
 }
 
-.saiba-mais h2 {
-    color: #1A5163;
-    width: 486px;
-    font-weight: 200;
+@media (max-width: 1400px) {
+    .image-dog {
+        display: none;
+    }
 }
 
-.saiba-mais p {
-    padding-top: 2rem;
-    color: #1A5163;
-    width: 486px;
+@media (max-width: 600px) {
+    .image-passos img {
+        width: 10rem;
+        height: 56rem;
+    }
+
+    .text {
+        gap: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .content {
+        margin: 0;
+    }
+
+    .text {
+        gap: 95px;
+    }
+
+    .text-box p {
+        font-size: 20px;
+    }
 }
