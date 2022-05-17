@@ -1,39 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--aqui vai o css da sua página, sem os estilos que estão no global-->
-    <link rel="stylesheet" href="./stylesheets/global.css">
-    <link rel="stylesheet" href="./stylesheets/about.css">
-    <link rel="stylesheet" href="./stylesheets/home.css">
-    <link rel="stylesheet" href="./stylesheets/dropdown.css">
-    <title>Sobre nós - PetAmigo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--aqui vai o css da sua página, sem os estilos que estão no global-->
+<link rel="stylesheet" href="./stylesheets/global.css">
+<title>
+  <%= title %>
+</title>
+<link rel="stylesheet" href="./stylesheets/about.css">
+<link rel="stylesheet" href="./stylesheets/home.css">
+<link rel="stylesheet" href="./stylesheets/dropdown.css">
+<title>Sobre nós - PetAmigo</title>
 </head>
-<body>
-    <!--HEADER-->
-    <%- include('./partials/header') %>
-    <!--Aqui vai a section-blue, se necessário-->
 
+<body>
+  <!--HEADER-->
+  <%- include('./partials/header') %>
+   
     <!--Aqui vai o main da sua página-->
     <section class="main ">
-        <div class="main-left ">
-            <h1>Nossa missão é unir os pequenos Pets a um novo lar!</h1>
-            <br>
-            <p>Nós da PetAmigo iremos te ajudar a encontrar seu companheiro!<br>Venha se apaixonar com a gente.</p>
-            <br>
-           <a href="./"> <button class="main-button-left">Encontre seu Pet</button></a>
+      <div class="main-left ">
+        <h1>Nossa missão é unir os pequenos Pets a um novo lar!</h1> <br>
+        <p>Nós da PetAmigo iremos te ajudar a encontrar seu companheiro!<br>Venha se apaixonar com a gente.</p> <br> <a
+          href="./"> <button class="main-button-left">Encontre seu Pet</button></a>
+      </div>
+      <div class="main-right">
+        <div class="border-header"></div>
+        <div class="img"><img class="img-right" src="./images/dog-login.svg" alt=""> </div>
+      </div>
+    </section>
+    <section class="sobreContainer">
+      <div class="sobre-left">
+        <h2>Sobre Nós</h2>
+        <div class="h5">
+          <h3>
+            O sucesso do seu negócio é baseado em uma <br> poderosa plataforma
+            de experiência do <br> cliente.
+          </h3>
         </div>
-        <div class="main-right">
-            <div class="border-header"></div>
-            <div class="img"><img class="img-right" src="./images/dog-login.svg" alt=""> 
-            </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consequuntur, tempora necessitatibus quo aspernatur in obcaecati fugit
+          voluptatibus accusamus dicta vero susipscipit um dolorum natus esse
+          enim rem non consectetur? Eaque!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          doloremque aliquid laudantium. Repellat eos assumenda beatae. Atque ea
+          deserunt quisquam sunt consectetur excepturi libero iste facere
+          perspiciatis. Accusamus, numquam quia.
+        </p>
+      </div>
+      <div class="sobre-right">
+        <div class="five"></div>
+        <div class="dados-ongs">
+          <div class="texts">
+            <i class="fas fa-user-friends i"></i>
+            <h5>2.000 <br>Membros</h5>
+          </div>
         </div>
-        
-</section>
+        <div class="dados-ongs-two">
+          <div class="texts">
+            <i class="fas fa-city i"></i>
+            <h5>32 <br>Cidades</h5>
+          </div>
+        </div>
+        <div class="dados-ongs-three">
+          <div class="texts">
+            <i class="fas fa-cat i"></i>
+            <h5>2.000 <br>Adoções</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
     <!--FOOTER-->
     <%- include('./partials/footer') %>
-    <script src="./javascripts/header.js"></script>
+      <script src="header.js"></script>
+      <script src="./javascripts/header.js"></script>
 </body>
+
 </html>
