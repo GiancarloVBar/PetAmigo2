@@ -180,7 +180,7 @@
     border-color: #1A5163;
 }
 
-.form input[type="submit"] {
+.form input[type="submit"], .modal-footer button[type="submit"] {
     background-color: #FC9685;
     color: #fff;
     border: none;
@@ -189,9 +189,38 @@
     letter-spacing: 1px;
 }
 
-.form input[type="submit"]:hover {
-    letter-spacing: 0.5px;
+.form input[type="submit"]:hover, .modal-footer button[type="submit"]:hover {
     background: linear-gradient(to right, #ff4225, #fc6048);
+}
+
+.form button {
+    border: none;
+    border-radius: 10px;
+    height: 3rem;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.form button a:hover, .form button:hover {
+    color: #38a9cf !important;
+}
+
+.form button a, .form button {
+    color: #1A5163;
+}
+
+.form .modal-header button {
+    height: 24px;
+    width: 28px;
+    border-radius: 0;
+}
+
+.form .modal-footer button {
+    width: 20%;
+}
+
+.modal-header [type="button"] {
+    padding: 1px 6px;
 }
 
 #agreement {

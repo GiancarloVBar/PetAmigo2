@@ -132,10 +132,6 @@ HEADER - STYLES
     z-index: 999;
 }
 
-#header a {
-    text-decoration: none;
-}
-
 /* LOGO */
 #logo {
     display: flex;
@@ -287,7 +283,9 @@ HEADER - STYLES
     color: #fc9685 !important;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 /* 
 ------------------------------------------------------
