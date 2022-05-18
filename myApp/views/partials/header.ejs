@@ -23,6 +23,12 @@
                 <button type="button">
                     <a id="cadastrar" href="/accountpf">Minha Conta</a>
                 </button>
+            <% } else if (ong) {%>
+                <a id="entrar" href="/logout">Sair</a>
+
+                <button type="button">
+                    <a id="cadastrar" href="/accountong">Minha Conta</a>
+                </button>
             <% } else {%>
                 <a id="entrar" href="/login">Entrar</a>
 

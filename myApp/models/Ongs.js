@@ -45,20 +45,19 @@ class ongs extends Model {
             }
         },{
             sequelize: connection,
-            freezeTableName: true   
+            freezeTableName: true
         })
     }
 
     static associate(models) {
         this.hasMany(models.pets, {
             foreignKey: "ong_id",
-            as: "ong_pets"
+            as: "pets"
         }),
         this.hasOne(models.ongAddress, {
             foreignKey: "ong_id",
-            as: "ong_ongAddress"
+            as: "address"
         })
-        
     }
 
 }
