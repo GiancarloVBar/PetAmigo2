@@ -10,15 +10,6 @@
     font-size: 36px;
 }
 
-header .container {
-    display: flex;
-    width: 100vw;
-}
-
-header .container .navbar {
-    width: 100vw;
-}
-
 .sections-ong {
     display: flex;
     flex-direction: column;
@@ -26,10 +17,6 @@ header .container .navbar {
 
 .main {
     background: linear-gradient(to bottom, rgba(26,81,99,255) 0%, rgba(26,81,99,255) 50%, #fff 51%, #fff 100%);
-}
-
-body {
-    height: 100vh;
 }
 
 .border-dog {
@@ -52,24 +39,6 @@ body {
     text-align: center;
 }
 
-input, label {
-    display: block;
-    width: 100%;
-}
-
-input:focus, label:focus {
-    outline: none;
-}
-
-a {
-    text-decoration:none;
-    color:#fff;
-}
-
-a:hover {
-    color:#fff;
-}
-
 .entrar {
     margin-top: 10px;
     text-decoration: none;
@@ -86,7 +55,7 @@ a:hover {
     justify-content: center;
 }
 
-form {
+.form form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -111,13 +80,13 @@ form {
     margin-right: 2.5%;
 }
 
-label {
+.form label {
     font-weight: bold;
     font-size: 15px;
     color: #1A5163;
 }
 
-input, select {
+.form input, .form select {
     border: 3px solid #E5E5E5;
     padding: 10px;
     font-size: 0.8em;
@@ -129,7 +98,7 @@ input, select {
     box-sizing: border-box;
 }
 
-input[type="checkbox"] {
+.form input[type="checkbox"] {
     float: none;
     cursor: pointer;
     padding: 0;
@@ -203,15 +172,15 @@ input[type="checkbox"] {
     background-color: #1A5163;
 }
 
-input .mb-4 {
+.form input .mb-4 {
     width: 200px;
 }
 
-input:focus {
+.form input:focus {
     border-color: #1A5163;
 }
 
-input[type="submit"] {
+.form input[type="submit"], .modal-footer button[type="submit"] {
     background-color: #FC9685;
     color: #fff;
     border: none;
@@ -220,9 +189,38 @@ input[type="submit"] {
     letter-spacing: 1px;
 }
 
-input[type="submit"]:hover {
-    letter-spacing: 0.5px;
+.form input[type="submit"]:hover, .modal-footer button[type="submit"]:hover {
     background: linear-gradient(to right, #ff4225, #fc6048);
+}
+
+.form button {
+    border: none;
+    border-radius: 10px;
+    height: 3rem;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.form button a:hover, .form button:hover {
+    color: #38a9cf !important;
+}
+
+.form button a, .form button {
+    color: #1A5163;
+}
+
+.form .modal-header button {
+    height: 24px;
+    width: 28px;
+    border-radius: 0;
+}
+
+.form .modal-footer button {
+    width: 20%;
+}
+
+.modal-header [type="button"] {
+    padding: 1px 6px;
 }
 
 #agreement {
@@ -256,7 +254,7 @@ input[type="submit"]:hover {
     display: none;
 }
 
-textarea {
+.form textarea {
     resize: none;
     overflow: hidden;
     border-radius: 20px !important;

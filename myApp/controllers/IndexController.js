@@ -9,7 +9,8 @@ const IndexController = {
             menuTamanho,
             siglas,
             nomeEstados,
-            usuario: req.session.usuario
+            usuario: req.session.usuario,
+            ong: req.session.ong
         });
     }, 
     searchView: (req,res)=>{

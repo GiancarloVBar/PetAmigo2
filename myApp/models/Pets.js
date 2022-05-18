@@ -47,7 +47,7 @@ class pets extends Model {
    static associate(models) {
       this.belongsTo(models.ongs, {
          foreignKey: 'ong_id',
-         as: 'ong_pets'
+         as: 'ong'
       })
    }
 }

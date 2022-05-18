@@ -74,7 +74,7 @@ class ongs extends Model {
 
         },{
             sequelize: connection,
-            freezeTableName: true   
+            freezeTableName: true
         })
     }
 

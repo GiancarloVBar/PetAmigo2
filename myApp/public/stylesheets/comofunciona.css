@@ -1,0 +1,80 @@
+.container {
+    font-family: 'Baloo 2', "roboto";
+    font-style: normal;
+    color: #fff;
+}
+
+.como-funciona {
+    background: rgba(26, 81, 99, 255);
+    margin-bottom: 10rem;
+}
+
+.como-funciona h1 {
+    text-align: center;
+    padding-top: 8rem;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.content {
+    display: flex;
+    padding-top: 5rem;
+    margin: 0 4rem 0 4rem;
+    padding-bottom: 3rem;
+}
+
+.image-dog img {
+    position: absolute;
+    width: 30rem;
+    height: 40rem;
+    left: 950px;
+    top: 236px;
+}
+
+.image-passos img {
+    width: 22.23rem;
+    height: 82.62rem;
+}
+
+.text {
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 14rem;
+    width: 415px;
+}
+
+.text-box p {
+    color: #FC9685;
+}
+
+@media (max-width: 1400px) {
+    .image-dog {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-passos img {
+        width: 10rem;
+        height: 56rem;
+    }
+
+    .text {
+        gap: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .content {
+        margin: 0;
+    }
+
+    .text {
+        gap: 95px;
+    }
+
+    .text-box p {
+        font-size: 20px;
+    }
+}

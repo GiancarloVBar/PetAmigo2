@@ -45,59 +45,7 @@ module.exports = {
 
         res.redirect('login')
     },
-    update: async (req,res) => {
-        const { id } = req.params;
-        
-        const {
-          nome,
-          email,
-          cpf,
-          nascimento,
-          celular,
-          profissao,
-          alergias,
-          criancas,
-          outros_pets,
-          cep,
-          endereco,
-          numero,
-          complemento,
-          bairro, 
-          cidade,
-          estado,
-          tipo_local } = req.body;
-
-          const UpdatedUser = await User.update({
-          nome,
-          email,
-          cpf,
-          nascimento,
-          celular,
-          profissao,
-          alergias,
-          criancas,
-          outros_pets,
-          cep,
-          endereco,
-          numero,
-          complemento,
-          bairro, 
-          cidade,
-          estado,
-          tipo_local
-          },
-          {
-          where: id 
-          });
-          res.json(UpdatedUser)
-    },
-    update: async (req,res) => {
-     const { id } = req.params;
-     const deletedUser = await User.destroy({
-          where: id
-     })
-     res.json(deletedUser)
-    },
+    
     getUsers: async (req,res)=>{
         const Users = await User.findAll({
             

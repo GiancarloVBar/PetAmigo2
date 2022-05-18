@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--aqui vai o css da sua página, sem os estilos que estão no global-->
     <link rel="stylesheet" href="./stylesheets/global.css">
-    <title><%= title %></title>
+    <link rel="stylesheet" href="./stylesheets/comofunciona.css">
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
 
     <!--HEADER-->
     <%- include('./partials/header') %>
 
-    <!--Aqui vai a section-blue, se necessário-->
+        <main class="container">
+            <section class="como-funciona">
+                <h1>Como funciona</h1>
+                <div class="content">
+                    <div class="image-passos">
+                        <img src="./images/passos.svg">
+                    </div>
+                    <div class="text">
+                        <div class="text-box">
+                            <h5>Encontre o pet ideal para você</h5>
+                            <p>Utilizando nossos filtros, selecione as características que você procura. </p>
+                        </div>
+                        <div class="text-box">
+                            <h5>Leia atentamente a ficha do animal</h5>
+                            <p>Veja as fotos e analise se o animal é compatível com o seu estilo de vida. </p>
+                        </div>
+                        <div>
+                            <h5>Clique em “Adotar” e aguarde o contato da ONG. </h5>
+                        </div>
+                        <div>
+                            <h5>Siga as instruções da ONG e dê muito amor e carinho ao seu novo pet.</h5>
+                        </div>
+                    </div>
+                    <div class="image-dog">
+                        <img src="./images/dog-comofunc.svg">
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <!--Aqui vai o main da sua página-->
 
-    <!--FOOTER-->
-    <%- include('./partials/footer') %>
+        <!--FOOTER-->
+        <%- include('./partials/footer') %>
 
 </body>
+
 </html>

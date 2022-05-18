@@ -120,7 +120,7 @@ HEADER - STYLES
 
   /* HEADER */
 
-  #header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -286,7 +286,9 @@ color: #ffffff;
     color: #fc9685 !important;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 /* 
 ------------------------------------------------------
