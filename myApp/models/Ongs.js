@@ -78,12 +78,7 @@ class ongs extends Model {
         })
     }
 
-    // static associate(models) {
-    //     this.hasMany(models.pets, {
-    //         foreignKey: "ong_id",
-    //         as: "ong_pets"
-    //     }) 
-    // }
+
 }
 
 module.exports = ongs;
