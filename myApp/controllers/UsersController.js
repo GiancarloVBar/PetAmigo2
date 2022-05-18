@@ -91,6 +91,13 @@ module.exports = {
           });
           res.json(UpdatedUser)
     },
+    update: async (req,res) => {
+     const { id } = req.params;
+     const deletedUser = await User.destroy({
+          where: id
+     })
+     res.json(deletedUser)
+    },
     getUsers: async (req,res)=>{
         const Users = await User.findAll({
             
