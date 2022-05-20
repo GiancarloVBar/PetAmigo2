@@ -34,7 +34,7 @@ const AccountController = {
         });
     },
     async updatePfaccount(req,res) {
-        update: async (req,res) => {
+        
             const { id } = req.params;
             
             const {
@@ -79,7 +79,7 @@ const AccountController = {
               where: id 
               });
               res.redirect('accountpf')
-        }
+        
     },
     async updatePasswordAccountpf(req, res) {
         const { id } = req.params;
