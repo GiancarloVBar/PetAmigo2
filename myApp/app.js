@@ -4,6 +4,7 @@ const session = require('express-session')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
@@ -33,6 +34,7 @@ app.use(
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
+app.use(methodOverride('_method'))
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -66,7 +68,8 @@ app.use(function (err, req, res, next) {
    // render the error page
    res.status(err.status || 500)
    res.render('error', {
-      usuario: req.session.usuario
+      usuario: req.session.usuario,
+      ong: req.session.ong
    })
 })
 

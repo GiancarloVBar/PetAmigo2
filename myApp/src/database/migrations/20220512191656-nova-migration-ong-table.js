@@ -2,19 +2,48 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('ongAddress',{
+    return queryInterface.createTable('ongs',{
       id: {
         type: Sequelize.INTEGER,
         primaryKey:true,
         autoIncrement: true,
         allowNull:false,
       },
-        ong_id:{
-        type: Sequelize.INTEGER,
-        allowNull:false,
-        references: { model: 'ongs', Key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+      razao_social: {
+        type: Sequelize.STRING(100),
+        allowNull: false
+      },
+      email: {
+          type: Sequelize.STRING(45),
+          allowNull: false
+      },
+      responsavel: {
+          type: Sequelize.STRING(45),
+          allowNull: false
+      },
+      cnpj: {
+          type: Sequelize.STRING(14),
+          allowNull: false
+      },
+      telefone: {
+          type: Sequelize.INTEGER(11),
+          allowNull: false
+      },
+      senha: {
+          type: Sequelize.STRING(45),
+          allowNull: false
+      },
+      anos_de_funcionamento: {
+          type: Sequelize.INTEGER(2),
+          allowNull: true
+      },
+      quantidade_animais: {
+          type: Sequelize.INTEGER(4),
+          allowNull: true
+      },
+      historia: {
+          type: Sequelize.STRING(1234),
+          allowNull: true
       },
       cep: {
         type: Sequelize.STRING(8),
@@ -60,6 +89,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) =>{
-    return queryInterface.dropTable('ongAddress');
+    return queryInterface.dropTable('ongs');
   }
 };

@@ -31,7 +31,15 @@
 
 <body>
     <%- include('./partials/header') %>
-
+    <% if(erro){ %>
+        <div class="alert alert-danger" role="alert">
+            <p style="text-align: center;"><%= erro %></p>
+        </div>
+    <% } else if (sucesso) { %>
+        <div class="alert alert-success" role="alert">
+            <p style="text-align: center;"><%= sucesso %></p>
+        </div>
+    <% } %>
         <section class="main">
             <div class="form">
                 <h1>Meus Dados</h1>
@@ -51,7 +59,7 @@
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required value="<%= senha %>">
+                            <input type="password" name="senha" id="password" required value="<%= senha %>">
                         </div>
 
                         <div class="col-sm-4">
@@ -63,7 +71,7 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="data">Data de Nascimento:</label>
-                            <input type="date" name="data" id="data" required value="<%= nascimento %>">
+                            <input type="date" name="nascimento" id="data" required value="<%= nascimento %>">
                         </div>
 
                         <div class="col-sm-6">
@@ -73,42 +81,62 @@
 
                         <div class="col-sm-3">
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" id="cep" required>
+                            <input type="text" name="cep" id="cep" required value="<%= cep %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-5">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="rua" id="rua" required>
+                            <input type="text" name="endereco" id="rua" required value="<%= endereco %>">
                         </div>
 
                         <div class="col-sm-2">
                             <label for="numero">Número:</label>
-                            <input type="text" name="numero" id="numero" required>
+                            <input type="text" name="numero" id="numero" required value="<%= numero %>">
                         </div>
 
                         <div class="col-sm-2">
                             <label for="complemento">Complemento:</label>
-                            <input type="text" name="complemento" id="complemento" required>
+                            <input type="text" name="complemento" id="complemento" required value="<%= complemento %>">
                         </div>
 
                         <div class="col-sm-3">
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" required>
+                            <input type="text" name="bairro" id="bairro" required value="<%= bairro %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-4">
                             <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required>
+                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
                         </div>
 
                         <div class="col-sm-2">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" name="complemento" id="complemento" required value="<%= complemento %>"
+                                readonly disabled>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" name="bairro" id="bairro" required value="<%= bairro %>" readonly
+                                disabled>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>" readonly
+                                disabled>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 justify-content-between">
+                        <div class="col-sm-3">
                             <label for="UF">Estado:</label>
-                            <select id="UF" name="UF">
-                                <option value="">Selecione</option>
+                            <select id="UF" name="estado">
+                                <option value=""><%= estado %></option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
                                 <option value="AP">Amapá</option>
@@ -141,79 +169,237 @@
 
                         <div class="col-sm-6">
                             <label for="local">Tipo de Residência:</label>
-                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, apartamento, chácara">
+                            <input type="text" name="tipo_local" id="local" required placeholder="Ex: Casa, apartamento, chácara" value="<%= tipo_local %>">
                         </div>
-                    </div>
 
-                    <div class="row col-sm-12">
                         <div class="col-sm-2">
                             <label for="profissao">Profissão:</label>
-                            <input type="text" name="profissao" id="profissao" required value="<%= profissao %>">
+                            <input type="text" name="profissao" id="profissao" required value="<%= profissao %>"
+                                readonly disabled>
                         </div>
 
                         <div class="col-sm-3">
                             <label for="alergia">Possui alguma alergia ?</label>
-                            <input type="text" name="alergia" id="alergia" required value="<%= alergias %>">
+                            <input type="text" name="alergias" id="alergia" required value="<%= alergias %>" readonly
+                                disabled>
                         </div>
+                    </div>
 
+                    <div class="row col-sm-12">
                         <div class="col-sm-4">
                             <label for="crianca">Há crianças em sua residência? Quantas?</label>
-                            <input type="text" name="crianca" id="crianca" required value="<%= criancas %>">
+                            <input type="text" name="crianca" id="criancas" required value="<%= criancas %>" readonly
+                                disabled>
                         </div>
 
-                        <div class="col-sm-3">
-                            <label for="pet">Possui outros pets em casa? Quais?</label>
-                            <input type="text" name="pet" id="pet" required value="<%= outros_pets %>">
-                        </div>
-                    </div>
-                    
-                    <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Atualizar">
-                </form>
-                <h1 class="pets">Dados do(s) meu(s) bichinho(s)</h1>
-                <form id="pets-form">
-                    <div class="row col-sm-12">
                         <div class="col-sm-4">
-                            <label for="nome_pet">Nome:</label>
-                            <input type="text" name="nome_pet" id="nome_pet" required>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="tipo_pet">Tipo de pet:</label>
-                            <input type="text" name="tipo_pet" id="tipo_pet" required>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="raca_pet">Raça:</label>
-                            <input type="text" name="raca_pet" id="raca_pet" required>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <label for="porte_pet">Porte:</label>
-                            <input type="text" name="porte_pet" id="porte_pet" required>
+                            <label for="pet">Possui outros pets em casa? Quais?</label>
+                            <input type="text" name="pet" id="pet" required value="<%= outros_pets %>" readonly
+                                disabled>
                         </div>
                     </div>
 
-                    <div class="row col-sm-12">
-                        <div class="col-sm-2">
-                            <label for="cor_pet">Cor:</label>
-                            <input type="text" name="cor_pet" id="cor_pet" required>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="nascimento_pet">Data de Nascimento:</label>
-                            <input type="date" name="nascimento_pet" id="nascimento_pet" required>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <label for="sexo_pet">Sexo:</label>
-                            <input type="text" name="sexo_pet" id="sexo_pet" required>
-                        </div>
-                    </div>
-                    <div class="row col-sm-12 justify-content-end">
-                        <input class="col-sm-2 mb-4 mt-3" type="submit" name="btn-submit" value="Incluir outro Pet">
-                    </div>
+                    <button class="col-sm-2 mb-2 mt-3" type="button" class="btn btn-light" data-toggle="modal" data-target="#editModal">
+                        <img src="./images/edit_button.svg" alt="Alterar dados">
+                        Alterar dados
+                    </button>
+                    <button class="col-sm-2 mb-2" type="button" class="btn btn-light" data-toggle="modal" data-target="#passwordModal">
+                        <img src="./images/password_button.svg" alt="Alterar senha">
+                        Alterar senha
+                    </button>
+                    <button class="col-sm-2" type="button" class="btn btn-light" data-toggle="modal" data-target="#deleteModal">
+                        <img src="./images/delete_button.svg" alt="Excluir conta">
+                        Excluir conta
+                    </button>
                 </form>
             </div>
+            <form action="/accountpf/edit/<%= usuario.id %>?_method=PUT" method="post" id="login-form" class="form">
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Alterar Dados</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-sm-12">
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" name="nome" id="nome" data-min-length="2" required value="<%= nome %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" required value="<%= email %>">
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="data">Data de Nascimento:</label>
+                                    <input type="date" name="nascimento" id="data" required value="<%= nascimento %>">
+                                </div>
+                                
+                                <div class="col-sm-12">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" name="cpf" id="cpf" required value="<%= cpf %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="celular">Celular:</label>
+                                    <input type="text" name="celular" id="celular" required value="<%= celular %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="cep">CEP:</label>
+                                    <input type="text" name="cep" id="cep" required value="<%= cep %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="endereco">Endereço:</label>
+                                    <input type="text" name="endereco" id="endereco" required value="<%= endereco %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="numero">Número:</label>
+                                    <input type="text" name="numero" id="numero" required value="<%= numero %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="complemento">Complemento:</label>
+                                    <input type="text" name="complemento" id="complemento" required value="<%= complemento %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="bairro">Bairro:</label>
+                                    <input type="text" name="bairro" id="bairro" required value="<%= bairro %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="UF">Estado:</label>
+                                    <select id="UF" name="estado">
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espirito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="tipo_local">Tipo de Residência:</label>
+                                    <input type="text" name="tipo_local" id="tipo_local" required
+                                        placeholder="Ex: Casa, apartamento, chácara" value="<%= tipo_local %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="profissao">Profissão:</label>
+                                    <input type="text" name="profissao" id="profissao" required value="<%= profissao %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="alergia">Possui alguma alergia ?</label>
+                                    <input type="text" name="alergia" id="alergia" required value="<%= alergias %>">
+                                </div>
+            
+                                <div class="col-sm-12">
+                                    <label for="crianca">Há crianças em sua residência? Quantas?</label>
+                                    <input type="text" name="crianca" id="crianca" required value="<%= criancas %>">
+                                </div>
+        
+                                <div class="col-sm-12">
+                                    <label for="pet">Possui outros pets em casa? Quais?</label>
+                                    <input type="text" name="pet" id="pet" required value="<%= outros_pets %>">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Voltar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="/accountpf/password/<%= usuario.id %>?_method=PUT" method="post" id="login-form" class="form">
+                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Alterar Senha</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-sm-12">
+                                    <label for="senha_antiga">Senha antiga:</label>
+                                    <input type="password" name="senha_antiga" id="senha_antiga" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="nova_senha">Nova senha:</label>
+                                    <input type="password" name="nova_senha" id="nova_senha" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="confirmar_senha">Confirmar nova senha:</label>
+                                    <input type="password" name="confirmar_senha" id="confirmar_senha" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Voltar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="/accountpf/delete/<%= usuario.id %>?_method=DELETE" method="post" id="login-form">
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Excluir Conta</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Tem certeza que deseja excluir sua conta? Essa ação é permanente
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Voltar</button>
+                                <button type="submit" class="btn btn-primary">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
         <%- include('./partials/footer') %>
 

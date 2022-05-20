@@ -29,7 +29,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -42,70 +41,70 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="razaoSocial">Nome ou Razão Social:</label>
-                            <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required>
+                            <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required value="<%= razao_social %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-6">
                             <label for="responsavel">Nome Completo do Responsável:</label>
-                            <input type="text" name="responsavel" id="responsavel" required>
+                            <input type="text" name="responsavel" id="responsavel" required value="<%= responsavel %>">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="cnpj">CNPJ:</label>
-                            <input type="text" name="cnpj" id="cnpj" required>
+                            <input type="text" name="cnpj" id="cnpj" required value="<%= cnpj %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="telefone">Telefone:</label>
-                            <input type="phone" name="telefone" id="telefone" required>
+                            <input type="phone" name="telefone" id="telefone"  value="<%= telefone %>">
                         </div>
 
                         <div class="col-sm-5">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" required value="<%= email %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password" id="password" required value="<%= senha %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-2">
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" id="cep" required>
+                            <input type="text" name="cep" id="cep" required value="<%= cep %>">
                         </div>
 
                         <div class="col-sm-8">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="rua" id="rua" required>
+                            <input type="text" name="rua" id="rua" required value="<%= endereco %>">
                         </div>
 
                         <div class="col-sm-2">
                             <label for="numero">Número:</label>
-                            <input type="text" name="numero" id="numero" required>
+                            <input type="text" name="numero" id="numero" required value="<%= numero %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-2">
                             <label for="complemento">Complemento:</label>
-                            <input type="text" name="complemento" id="complemento">
+                            <input type="text" name="complemento" id="complemento" value="<%= complemento %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" required>
+                            <input type="text" name="bairro" id="bairro" required value="<%= bairro %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required>
+                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
                         </div>
 
                         <div class="col-sm-2 estado">
@@ -146,19 +145,19 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-6">
                             <label for="local">Tipo de Local:</label>
-                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara">
+                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara" value="<%= tipo_local %>">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="funcionamento">Há quantos anos a sua ONG funciona?</label>
-                            <input type="text" name="funcionamento" id="funcionamento" required>
+                            <input type="text" name="funcionamento" id="funcionamento" required value="<%= anos_de_funcionamento %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="animais">Quantos e quais animais a ONG possui?</label>
-                            <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos">
+                            <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos" value="<%= quantidade_animais %>">
                         </div>
                     </div>
 
@@ -166,7 +165,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="historia">Nos conte a história da ONG</label>
-                                <textarea class="form-control" id="historia" rows="12"></textarea>
+                                <textarea class="form-control" id="historia" rows="12"><%= historia %></textarea>
                             </div>
                         </div>
                     </div>
