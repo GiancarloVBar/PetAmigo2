@@ -1,6 +1,7 @@
 const User = require('../models/Users')
 const Ong = require('../models/Ongs')
 const database = require('../src/database')
+const { validationResult } = require('express-validator')
 
 const LoginController = {
     loginView: (req, res)=>{
@@ -15,9 +16,13 @@ const LoginController = {
     },
 
     async login(req, res) {
+
+        const  errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.status(400).json({errors: errors.array()})
+        }
         const {email, senha} = req.body;
 
-        
         const usuario = await User.findOne({
             where: {
                 email: email,
