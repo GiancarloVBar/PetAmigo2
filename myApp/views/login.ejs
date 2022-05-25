@@ -41,15 +41,37 @@
                 <form action="/login/signin" method="post" id="login-form">
                     <div class="full-box">
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="email"
-                            placeholder="Digite o seu email"
-                            data-min-length="2" required>
+                        <input
+                        type="email"
+                        name="email"
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : '' %>" 
+                        id="email"
+                        placeholder="Digite o seu email"
+                        data-min-length="2"
+                        value="<%= locals.values && values.email ? values.email : '' %>"
+                         >
+                         <% if(locals.errors && errors.email) { %>
+                            <span class="invalid-feedback">
+                                <%= errors.email.msg %>
+                            </span>
+                         <% } %>
                     </div>
 
                     <div class="full-box">
                         <label for="senha">Senha:</label>
-                        <input type="password" name="senha" id="senha"
-                            placeholder="Digite a sua senha" required>
+                        <input
+                         type="password"
+                         name="senha"
+                         id="senha"
+                         placeholder="Digite a sua senha"
+                         class="form-control <%= locals.errors && errors.senha ? 'is-invalid' : '' %>" 
+                         value="<%= locals.values && values.senha ? values.senha : '' %>"
+                         >
+                         <% if(locals.errors && errors.senha) { %>
+                            <span class="invalid-feedback">
+                                <%= errors.senha.msg %>
+                            </span>
+                         <% } %>
                     </div>
 
                     <div class="full-box d-flex end-center">

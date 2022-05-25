@@ -20,7 +20,7 @@ module.exports = {
                 estado,
                 tipo_local } = req.body;
 
-        const ongs = await Ong.create({
+        await Ong.create({
                 razao_social,
                 email,
                 responsavel,
@@ -47,4 +47,5 @@ module.exports = {
         });
         return res.json(Ongs)
     }
+
 }

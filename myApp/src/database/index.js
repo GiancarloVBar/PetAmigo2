@@ -9,10 +9,9 @@ const Ongs = require('../../models/Ongs')
 Pets.init(connection)
 User.init(connection);
 Ongs.init(connection);
-Pets.init(connection);
 
-// Ongs.associate(connection.models)
-// Pets.associate(connection.models)
+Ongs.associate(connection.models)
+Pets.associate(connection.models)
 
 
 module.exports = connection;
