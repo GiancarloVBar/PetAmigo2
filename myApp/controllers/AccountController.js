@@ -38,48 +38,49 @@ const AccountController = {
             const { id } = req.params;
             
             const {
-              nome,
-              email,
-              cpf,
-              nascimento,
-              celular,
-              profissao,
-              alergias,
-              criancas,
-              outros_pets,
-              cep,
-              endereco,
-              numero,
-              complemento,
-              bairro, 
-              cidade,
-              estado,
-              tipo_local } = req.body;
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            } = req.body;
     
-              await User.update({
-              nome,
-              email,
-              cpf,
-              nascimento,
-              celular,
-              profissao,
-              alergias,
-              criancas,
-              outros_pets,
-              cep,
-              endereco,
-              numero,
-              complemento,
-              bairro, 
-              cidade,
-              estado,
-              tipo_local
-              },
-              {
-              where: id 
-              });
-              res.redirect('accountpf')
-        
+            await User.update({
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            },
+            {
+              where: {id}
+            });
+            
+            res.redirect('/accountpf')
     },
     async updatePasswordAccountpf(req, res) {
         const { id } = req.params;
