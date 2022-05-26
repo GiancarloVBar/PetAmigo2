@@ -17,24 +17,30 @@
 .main-left h1 {
   font-weight: 500;
   color: white;
-  font-size: 35px;
   width: 600px;
   height: 100px;
+  font-size: 50px;
+  margin-top: 15px;
 }
 
 .main-left p {
-  font-weight: bold;
+  font-weight: 500;
   color: white;
-  font-size: 20px;
+  width: 600px;
+  height: 100px;
+  font-size: 24px;
+  margin-top: 15px;
+
 }
 
 .main-button-left {
   background-color: #fc9b8b;
   color: white;
-  width: 150px;
+  width: 180px;
   border: 1px solid #FC9B8B;
   border-radius: 5px;
-  height: 35px;
+  height: 45px;
+  margin-top: 18px;
 }
 
 .main-button-left:hover {
@@ -62,10 +68,10 @@
 }
 
 .img-right {
-  bottom: -18px;
+  bottom: -28px;
   position: absolute;
   width: 300px;
-  height: 430px;
+  height: 450px;
   margin-left: 80px;
   border-radius: 250px 250px 10px 10px;
 }
@@ -75,7 +81,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 85px;
-  margin-bottom: 180px;
+  margin-bottom: 250px;
 }
 
 .sobre-left h2 {
@@ -84,6 +90,7 @@
   margin-bottom: 10px;
   margin-left: 10px;
   margin-top: 20px;
+  font-size: 40px;
   /*padding: 20px, 0, 40px, 100px;*/
 }
 
@@ -112,18 +119,29 @@
   font-weight: 500;
   color: rgba(26, 81, 99, 255);
   margin-left: 10px;
+
+}
+
+.h5 h4 {
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: 500;
+  color: rgba(26, 81, 99, 255);
+  margin-left: 10px;
+  height: 100px;
 }
 
 .five {
   position: absolute;
   border-style: solid;
-  border-width: 20px;
+  border-width: 15px;
   border-color: #d5d2d2;
   border-radius: 100%;
   width: 250px;
   height: 250px;
   right: 15px;
-  bottom: -250px;
+  bottom: -100px;
+  right: 30px;
 }
 
 .dados-ongs {
@@ -150,7 +168,7 @@
 
 .texts h5 {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 15px;
 }
 
@@ -190,13 +208,48 @@
 }
 
 .dados-ongs {
-  right: 200px;
+  right: 230px;
+  top: 650px;
 }
 
 .dados-ongs-two {
-  right: 30px;
+  top: 570px;
+  right: 90px;
 }
 
 .dados-ongs-three {
   right: 60px;
+  top: 720px;
 }
+
+/*@media screen and (max-width: 480px) {
+
+  #header {
+    position: static;
+  }
+
+
+  section.main,
+  .h1 {
+    display: block;
+    justify-content: center;
+    height: 300px;
+  }
+}
+
+.img-right {
+  position: relative;
+  top: 400px;
+  left: -150px;
+  right: 80px;
+}
+
+.border-header {
+  position: relative;
+  top: 400px;
+  right: 80px;
+  left: -150px;
+}
+}
+
+*/
