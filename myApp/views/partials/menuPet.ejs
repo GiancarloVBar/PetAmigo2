@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pet">
   <div class="par">
   <p>Pet</p>
 </div>
@@ -11,9 +11,10 @@
           type="radio"
           class="radio"
           id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-          name="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+          name="pet"
+          value="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
         />
-        <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
+        <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item %></label>
       <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
 
       </div>

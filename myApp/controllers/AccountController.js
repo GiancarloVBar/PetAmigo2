@@ -56,7 +56,7 @@ const AccountController = {
               estado,
               tipo_local } = req.body;
     
-              const UpdatedUser = await User.update({
+              await User.update({
               nome,
               email,
               cpf,
