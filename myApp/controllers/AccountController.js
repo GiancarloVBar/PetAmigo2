@@ -143,7 +143,11 @@ const AccountController = {
             estado: req.session.ong.estado,
             tipo_local: req.session.ong.tipo_local
         });
-    }
+    },
+
+    petsOngView: (req, res) => {
+        res.render('petsOng', { title: 'Pets ONG' })
+     }
 }
 
 module.exports = AccountController;

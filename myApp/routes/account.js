@@ -8,6 +8,6 @@ router.put('/accountpf/password/:id', AccountController.updatePasswordAccountpf)
 router.delete('/accountpf/delete/:id', AccountController.deleteAccountpf)
 router.get('/accountong', AccountController.accountongView);
 router.put('/accountpf/password/:id', AccountController.updatePfaccount)
-
+router.get('/accountong/pets', AccountController.petsOngView);
 
 module.exports = router;
