@@ -143,6 +143,16 @@ const AccountController = {
             estado: req.session.ong.estado,
             tipo_local: req.session.ong.tipo_local
         });
+    },
+
+    petsOngView: (req, res) => {
+        res.render('petsOng', { title: 'Pets ONG' })
+    },
+    petsOngEditarView: (req, res) => {
+    res.render('petsOngEditar', { title: 'Pets ONG Editar' })
+    },
+    petsOngCadastrarView: (req, res) => {
+    res.render('petsOngCadastrar', { title: 'Pets ONG Cadastrar' })
     }
 }
 
