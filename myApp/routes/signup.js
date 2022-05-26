@@ -10,6 +10,7 @@ router.get('/signuppf', SignupController.signuppfView);
 router.post('/signuppf', UsersController.store);
 
 router.get('/signupong', SignupController.signupongView);
+router.get('/signupong/:ongs_id/getOngs', PetsController.getPets);
 router.post('/signupong', OngController.store);
 
 router.post('/signupong/:ongs_id/pets', PetsController.petStore);

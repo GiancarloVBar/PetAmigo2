@@ -1,4 +1,5 @@
 const Ong = require('../models/Ongs');
+const Pet = require('../models/Pets');
 
 module.exports = {
      store: async(req,res) => {
@@ -43,9 +44,7 @@ module.exports = {
     },
     getOngs: async (req,res)=>{
         const Ongs = await Ong.findAll({
-            
         });
         return res.json(Ongs)
     }
-
 }
