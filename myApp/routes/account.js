@@ -9,5 +9,6 @@ router.delete('/accountpf/delete/:id', AccountController.deleteAccountpf)
 router.get('/accountong', AccountController.accountongView);
 router.put('/accountpf/password/:id', AccountController.updatePfaccount)
 router.get('/accountong/pets', AccountController.petsOngView);
+router.get('/accountong/pets/editar', AccountController.petsOngEditarView);
 
 module.exports = router;

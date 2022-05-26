@@ -147,7 +147,10 @@ const AccountController = {
 
     petsOngView: (req, res) => {
         res.render('petsOng', { title: 'Pets ONG' })
-     }
+    },
+    petsOngEditarView: (req, res) => {
+    res.render('petsOngEditar', { title: 'Pets ONG Editar' })
+    }
 }
 
 module.exports = AccountController;
