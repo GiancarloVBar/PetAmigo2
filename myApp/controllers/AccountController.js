@@ -150,6 +150,9 @@ const AccountController = {
     },
     petsOngEditarView: (req, res) => {
     res.render('petsOngEditar', { title: 'Pets ONG Editar' })
+    },
+    petsOngCadastrarView: (req, res) => {
+    res.render('petsOngCadastrar', { title: 'Pets ONG Cadastrar' })
     }
 }
 
