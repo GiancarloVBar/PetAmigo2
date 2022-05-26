@@ -61,70 +61,204 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-12">
                             <label for="nome">Nome Completo:</label>
-                            <input type="text" name="nome" id="nome" data-min-length="2" required>
+                            <input
+                             type="text"
+                             name="nome"
+                             id="nome"
+                             data-min-length="2" 
+                             class="<%= locals.errors && errors.nome ? 'is-invalid' : '' %>"
+                             value="<%= locals.values && values.nome ? values.nome : '' %>"
+                            >
+                            <% if(locals.errors && errors.nome) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.nome.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-4">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" required>
+                            <input
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            class="<%= locals.errors && errors.email ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.email ? values.email : '' %>"
+                            >
+                            <% if(locals.errors && errors.email) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.email.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="senha" id="password" required>
+                            <input
+                            type="password" 
+                            name="senha" 
+                            id="password"
+                            class="<%= locals.errors && errors.senha ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.senha ? values.senha : '' %>"
+                            >
+                            <% if(locals.errors && errors.senha) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.senha.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-4">
                             <label for="cpf">CPF:</label>
-                            <input type="text" name="cpf" id="cpf" required>
+                            <input
+                            type="text" 
+                            name="cpf" 
+                            id="cpf" 
+                            class="<%= locals.errors && errors.cpf ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.cpf ? values.senha : '' %>"
+                            >
+                            <% if(locals.errors && errors.cpf) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.cpf.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="data">Data de Nascimento:</label>
-                            <input type="date" name="nascimento" id="data" required>
+                            <input 
+                            type="date" 
+                            name="nascimento" 
+                            id="data" 
+                            class="<%= locals.errors && errors.nascimento ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.nascimento ? values.nascimento : '' %>"
+                            >
+                            <% if(locals.errors && errors.nascimento) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.nascimento.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-6">
                             <label for="celular">Celular:</label>
-                            <input type="text" name="celular" id="celular" required>
+                            <input 
+                            type="text" 
+                            name="celular" 
+                            id="celular"
+                            class="<%= locals.errors && errors.celular ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.celular ? values.celular : '' %>" 
+                            >
+                            <% if(locals.errors && errors.celular) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.celular.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-3">
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" id="cep" required>
+                            <input 
+                            type="text" 
+                            name="cep" 
+                            id="cep"
+                            class="<%= locals.errors && errors.cep ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.cep ? values.cep : '' %>" 
+                            >
+                            <% if(locals.errors && errors.cep) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.cep.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-5">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="endereco" id="rua" required>
+                            <input 
+                            type="text" 
+                            name="endereco" 
+                            id="rua"
+                            class="<%= locals.errors && errors.endereco ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.endereco ? values.endereco : '' %>" 
+                            >
+                            <% if(locals.errors && errors.endereco) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.endereco.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-2">
                             <label for="numero">Número:</label>
-                            <input type="text" name="numero" id="numero" required>
+                            <input 
+                            type="text" 
+                            name="numero" 
+                            id="numero"
+                            class="<%= locals.errors && errors.numero ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.numero ? values.numero : '' %>" 
+                            >
+                            <% if(locals.errors && errors.numero) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.numero.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-2">
                             <label for="complemento">Complemento:</label>
-                            <input type="text" name="complemento" id="complemento" required>
+                            <input 
+                            type="text" 
+                            name="complemento" 
+                            id="complemento"
+                            class="<%= locals.errors && errors.complemento ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.complemento ? values.complemento : '' %>" 
+                            >
+                            <% if(locals.errors && errors.complemento) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.complemento.msg %>
+                                </span>
+                             <% } %>
+                            
                         </div>
 
                         <div class="col-sm-3">
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" required>
+                            <input 
+                            type="text" 
+                            name="bairro" 
+                            id="bairro"
+                            class="<%= locals.errors && errors.bairro ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.bairro ? values.bairro : '' %>" 
+                            >
+                            <% if(locals.errors && errors.bairro) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.bairro.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-4">
                             <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required>
+                            <input 
+                            type="text" 
+                            name="cidade" 
+                            id="cidade"
+                            class="<%= locals.errors && errors.cidade ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.cidade ? values.cidade : '' %>" 
+                            >
+                            <% if(locals.errors && errors.cidade) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.cidade.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-2">
@@ -163,36 +297,100 @@
 
                         <div class="col-sm-6">
                             <label for="local">Tipo de Residência:</label>
-                            <input type="text" name="tipo_local" id="local" required placeholder="Ex: Casa, apartamento, chácara">
+                            <input 
+                            type="text" 
+                            name="tipo_local" 
+                            id="local" 
+                            placeholder="Ex: Casa, apartamento, chácara"
+                            class="<%= locals.errors && errors.tipo_local ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.tipo_local ? values.tipo_local : '' %>"
+                            >
+                            <% if(locals.errors && errors.tipo_local) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.tipo_local.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12">
                         <div class="col-sm-2">
                             <label for="profissao">Profissão:</label>
-                            <input type="text" name="profissao" id="profissao" required>
+                            <input 
+                            type="text" 
+                            name="profissao" 
+                            id="profissao"
+                            class="<%= locals.errors && errors.profissao ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.profissao ? values.profissao : '' %>" 
+                            >
+                            <% if(locals.errors && errors.profissao) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.profissao.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-3">
                             <label for="alergia">Possui alguma alergia ?</label>
-                            <input type="text" name="alergias" id="alergia" required placeholder="Ex: Sim, alergia a pelo de gato">
+                            <input 
+                            type="text" 
+                            name="alergias" 
+                            id="alergia" 
+                            placeholder="Ex: Sim, alergia a pelo de gato"
+                            class="<%= locals.errors && errors.alergias ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.alergias ? values.alergias : '' %>"
+                            >
+                            <% if(locals.errors && errors.alergias) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.alergias.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-4">
                             <label for="crianca">Há crianças em sua residência? Quantas?</label>
-                            <input type="text" name="criancas" id="crianca" required placeholder="Ex: Sim, duas">
+                            <input 
+                            type="text" 
+                            name="criancas" 
+                            id="crianca" 
+                            placeholder="Ex: Sim, duas"
+                            class="<%= locals.errors && errors.criancas ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.criancas ? values.criancas : '' %>"
+                            >
+                            <% if(locals.errors && errors.criancas) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.criancas.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-3">
                             <label for="pet">Possui outros pets em casa? Quais?</label>
-                            <input type="text" name="outros_pets" id="pet" required placeholder="Ex: Sim, dois cachorros">
+                            <input 
+                            type="text" 
+                            name="outros_pets" 
+                            id="pet" 
+                            placeholder="Ex: Sim, dois cachorros"
+                            class="<%= locals.errors && errors.outros_pets ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.outros_pets ? values.outros_pets : '' %>"
+                            >
+                            <% if(locals.errors && errors.outros_pets) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.outros_pets.msg %>
+                                </span>
+                             <% } %>
                         </div>
                     </div>
 
                     <div class="row col-sm-12">
                         <div class="row col-sm-10">
                             <label class="container" for="termos">
-                                <input type="checkbox" name="termos" id="termos">
+                                <input
+                                type="checkbox" 
+                                name="termos" 
+                                id="termos"
+                                >
+                                
                                 <span class="checkmark"></span>
                                 Eu li e aceito os Termos de uso.
                             </label>

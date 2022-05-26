@@ -1,7 +1,17 @@
 const User = require('../models/Users');
+const { validationResult } = require('express-validator');
+
 
 module.exports = {
      store: async(req,res) => {
+          const errors = validationResult(req);
+
+        if(!errors.isEmpty()){
+            req.flash('errors', errors.mapped());
+            req.flash('values', req.body);
+
+               return res.redirect('signuppf');
+        }
         const {
              nome,
              email,

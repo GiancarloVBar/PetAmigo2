@@ -5,7 +5,7 @@ module.exports = {
     password:'',
     database:'petAmigo',
     define:{
-        // timestamps: true,
+        timestamps: true,
         underscored:true
     }
 }
