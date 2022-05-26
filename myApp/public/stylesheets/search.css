@@ -26,7 +26,7 @@ body {
 }
 
 /*CORPO DA PÁGINA*/
-.blue-index {
+.blue {
    height: 36.5rem;
 
    background-color: var(--azul-escuro);
@@ -38,6 +38,8 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
+   width: 100%;
 }
 
 main .ficha {
@@ -48,6 +50,8 @@ main .ficha {
    gap: 1rem;
 
    margin: 3.5rem 2rem;
+   width: 50%;
+   max-width: 300px;
 }
 
 main .ficha img {
@@ -120,10 +124,11 @@ main .ficha img {
 @media (min-width: 576px) {
    .dados-animais {
       flex-direction: row;
+      flex-wrap: wrap;
    }
 
    main .ficha {
-      margin: 5rem 3rem;
+      margin: 5rem 0;
    }
 
    .ficha .dados .campo .dado {
