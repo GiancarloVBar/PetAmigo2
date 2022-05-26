@@ -77,6 +77,12 @@ class ongs extends Model {
             freezeTableName: true
         })
     }
+    static associate(models){
+        this.hasMany(models.pets, {
+            foreignKey: 'ongs_id',
+            as: 'ongs_pets'
+        })
+    }
 
 
 }

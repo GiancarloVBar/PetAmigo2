@@ -1,4 +1,5 @@
 const Ong = require('../models/Ongs');
+const Pet = require('../models/Pets');
 
 module.exports = {
      store: async(req,res) => {
@@ -20,7 +21,7 @@ module.exports = {
                 estado,
                 tipo_local } = req.body;
 
-        const ongs = await Ong.create({
+        await Ong.create({
                 razao_social,
                 email,
                 responsavel,
@@ -43,7 +44,6 @@ module.exports = {
     },
     getOngs: async (req,res)=>{
         const Ongs = await Ong.findAll({
-            
         });
         return res.json(Ongs)
     }

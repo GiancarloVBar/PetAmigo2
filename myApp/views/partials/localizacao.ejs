@@ -6,14 +6,15 @@
 </div>
   <div class="select-box">
       <div class="options-container2">
-          <% menuPet.forEach(item => { %>
+          <% nomeEstados.forEach(item => { %>
           <div class="option2">
           <img src="./images/pet-icon.svg" alt="icone animal">
         <input
           type="radio"
           class="radio"
           id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-          name="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
+          name="localizacao"
+          value="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
         />
         <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
       <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
