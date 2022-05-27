@@ -2,11 +2,12 @@ const User = require('../models/Users')
 const Ong = require('../models/Ongs')
 
 const AccountController = {
-    accountpfView: (req,res)=>{
+    accountPfView: (req,res)=>{
         erro = req.session.erro;
         sucesso = req.session.sucesso;
         delete req.session.sucesso;
         delete req.session.erro;
+
         res.render('accountpf', {
             title: 'Minha Conta - PF',
             usuario: req.session.usuario,
@@ -33,8 +34,7 @@ const AccountController = {
             tipo_local: req.session.usuario.tipo_local,
         });
     },
-    async updatePfaccount(req,res) {
-        
+    async updatePfAccount(req, res) {
             const { id } = req.params;
             
             const {
@@ -82,7 +82,55 @@ const AccountController = {
             
             res.redirect('/accountpf')
     },
-    async updatePasswordAccountpf(req, res) {
+    async updateOngAccount(req, res) {
+        const { id } = req.params;
+        
+        const {
+            razao_social,
+            email, 
+            responsavel,
+            cnpj,
+            telefone,
+            senha,
+            anos_de_funcionamento,
+            quantidade_animais,
+            historia,
+            cep,
+            endereco,
+            numero,
+            complemento,
+            bairro,
+            cidade,
+            estado,
+            tipo_local
+        } = req.body;
+
+        await Ong.update({
+            razao_social,
+            email,
+            responsavel,
+            cnpj,
+            telefone,
+            senha,
+            anos_de_funcionamento,
+            quantidade_animais,
+            historia,
+            cep,
+            endereco,
+            numero,
+            complemento,
+            bairro,
+            cidade,
+            estado,
+            tipo_local
+        },
+        {
+          where: {id}
+        });
+        
+        res.redirect('/accountong')
+    },
+    async updatePasswordAccountPf(req, res) {
         const { id } = req.params;
         const {senha_antiga, nova_senha, confirmar_senha} = req.body;
 
@@ -107,7 +155,32 @@ const AccountController = {
             return res.redirect("/accountpf");
         }
     },
-    async deleteAccountpf(req, res) {
+    async updatePasswordAccountOng(req, res) {
+        const { id } = req.params;
+        const {senha_antiga, nova_senha, confirmar_senha} = req.body;
+
+        if (nova_senha == confirmar_senha) {
+            const updated = await Ong.update(
+                {senha: nova_senha},
+                {where: {
+                    id,
+                    senha: senha_antiga
+                }}
+            );
+
+            if (updated > 0) {
+                req.session.sucesso = 'Senha alterada com sucesso';
+                return res.redirect("/accountong");
+            } else {
+                req.session.erro = 'Verifique as senhas informadas e tente novamente';
+                return res.redirect("/accountong");
+            }
+        } else {
+            req.session.erro = 'Verifique as senhas informadas e tente novamente';
+            return res.redirect("/accountong");
+        }
+    },
+    async deleteAccountPf(req, res) {
         const { id } = req.params;
         deleted = await User.destroy({
             where: {
@@ -120,8 +193,21 @@ const AccountController = {
         }
         return res.redirect("/");
     },
-    accountongView: (req,res)=>{
-        res.render('accountong',{
+    async deleteAccountOng(req, res) {
+        const { id } = req.params;
+        deleted = await Ong.destroy({
+            where: {
+                id
+            }
+        });
+
+        if (deleted) {
+            delete req.session.usuario;
+        }
+        return res.redirect("/");
+    },
+    accountOngView: (req, res) => {
+        res.render('accountong', {
             title: 'Minha Conta - ONG',
             usuario: req.session.usuario,
             ong: req.session.ong,
@@ -150,10 +236,10 @@ const AccountController = {
         res.render('petsOng', { title: 'Pets ONG' })
     },
     petsOngEditarView: (req, res) => {
-    res.render('petsOngEditar', { title: 'Pets ONG Editar' })
+        res.render('petsOngEditar', { title: 'Pets ONG Editar' })
     },
     petsOngCadastrarView: (req, res) => {
-    res.render('petsOngCadastrar', { title: 'Pets ONG Cadastrar' })
+        res.render('petsOngCadastrar', { title: 'Pets ONG Cadastrar' })
     }
 }
 

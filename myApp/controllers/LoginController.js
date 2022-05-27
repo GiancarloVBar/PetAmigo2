@@ -1,6 +1,5 @@
 const User = require('../models/Users')
 const Ong = require('../models/Ongs')
-const database = require('../src/database')
 const { validationResult } = require('express-validator')
 
 const LoginController = {
@@ -29,7 +28,7 @@ const LoginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-            return  res.redirect('/login')
+            return res.redirect('/login')
         }
 
         const {email, senha} = req.body;
