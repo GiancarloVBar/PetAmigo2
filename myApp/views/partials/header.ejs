@@ -1,46 +1,48 @@
 <header id="header">
-    <!-- LOGO -->
-    <nav id="logo">
-        <a href="/">
-            <img src="/images/pata-logo.svg" alt="logo">
-        </a>
-        <span>PetAmigo</span>
-    </nav>
+   <!-- LOGO -->
+   <nav id="logo">
+      <a href="/">
+         <img src="/images/logoHeader.svg" alt="logo" />
+      </a>
+   </nav>
 
-    <!-- NAV-BAR -->
-    <nav id="nav">
-        <ul id="menu">
-            <li><a href="/" id="inicio">Início</a></li>
-            <li> <a href="/comoFunciona" id="comofunciona">Como Funciona</a></li>
-            <li><a href="/about" id="about">Sobre Nós</a></li>
-            <li><a href="/contato" id="contato">Contato</a></li>
-        </ul>
-        <!-- BOTÃO  -->
-        <div class="logado" id="login">
-            <% if(usuario){ %>
-                <a id="entrar" href="/logout">Sair</a>
+   <!-- NAV-BAR -->
+   <nav id="nav">
+      <ul id="menu">
+         <li><a href="/" id="inicio">Início</a></li>
+         <li><a href="/comoFunciona" id="comofunciona">Como Funciona</a></li>
+         <li><a href="/about" id="about">Sobre Nós</a></li>
+         <li><a href="/contato" id="contato">Contato</a></li>
+      </ul>
+      <!-- BOTÃO  -->
+      <div class="logado" id="login">
+         <% if(usuario){ %>
+         <a id="entrar" href="/logout">Sair</a>
 
-                <button type="button">
-                    <a id="cadastrar" href="/accountpf">Minha Conta</a>
-                </button>
-            <% } else if (ong) {%>
-                <a id="entrar" href="/logout">Sair</a>
+         <button type="button">
+            <a id="cadastrar" href="/accountpf">Minha Conta</a>
+         </button>
+         <% } else if (ong) {%>
+         <a id="entrar" href="/logout">Sair</a>
 
-                <button type="button">
-                    <a id="cadastrar" href="/accountong">Minha Conta</a>
-                </button>
-            <% } else {%>
-                <a id="entrar" href="/login">Entrar</a>
+         <button type="button">
+            <a id="cadastrar" href="/accountong">Minha Conta</a>
+         </button>
+         <% } else {%>
+         <a id="entrar" href="/login">Entrar</a>
 
-                <button type="button">
-                    <a id="cadastrar" href="/signuppf">Cadastre-se</a>
-                </button>
-            <% } %>
-        </div>
-    </nav>
+         <button type="button">
+            <a id="cadastrar" href="/signuppf">Cadastre-se</a>
+         </button>
+         <% } %>
+      </div>
+   </nav>
 
-    <!-- MENU HAMBURGER-->
-    <button id="btn-mobile">
-        <div id="hamburger"></div>
-    </button>
+   <!-- MENU HAMBURGER-->
+   <button id="btn-mobile">
+      <img src="/images/ham-menu.svg" alt="Menu Hamburguer" />
+   </button>
+   <button id="btn-mobile-x">
+      <img src="/images/x-menu.svg" alt="Menu X" />
+   </button>
 </header>
