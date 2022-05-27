@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/stylesheets/global.css" />
+      <link rel="stylesheet" href="/stylesheets/vermais.css" />
+      <title><%= title %></title>
+   </head>
+   <body>
+      <!-- HEADER -->
+
+      <!-- PESQUISA DOS ANIMAIS -->
+      <!-- ESPAÇO -->
+      <div class="space"></div>
+
+      <div class="top-container">
+         <h1>Pet Amigo</h1>
+         <p>
+            Adote um pet <br />
+            para o seu lar
+         </p>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <form class="form-home" method="POST">
+
+
+         <div class="search-container">
+            <button type="submit" class="search-box">
+               <img src="./images/lupa-icon.svg" alt="" />
+               Buscar
+            </button>
+         </div>
+      </form>
+      <!--FICHA DOS ANIMAIS-->
+      <main class="dados-animal">
+         <section class="ficha">
+            <img src="../images/search/dog.png" alt="Foto do pet" />
+
+            <div class="dados">
+               <div class="campo">
+                  <h4>Nome:</h4>
+                  <div class="dado">
+                     <p>Bob</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Espécie:</h4>
+                  <div class="dado">
+                     <p>Cachorro</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Raça:</h4>
+                  <div class="dado">
+                     <p>Sem raça definida</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Tamanho:</h4>
+                  <div class="dado">
+                     <p>Médio porte</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Cor:</h4>
+                  <div class="dado">
+                     <p>Preto/marrom/branco</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Data de nascimento:</h4>
+                  <div class="dado">
+                     <p>06/2020</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Sexo:</h4>
+                  <div class="dado">
+                     <p>Macho</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Instituição Responsável:</h4>
+                  <div class="dado">
+                     <p>ONG Viva Pets</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>CNPJ:</h4>
+                  <div class="dado">
+                     <p>12.345.678/0001-23</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Pessoa Responsável:</h4>
+                  <div class="dado">
+                     <p>Lúcia Aparecida de Souza</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Telefone:</h4>
+                  <div class="dado">
+                     <p>(21) 1234-5678</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Endereço:</h4>
+                  <div class="dado">
+                     <p>Rua Minharua, 123</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Bairro:</h4>
+                  <div class="dado">
+                     <p>Meubairro</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Cidade:</h4>
+                  <div class="dado">
+                     <p>Rio de Janeiro</p>
+                  </div>
+               </div>
+               <div class="campo">
+                  <h4>Estado:</h4>
+                  <div class="dado">
+                     <p>RJ</p>
+                  </div>
+               </div>
+               <a href="#"><button type="button" class="adotar">Adotar</button></a>
+            </div>
+         </section>
+      </main>
+      <!-- FOOTER -->
+      <%- include('./partials/footer') %>
+      <script src="./javascripts/header.js"></script>
+   </body>
+</html>

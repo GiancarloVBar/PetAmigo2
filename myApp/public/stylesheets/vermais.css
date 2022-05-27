@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+   --azul-escuro: #1a5163;
+   --azul-claro: #e1eff3;
+   --laranja-rosa: #fc9685;
+   --cinza-paragraph: #686868;
+
+   --fonte-baloo-2: 'Baloo 2', cursive;
+   --fonte-roboto: 'Roboto', sans-serif;
+
+   font-size: 62.5%; /*1 rem = 10px*/
+}
+
+* {
+   box-sizing: border-box;
+   border: 0;
+   outline: 0;
+   padding: 0;
+   margin: 0;
+}
+
+/*BUSCA*/
+.top-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: #1a5163;
+   align-items: center;
+}
+
+.top-container h1 {
+   width: 60%;
+   text-align: center;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 31.5px;
+   letter-spacing: 10%;
+   font-family: Baloo, sans-serif;
+   color: #fc9685;
+}
+
+.top-container p {
+   color: #fff;
+   font-style: normal;
+   font-size: 16px;
+   line-height: 20px;
+   display: flex;
+   letter-spacing: 0.1em;
+}
+
+.form-home {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.search-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #1a5163;
+   width: 100%;
+}
+
+.search-box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   color: white;
+   border: 1px solid white;
+   border-radius: 5px;
+   background-color: #1a5163;
+   width: 140px;
+   max-width: 140px;
+   height: 23px;
+}
+
+.search-box img {
+   margin-right: 5px;
+}
+
+/*Ficha*/
+.dados-animal {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 100%;
+}
+
+.dados-animal .ficha {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+
+   margin: 3.5rem 2rem;
+}
+
+.dados-animal .ficha img {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+
+   width: 9rem;
+   height: 9rem;
+}
+
+.dados-animal .ficha .dados {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 0.6rem;
+}
+
+.dados-animal .ficha .dados .campo h4 {
+   font-family: var(--fonte-baloo-2);
+   font-size: 1.2rem;
+   line-height: 1.9rem;
+   text-align: left;
+   letter-spacing: 10%;
+
+   color: #1a5163;
+}
+
+.dados-animal .ficha .dados .campo .dado {
+   border: 0.5px solid var(--azul-escuro);
+
+   display: flex;
+   align-items: center;
+   padding: 0.5rem;
+
+   width: 25rem;
+   height: 2.5rem;
+
+   border-radius: 5px;
+}
+
+.dados-animal .ficha .dados .campo .dado p {
+   color: var(--cinza-paragraph);
+   font-family: var(--fonte-roboto);
+   font-size: 1.2rem;
+   font-weight: 400;
+   line-height: 1.4rem;
+   letter-spacing: 10%;
+}
+
+.dados-animal .ficha .adotar {
+   align-self: center;
+   margin-top: 1.8rem;
+
+   background-color: #1a5163;
+   color: white;
+
+   border-radius: 10px;
+   width: 10rem;
+   height: 2.5rem;
+
+   font-family: var(--fonte-roboto);
+   font-size: 1.2rem;
+   line-height: 1.6rem;
+   letter-spacing: 5%;
+   font-weight: 700;
+
+   cursor: pointer;
+}
+
+.ficha .dados a {
+   align-self: center;
+}
+
+@media (min-width: 576px) {
+   .dados-animal .ficha {
+      margin: 5rem 0;
+   }
+
+   .dados-animal .ficha .dados .campo .dado {
+      width: 20rem;
+   }
+}
