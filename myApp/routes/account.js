@@ -11,6 +11,7 @@ router.delete('/accountpf/delete/:id', checkUserPermission, checkIsUser, Account
 
 router.get('/accountong', checkUserAuthenticated, checkIsOng, AccountController.accountOngView);
 
+
 router.get('/accountong/:ongs_id/pets', AccountController.petsOngView);
 
 router.get('/accountong/pets/editar', checkUserAuthenticated, checkIsOng, AccountController.petsOngEditarView);
@@ -20,5 +21,3 @@ router.put('/accountong/password/:id', checkUserPermission, checkIsOng, AccountC
 router.delete('/accountong/delete/:id', checkUserPermission, checkIsOng, AccountController.deleteAccountOng);
 
 module.exports = router;
-
-// checkUserAuthenticated, checkIsOng,

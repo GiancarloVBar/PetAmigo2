@@ -247,30 +247,13 @@ const AccountController = {
             
             })
             
-        
         res.render('petsOng', {
             title: 'Pets ONG',
             usuario: req.session.usuario,
             ong: req.session.ong,
-            // razao_social: req.session.ong.razao_social,
-            // email: req.session.ong.email,
-            // responsavel: req.session.ong.responsavel,
-            // cnpj: req.session.ong.cnpj,
-            // telefone: req.session.ong.telefone,
-            // celular: req.session.ong.celular,
-            // senha: req.session.ong.senha,
-            // anos_de_funcionamento: req.session.ong.anos_de_funcionamento,
-            // quantidade_animais: req.session.ong.quantidade_animais,
-            // historia: req.session.ong.historia,
-            // cep: req.session.ong.cep,
-            // endereco: req.session.ong.endereco,
-            // numero: req.session.ong.numero,
-            // complemento: req.session.ong.complemento,
-            // bairro: req.session.ong.bairro,
-            // cidade: req.session.ong.cidade,
-            // estado: req.session.ong.estado,
-            // tipo_local: req.session.ong.tipo_local,
-            pets
+            ongs_id,            
+            pets,
+            
         })
     },
     petsOngEditarView: (req, res) => {
