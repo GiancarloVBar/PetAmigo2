@@ -6,7 +6,7 @@
 
 .como-funciona {
     background: rgba(26, 81, 99, 255);
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .como-funciona h1 {
@@ -44,8 +44,24 @@
     width: 415px;
 }
 
-.text-box p {
+.text-box p, .saiba-mais h1 {
     color: #FC9685;
+}
+
+.saiba-mais {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.saiba-mais h2 {
+    color: #1a5163;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.saiba-mais p {
+    color: #21657b;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 1400px) {
