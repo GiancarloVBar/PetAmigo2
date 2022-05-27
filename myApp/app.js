@@ -15,7 +15,6 @@ const signupRouter = require('./routes/signup')
 const footerRouter = require('./routes/footer')
 const accountRouter = require('./routes/account')
 const searchRouter = require('./routes/search')
-
 const usersRouter = require('./routes/users')
 
 const app = express()
