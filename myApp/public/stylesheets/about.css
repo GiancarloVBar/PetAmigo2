@@ -1,6 +1,9 @@
 .main {
   height: 500px;
   background-color: rgba(26, 81, 99, 255);
+  width: 100%;
+  min-height: 568px;
+  height: 85vh;
   position: relative;
 }
 
@@ -225,6 +228,20 @@
 /*@media screen and (max-width: 480px) {
 
   #header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+  }
+}
+
+
+
+/*@media screen and (max-width: 480px) {
+
+  #header {
     position: static;
   }
 
@@ -253,3 +270,11 @@
 }
 
 */
+
+
+
+@media (max-width: 720px) {
+  main .menuLateral {
+    min-width: 3rem;
+  }
+}
