@@ -239,16 +239,7 @@
     background-color:#1a5163;
 }
 
-@media (min-width: 750px) {
-    .form-home {
-        flex-direction: row;
-        align-items: flex-end;
-        padding: 0 50px;
-    }
-}
-
 @media (min-width: 650px){
-
     .top-container {
         height: 200px;
         justify-content: center;
@@ -320,6 +311,7 @@
     }
 
     .trust-container {
+        display: none;
         position: absolute;  
         left: 45%;
         top: 40px;
@@ -348,4 +340,18 @@
     .p-trust {
         padding: 5px 0; 
     }   
+}
+
+@media (min-width: 750px) {
+    .form-home {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .trust-container {
+        display: flex;
+    }
 }
