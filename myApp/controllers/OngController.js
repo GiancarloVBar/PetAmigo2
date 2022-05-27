@@ -11,7 +11,7 @@ module.exports = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-               return res.redirect('signuppf');
+               return res.redirect('signupong');
         }
 
         const { razao_social,
