@@ -1,31 +1,13 @@
 <div class="container tamanho">
-  <div class="par">
-  <p>Tamanho do Pet</p>
-</div>
+  <div class="pet-name">
+    <p>Tamanho do Pet</p>
+  </div>
   <div class="select-box">
-      <div class="options-container3">
-          <% menuTamanho.forEach(item => { %>
-          <div class="option3">
-          <img src="./images/pet-icon.svg" alt="icone animal">
-        <input
-          type="radio"
-          class="radio"
-          id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-          name="tamanho"
-          value="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-        />
-        <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
-      <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
-
-      </div>
-      <% });%> 
-    </div>  
-
-    <div class="selected3"  id="tamanho">
-      <img src="./images/pet-icon.svg" alt="icone animal">
-      Selecionar
-      <img class="imgSeta3" src="./images/seta-icon.svg" alt="icone seta">
-
-    </div>
+    <select class="selected" name="tamanho" id="tamanho">Selecione
+      <option value="">📏 Selecionar</option>
+      <option value="pequeno">📏 Pequeno</option>
+      <option value="medio">📏 Médio</option>
+      <option value="grande">📏 Grande</option>
+    </select>
   </div>
 </div>

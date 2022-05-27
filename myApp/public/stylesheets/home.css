@@ -237,6 +237,14 @@
     background-color:#1a5163;
 }
 
+@media (min-width: 750px) {
+    .form-home {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 0 50px;
+    }
+}
+
 @media (min-width: 650px){
 
     .top-container {
@@ -258,7 +266,6 @@
     .form-home {
         flex-direction: row;
         align-items: flex-end;
-        padding: 0 50px;
     }
 
     .form-home .container, .form-home .search-container {

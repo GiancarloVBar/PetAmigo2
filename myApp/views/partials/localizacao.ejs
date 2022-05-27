@@ -1,33 +1,37 @@
-
-
 <div class="container">
-  <div class="par">
-  <p>Localizacao</p>
-</div>
+  <div class="pet-name">
+    <p>Localizacao</p>
+  </div>
   <div class="select-box">
-      <div class="options-container2">
-          <% nomeEstados.forEach(item => { %>
-          <div class="option2">
-          <img src="./images/pet-icon.svg" alt="icone animal">
-        <input
-          type="radio"
-          class="radio"
-          id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-          name="localizacao"
-          value="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-        />
-        <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item%></label>
-      <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
-
-      </div>
-      <% });%> 
-    </div>  
-
-    <div class="selected2">
-      <img src="./images/pet-icon.svg" alt="icone animal">
-      Selecionar
-      <img class="imgSeta2" src="./images/seta-icon.svg" alt="icone seta">
-
-    </div>
+    <select id="UF" name="estado" class="selected">
+      <option value="">🚩 Selecionar</option>
+      <option value="AC">🚩 Acre</option>
+      <option value="AL">🚩 Alagoas</option>
+      <option value="AP">🚩 Amapá</option>
+      <option value="AM">🚩 Amazonas</option>
+      <option value="BA">🚩 Bahia</option>
+      <option value="CE">🚩 Ceará</option>
+      <option value="DF">🚩 Distrito Federal</option>
+      <option value="ES">🚩 Espirito Santo</option>
+      <option value="GO">🚩 Goiás</option>
+      <option value="MA">🚩 Maranhão</option>
+      <option value="MS">🚩 Mato Grosso do Sul</option>
+      <option value="MT">🚩 Mato Grosso</option>
+      <option value="MG">🚩 Minas Gerais</option>
+      <option value="PA">🚩 Pará</option>
+      <option value="PB">🚩 Paraíba</option>
+      <option value="PR">🚩 Paraná</option>
+      <option value="PE">🚩 Pernambuco</option>
+      <option value="PI">🚩 Piauí</option>
+      <option value="RJ">🚩 Rio de Janeiro</option>
+      <option value="RN">🚩 Rio Grande do Norte</option>
+      <option value="RS">🚩 Rio Grande do Sul</option>
+      <option value="RO">🚩 Rondônia</option>
+      <option value="RR">🚩 Roraima</option>
+      <option value="SC">🚩 Santa Catarina</option>
+      <option value="SP">🚩 São Paulo</option>
+      <option value="SE">🚩 Sergipe</option>
+      <option value="TO">🚩 Tocantins</option>
+    </select>
   </div>
 </div>
