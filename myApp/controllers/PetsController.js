@@ -65,7 +65,11 @@ search: async(req,res)=>{
                 tamanho
             }
         })
-        res.json(pets)
+        await res.render('search', {
+             title: 'Search - PetAmigo',
+             pets
+             })
+             console.log(pets);
     }
     catch(err){
         return res.json(err)
