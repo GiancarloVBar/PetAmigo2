@@ -10,8 +10,6 @@
    --fonte-roboto: 'Roboto', sans-serif;
 
    font-size: 62.5%; /*1 rem = 10px*/
-
-   --metade-menu: calc(width/2);
 }
 
 * {
@@ -91,7 +89,6 @@
 /* NAVBAR */
 #nav {
    display: none;
-
 }
 
 /* MENU */
@@ -185,73 +182,91 @@ FOOTER - STYLES
 */
 
 footer {
-   color: #1a5163;
-   font-family: 'Baloo 2', cursive;
-}
-
-footer > div.footer-menu {
-   display: flex;
-   text-indent: 7px;
-}
-
-footer > div.footer-menu > nav {
-   flex-grow: 1;
-   margin-bottom: 7px;
-}
-
-footer > div.footer-menu > nav > h3 {
-   font-weight: bold;
-   font-size: 8px;
-   margin-bottom: 5px;
-}
-
-footer > div.footer-menu > nav > ul {
-   list-style: none;
-   line-height: 70%;
-}
-
-footer > div.footer-menu > nav > ul > li > a {
-   color: #1a5163;
-   font-size: 8px;
-}
-
-footer > div.footer-menu > nav > ul > li > a:hover {
-   font-weight: bold;
+   width: 100%;
 }
 
 footer > div.stroke {
    background-color: #1a5163;
-   height: 0.5px;
+   height: 0.3px;
    width: 95vw;
    margin: auto;
 }
 
-footer > div.bottom-footer {
+footer > div.footer-menu {
    display: flex;
+   flex-direction: column;
+   align-items: center;
    justify-content: center;
-   margin: 7px 10px 7px 10px;
+
+   margin-block: 20px;
+   gap: 20px;
 }
 
-footer > div.bottom-footer /* > div.footer-logo */ > img {
-   width: 12px;
+footer nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
-footer > div.bottom-footer > span {
-   font-family: 'Baloo 2', cursive;
-   font-size: 10px;
-   font-weight: bold;
-   margin: auto 5px auto 5px;
+footer .footer-menu nav h3 {
+   font-family: var(--fonte-roboto);
+   font-weight: 700;
+   font-size: 1.2rem;
+   line-height: 2.2rem;
+   color: var(--azul-escuro);
 }
 
-footer > div.bottom-footer > p {
+footer .footer-menu nav ul li a {
+   font-family: var(--fonte-roboto);
+   font-weight: 400;
+   font-size: 1.2rem;
+   line-height: 2.2rem;
+   color: var(--azul-escuro);
+}
+
+footer ul {
+   list-style: none;
+}
+
+footer .footer-menu nav ul li {
    text-align: center;
-   margin: auto 5px auto 5px;
-   font-size: 6px;
 }
 
-.alert {
-   padding-top: 96px;
-   margin: 0px;
+footer .footer-menu nav:nth-child(3) ul {
+   display: flex;
+   gap: 10px;
+}
+
+footer .bottom-footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+
+   margin: 15px 10px;
+   text-align: center;
+}
+
+.bottom-footer #com-amor {
+   font-family: var(--fonte-roboto);
+   font-weight: 400;
+   font-size: 0.8rem;
+   line-height: 0.9rem;
+   letter-spacing: 0.1rem;
+}
+
+.bottom-footer #com-amor img {
+   position: relative;
+   top: 3px;
+}
+
+.bottom-footer #copy {
+   font-family: var(--fonte-baloo-2);
+   font-weight: 400;
+   font-size: 0.8rem;
+   line-height: 1rem;
 }
 
 /* *************************************
@@ -262,7 +277,7 @@ RESPONSIVIDADES
 RESPONSIVIDADE - 320px a 375px - MOBILE S
 */
 
-@media (min-width: 320px) {
+/* @media (min-width: 320px) {
    footer > div.footer-menu {
       text-indent: 12%;
    }
@@ -275,7 +290,7 @@ RESPONSIVIDADE - 320px a 375px - MOBILE S
       font-size: 9px;
    }
 
-   footer > div.bottom-footer /* > div.footer-logo */ > img {
+   footer > div.bottom-footer /* > div.footer-logo  > img {
       width: 15px;
    }
 
@@ -286,14 +301,13 @@ RESPONSIVIDADE - 320px a 375px - MOBILE S
    footer > div.bottom-footer > p {
       font-size: 7px;
    }
-}
+} */
 
 /* 
 RESPONSIVIDADE - 376px a 650px - MOBILE L
 */
 
 @media (min-width: 376px) {
-
    section.blue-index {
       height: 235px;
    }
@@ -382,9 +396,9 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
    }
 
    #nav {
-    width: calc(100% - 123px);
-    justify-content: space-between;
-    align-items: center;
+      width: calc(100% - 123px);
+      justify-content: space-between;
+      align-items: center;
    }
 
    #nav,
@@ -398,13 +412,13 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
    }
 
    #login.logado #cadastrar {
-    margin-left: 0;
-    font-size: 1.4rem;
- }
+      margin-left: 0;
+      font-size: 1.4rem;
+   }
 
    #login > button {
-    margin-left: 5px;
-    width: 100px;
+      margin-left: 5px;
+      width: 100px;
    }
 
    #header > #login > a:hover {
