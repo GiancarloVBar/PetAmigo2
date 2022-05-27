@@ -16,98 +16,100 @@
       <div class="h1"><h1>Pets para adoção</h1></div>
 
       <main class="dados-animais-ong">
-         <section class="ficha">
-            <img src="../images/search/dog.png" alt="Foto do pet" />
+
+         <% pets.forEach(pet => { %>
+             
+            <!-- <img src="../images/search/dog.png" alt="Foto do pet" /> -->
 
             <div class="dados">
                <div class="campo">
                   <h4>Nome:</h4>
                   <div class="dado">
-                     <p>Bob</p>
+                     <p><%= pet.nome %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Espécie:</h4>
                   <div class="dado">
-                     <p>Cachorro</p>
+                     <p><%= pet.especie %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Raça:</h4>
                   <div class="dado">
-                     <p>Sem raça definida</p>
+                     <p><%= pet.raca %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Tamanho:</h4>
                   <div class="dado">
-                     <p>Médio porte</p>
+                     <p><%= pet.tamanho %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Cor:</h4>
                   <div class="dado">
-                     <p>Preto/marrom/branco</p>
+                     <p><%= pet.cor %></p>
                   </div>
                </div>
                <div class="campo">
-                  <h4>Data de nascimento:</h4>
+                  <h4>Idade</h4>
                   <div class="dado">
-                     <p>06/2020</p>
+                     <p><%= pet.idade %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Sexo:</h4>
                   <div class="dado">
-                     <p>Macho</p>
+                     <p><%= pet.sexo %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Instituição Responsável:</h4>
                   <div class="dado">
-                     <p>ONG Viva Pets</p>
+                     <p><%= pet.ongs_pets.razao_social %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>CNPJ:</h4>
                   <div class="dado">
-                     <p>12.345.678/0001-23</p>
+                     <p><%= pet.ongs_pets.cnpj %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Pessoa Responsável:</h4>
                   <div class="dado">
-                     <p>Lúcia Aparecida de Souza</p>
+                     <p><%= pet.ongs_pets.responsavel %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Telefone:</h4>
                   <div class="dado">
-                     <p>(21) 1234-5678</p>
+                     <p><%= pet.ongs_pets.telefone %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Endereço:</h4>
                   <div class="dado">
-                     <p>Rua Minharua, 123</p>
+                     <p><%= pet.ongs_pets.endereco %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Bairro:</h4>
                   <div class="dado">
-                     <p>Meubairro</p>
+                     <p><%= pet.ongs_pets.bairro %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Cidade:</h4>
                   <div class="dado">
-                     <p>Rio de Janeiro</p>
+                     <p><%= pet.ongs_pets.cidade %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Estado:</h4>
                   <div class="dado">
-                     <p>RJ</p>
+                     <p><%= pet.ongs_pets.estado %></p>
                   </div>
                </div>
                <a href="#"
@@ -115,303 +117,8 @@
                >
             </div>
          </section>
-         <section class="ficha">
-            <img src="../images/search/dog2.png" alt="Foto do pet" />
-
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Instituição Responsável:</h4>
-                  <div class="dado">
-                     <p>ONG Viva Pets</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>CNPJ:</h4>
-                  <div class="dado">
-                     <p>12.345.678/0001-23</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Pessoa Responsável:</h4>
-                  <div class="dado">
-                     <p>Lúcia Aparecida de Souza</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Telefone:</h4>
-                  <div class="dado">
-                     <p>(21) 1234-5678</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Endereço:</h4>
-                  <div class="dado">
-                     <p>Rua Minharua, 123</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Bairro:</h4>
-                  <div class="dado">
-                     <p>Meubairro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cidade:</h4>
-                  <div class="dado">
-                     <p>Rio de Janeiro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Estado:</h4>
-                  <div class="dado">
-                     <p>RJ</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="editar">Editar</button></a
-               >
-            </div>
-         </section>
-         <section class="ficha">
-            <img src="../images/search/dog3.png" alt="Foto do pet" />
-
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Instituição Responsável:</h4>
-                  <div class="dado">
-                     <p>ONG Viva Pets</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>CNPJ:</h4>
-                  <div class="dado">
-                     <p>12.345.678/0001-23</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Pessoa Responsável:</h4>
-                  <div class="dado">
-                     <p>Lúcia Aparecida de Souza</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Telefone:</h4>
-                  <div class="dado">
-                     <p>(21) 1234-5678</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Endereço:</h4>
-                  <div class="dado">
-                     <p>Rua Minharua, 123</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Bairro:</h4>
-                  <div class="dado">
-                     <p>Meubairro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cidade:</h4>
-                  <div class="dado">
-                     <p>Rio de Janeiro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Estado:</h4>
-                  <div class="dado">
-                     <p>RJ</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="editar">Editar</button></a
-               >
-            </div>
-         </section>
-         <section class="ficha">
-            <img src="../images/search/dog4.png" alt="Foto do pet" />
-
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Instituição Responsável:</h4>
-                  <div class="dado">
-                     <p>ONG Viva Pets</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>CNPJ:</h4>
-                  <div class="dado">
-                     <p>12.345.678/0001-23</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Pessoa Responsável:</h4>
-                  <div class="dado">
-                     <p>Lúcia Aparecida de Souza</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Telefone:</h4>
-                  <div class="dado">
-                     <p>(21) 1234-5678</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Endereço:</h4>
-                  <div class="dado">
-                     <p>Rua Minharua, 123</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Bairro:</h4>
-                  <div class="dado">
-                     <p>Meubairro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cidade:</h4>
-                  <div class="dado">
-                     <p>Rio de Janeiro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Estado:</h4>
-                  <div class="dado">
-                     <p>RJ</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="editar">Editar</button></a
-               >
-            </div>
-         </section>
+         <% }) %>
+         
       </main>
 
       <!-- FOOTER -->

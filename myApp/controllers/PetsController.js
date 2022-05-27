@@ -35,16 +35,7 @@ petStore: async(req,res)=>{
     return res.json(pet)
 },
 
-getPets: async(req,res)=>{
-    const { ongs_id } = req.params;
-    const ongs = await Ong.findByPk(ongs_id, {
-        include: {
-            association: 'ongs_pets'
-        }
-    });
 
-    return res.json(ongs)
-},
 
 search: async(req,res)=>{
     const { pet, tamanho, localizacao  } = req.body

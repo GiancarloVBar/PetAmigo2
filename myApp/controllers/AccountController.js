@@ -1,5 +1,6 @@
 const User = require('../models/Users')
 const Ong = require('../models/Ongs')
+const Pet = require('../models/Pets')
 
 const AccountController = {
     accountPfView: (req,res)=>{
@@ -232,29 +233,44 @@ const AccountController = {
         });
     },
 
-    petsOngView: (req, res) => {
+    petsOngView: async (req, res) => {
+        const { ongs_id } = req.params;
+       
+        const pets = await Pet.findAll({
+    
+                where: {
+                  ongs_id
+                },
+                include: {
+                    association: 'ongs_pets',
+                }
+            
+            })
+            
+        
         res.render('petsOng', {
             title: 'Pets ONG',
             usuario: req.session.usuario,
             ong: req.session.ong,
-            razao_social: req.session.ong.razao_social,
-            email: req.session.ong.email,
-            responsavel: req.session.ong.responsavel,
-            cnpj: req.session.ong.cnpj,
-            telefone: req.session.ong.telefone,
-            celular: req.session.ong.celular,
-            senha: req.session.ong.senha,
-            anos_de_funcionamento: req.session.ong.anos_de_funcionamento,
-            quantidade_animais: req.session.ong.quantidade_animais,
-            historia: req.session.ong.historia,
-            cep: req.session.ong.cep,
-            endereco: req.session.ong.endereco,
-            numero: req.session.ong.numero,
-            complemento: req.session.ong.complemento,
-            bairro: req.session.ong.bairro,
-            cidade: req.session.ong.cidade,
-            estado: req.session.ong.estado,
-            tipo_local: req.session.ong.tipo_local
+            // razao_social: req.session.ong.razao_social,
+            // email: req.session.ong.email,
+            // responsavel: req.session.ong.responsavel,
+            // cnpj: req.session.ong.cnpj,
+            // telefone: req.session.ong.telefone,
+            // celular: req.session.ong.celular,
+            // senha: req.session.ong.senha,
+            // anos_de_funcionamento: req.session.ong.anos_de_funcionamento,
+            // quantidade_animais: req.session.ong.quantidade_animais,
+            // historia: req.session.ong.historia,
+            // cep: req.session.ong.cep,
+            // endereco: req.session.ong.endereco,
+            // numero: req.session.ong.numero,
+            // complemento: req.session.ong.complemento,
+            // bairro: req.session.ong.bairro,
+            // cidade: req.session.ong.cidade,
+            // estado: req.session.ong.estado,
+            // tipo_local: req.session.ong.tipo_local,
+            pets
         })
     },
     petsOngEditarView: (req, res) => {
