@@ -196,8 +196,7 @@
 
 .form button {
     border: none;
-    border-radius: 10px;
-    height: 3rem;
+    border-radius: 50%;
     letter-spacing: 1px;
     width: 100%;
 }

@@ -4,31 +4,44 @@
   font-family: 'Baloo 2', "roboto";
   font-style: normal;
   color: #ffff;
+<<<<<<< HEAD
   margin-block-end: auto;
 
+=======
+  padding-bottom: 6rem;
+>>>>>>> f7549fec39338bc75b7cad82a8354ec14d0925da
 }
-
 .title {
   padding: 8rem 0 5rem 0;
   text-align: center;
   font-weight: 500;
 }
-
 .text {
   text-align: justify;
   padding-bottom: 6rem;
+<<<<<<< HEAD
   margin: 0 10rem 1rem 10rem;
+=======
+  margin: 0 10rem 50rem 10rem;
+>>>>>>> f7549fec39338bc75b7cad82a8354ec14d0925da
   font-weight: 300;
   line-height: 1.8;
   color: rgba(26, 81, 99, 255);
   font-size: 19px;
 }
+<<<<<<< HEAD
 
 span {
   color: #fc9685;
   font-size: 19px;
 }
 
+=======
+span {
+  color: #FC9685;
+  font-size: 19px;
+}
+>>>>>>> f7549fec39338bc75b7cad82a8354ec14d0925da
 .balao {
   background-color: #ffff;
   border-top: 20px;
@@ -37,7 +50,6 @@ span {
   margin-top: 20px;
   text-align: justify;
 }
-
 @media (max-width: 720px) {
   .text {
     margin: 0 2rem 0 2rem;
