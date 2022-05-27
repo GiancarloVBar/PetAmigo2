@@ -218,7 +218,7 @@
 
 .feedback {
     width: 90%;
-    height: 100px;
+    height: 120px;
     background: #1A5163;
     border-radius: 150px;
     margin: 20px auto;
@@ -227,6 +227,8 @@
 
 .feedback-content {
     color: #fff;
+    padding: 0.8rem;
+    /* margin-left: 0.8rem; */
 }
 
 .feedback-author, .feedback-date {

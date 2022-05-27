@@ -1,34 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&family=Roboto:wght@400;700&display=swap');
-
-:root {
-   --azul-escuro: #1a5163;
-   --azul-claro: #e1eff3;
-   --laranja-rosa: #fc9685;
-   --cinza-paragraph: #686868;
-
-   --fonte-baloo-2: 'Baloo 2', cursive;
-   --fonte-roboto: 'Roboto', sans-serif;
-
-   font-size: 62.5%; /*1 rem = 10px*/
-}
-
-* {
-   box-sizing: border-box;
-   border: 0;
-   outline: 0;
-   padding: 0;
-   margin: 0;
-}
-
-.h1 h1 {
-   font-family: var(--fonte-baloo-2);
-   font-weight: 800;
+.title h1 {
+   font-weight: bold;
    font-size: 1.8rem;
    text-align: center;
    letter-spacing: 10%;
    color: var(--azul-escuro);
-
-   margin-top: 2rem;
+   padding-top: 4rem;
 }
 
 .dados-animais-ong {
@@ -36,23 +12,21 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-
    width: 100%;
 }
 
-main .ficha {
+.dados-animais-ong .ficha {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    gap: 1rem;
-
    margin: 3.5rem 2rem;
    width: 50%;
    max-width: 300px;
 }
 
-main .ficha img {
+.dados-animais-ong .ficha img {
    display: flex;
    flex-direction: column;
    gap: 15px;
@@ -69,36 +43,29 @@ main .ficha img {
    gap: 0.6rem;
 }
 
-.ficha .dados .campo h4 {
+.ficha .dados .campo label {
    font-family: var(--fonte-baloo-2);
+   font-weight: bold;
    font-size: 1.2rem;
    line-height: 1.9rem;
    text-align: left;
    letter-spacing: 10%;
-
    color: #1a5163;
 }
 
 .ficha .dados .campo .dado {
    border: 0.5px solid var(--azul-escuro);
-
    display: flex;
    align-items: center;
    padding: 0.5rem;
-
    width: 25rem;
    height: 2.5rem;
-
    border-radius: 5px;
-}
-
-.ficha .dados .campo .dado p {
    color: var(--cinza-paragraph);
    font-family: var(--fonte-roboto);
    font-size: 1.2rem;
-   font-weight: 400;
+   font-weight: lighter;
    line-height: 1.4rem;
-   letter-spacing: 10%;
 }
 
 .ficha .editar {
