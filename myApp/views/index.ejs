@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./stylesheets/global.css">
-  <link rel="stylesheet" href="./stylesheets/home.css">
-  <link rel="stylesheet" href="./stylesheets/dropdown.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/home.css">
+  <link rel="stylesheet" href="/stylesheets/dropdown.css">
 
 
 
@@ -30,34 +30,62 @@
     </div>
     
     <!-- DROPDOWN MENU -->
-    <form class="form-home"  method="POST">
-    <%- include('./partials/menuPet') %>
-    <%- include('./partials/tamanhoPet') %>
-    <%- include('./partials/localizacao') %>
-    
-    <div class="search-container">
-        <button type="submit" class="search-box">
-                <img src="./images/lupa-icon.svg" alt="">
-                Buscar
-             </button> 
-    </div>
-</form>    
+    <form class="form-home" action="/search" method="POST">
+        <%- include('./partials/menuPet') %>
+        <%- include('./partials/tamanhoPet') %>
+        <%- include('./partials/localizacao') %>
+        
+        <!-- <select name="pet" id="pet">Selecione
+            <option value="gato">Gato</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="passaro">Pássaro</option>
+        </select>
+
+        <select name="tamanho" id="tamanho">Selecione
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select>
+
+        <select name="localizacao" id="localizacao">Selecione
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+        </select> -->
+
+
+
+        <div class="search-container">
+            <button type="submit" class="search-box">
+                    <img src="/images/lupa-icon.svg" alt="">
+                    Buscar
+                </button> 
+        </div>
+    </form>    
    
     <!-- Middle Container -->
     <div class="middle-container">
         <div class="pet-text-container">
+<<<<<<< HEAD
             <p  class="p1" >Por que usar o <span class="color">PetAmigo</span>?</p>
             <p class="p2">Infelizmente, no Brasil, todos os anos inúmeros animais são abandonados e negligenciados pelos seus donos. No entanto, como acreditamos que todos os animais merecem ter a hipótese de serem felizes ao lado de uma boa família, a PetAmigo pretende sensibilizar e incentivar a adoção responsável.</p>
+=======
+            <p class="p1" >Por que usar o <span class="color">PetAmigo</span>?</p>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Libero, obcaecati? Est eligendi provident officia quas. 
+                Deleniti nemo harum voluptatum eveniet dolorum amet animi 
+                optio, molestias dolorem. Animi sit corrupti et?</p>
+>>>>>>> b6bb86100e75659451900e6461a8df4ad6738361
         </div>
         <div class="pet-img-container">
-            <img class="star" src="./images/star.svg" alt="estrela">
-            <img class="star2 "src="./images/star.svg" alt="estrela">
-            <img src="./images/dog-home.svg" alt="imagem de cachorro">
+            <img class="star" src="/images/star.svg" alt="estrela">
+            <img class="star2" src="/images/star.svg" alt="estrela">
+            <img class="dog" src="/images/dog-home.svg" alt="imagem de cachorro">
         </div>
         <div class="trust-container">
             <div class="star-container">
                 <p class="p-trust-star">
-                    <img src="./images/big-star.svg" alt="estrela grande">Trustpilot
+                    <img src="/images/big-star.svg" alt="estrela grande">Trustpilot
                 </p>
             </div>
         
@@ -67,7 +95,7 @@
             </p>
             <p class="p-trust p-trust-4 color" >
                 <a href="https://br.trustpilot.com/">Visite o site
-                    <img src="./images/hand-icon.svg" alt="mãozinha">
+                    <img src="/images/hand-icon.svg" alt="mãozinha">
                 </a>
             </p>
         </div>
@@ -78,16 +106,23 @@
         </div>
     </div>
     
+    <h2 class="feedback-title">O que estão falando sobre nós:</h2>
     <div class="feedback">
-        <img src="./images/cara-estranho.svg" alt="cara estranho">
+        <img src="/images/cara-estranho.svg" alt="cara estranho">
+        <span class="feedback-content">
+            <img src="/images/feedback-stars.svg" alt="cara estranho">
+            <p class="feedback-message">"Adotei um pet pelo site e deu tudo certo, adorei!"</p>
+            <p class="feedback-author">Ricardo Luiz</p>
+            <time datetime="2021-12-16" class="feedback-date">16 de Dezembro de 2021</time>
+        </span>
     </div>
     
     <!--FOOTER -->
     <%- include('./partials/footer') %>
 
 
-    <script src="./javascripts/header.js"></script>
-    <script src="./javascripts/dropdown.js"></script>
+    <script src="/javascripts/header.js"></script>
+    <script src="/javascripts/dropdown.js"></script>
 
    
 </body>

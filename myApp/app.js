@@ -4,6 +4,8 @@ const session = require('express-session')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const methodOverride = require('method-override')
+const flash = require('connect-flash')
 
 const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
@@ -14,7 +16,7 @@ const signupRouter = require('./routes/signup')
 const footerRouter = require('./routes/footer')
 const accountRouter = require('./routes/account')
 const searchRouter = require('./routes/search')
-
+const ongsRouter = require('./routes/ongs')
 const usersRouter = require('./routes/users')
 
 const app = express()
@@ -33,11 +35,13 @@ app.use(
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
+app.use(methodOverride('_method'))
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(flash())
 
 app.use('/', indexRouter)
 app.use('/', footerRouter)
@@ -47,6 +51,7 @@ app.use('/contato', contactRouter)
 app.use('/about', aboutRouter)
 app.use('/search', searchRouter)
 app.use('/login', loginRouter)
+app.use('/ongs', ongsRouter)
 
 app.use('/logout', logoutRouter)
 
@@ -62,11 +67,12 @@ app.use(function (err, req, res, next) {
    // set locals, only providing error in development
    res.locals.message = err.message
    res.locals.error = req.app.get('env') === 'development' ? err : {}
-
+   console.log(err.status + ' - ' + err.message);
    // render the error page
    res.status(err.status || 500)
    res.render('error', {
-      usuario: req.session.usuario
+      usuario: req.session.usuario,
+      ong: req.session.ong
    })
 })
 

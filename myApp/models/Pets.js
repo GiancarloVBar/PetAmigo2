@@ -35,7 +35,13 @@ class pets extends Model {
             sexo: {
                type: DataTypes.STRING(1),
                allowNull: true
-            }
+            },
+            created_at: {
+               type: DataTypes.DATE,
+            },
+            updated_at: {
+               type: DataTypes.DATE,
+            },
          },
          {
             sequelize: connection,
@@ -43,13 +49,13 @@ class pets extends Model {
          }
       )
    }
-
-   static associate(models) {
+   static associate(models){
       this.belongsTo(models.ongs, {
-         foreignKey: 'ong_id',
-         as: 'ong_pets'
+          foreignKey: 'ongs_id',
+          as: 'ongs_pets'  
       })
    }
+   
 }
 
 module.exports = pets

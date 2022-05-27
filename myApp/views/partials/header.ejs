@@ -2,7 +2,7 @@
     <!-- LOGO -->
     <nav id="logo">
         <a href="/">
-            <img src="./images/pata-logo.svg" alt="logo">
+            <img src="/images/pata-logo.svg" alt="logo">
         </a>
         <span>PetAmigo</span>
     </nav>
@@ -22,6 +22,12 @@
 
                 <button type="button">
                     <a id="cadastrar" href="/accountpf">Minha Conta</a>
+                </button>
+            <% } else if (ong) {%>
+                <a id="entrar" href="/logout">Sair</a>
+
+                <button type="button">
+                    <a id="cadastrar" href="/accountong">Minha Conta</a>
                 </button>
             <% } else {%>
                 <a id="entrar" href="/login">Entrar</a>

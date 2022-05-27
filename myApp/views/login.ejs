@@ -7,8 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/login.css">
-    <link rel="stylesheet" href="./stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/global.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
@@ -41,15 +41,37 @@
                 <form action="/login/signin" method="post" id="login-form">
                     <div class="full-box">
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="email"
-                            placeholder="Digite o seu email"
-                            data-min-length="2" required>
+                        <input
+                        type="email"
+                        name="email"
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : '' %>" 
+                        id="email"
+                        placeholder="Digite o seu email"
+                        data-min-length="2"
+                        value="<%= locals.values && values.email ? values.email : '' %>"
+                         >
+                         <% if(locals.errors && errors.email) { %>
+                            <span class="invalid-feedback">
+                                <%= errors.email.msg %>
+                            </span>
+                         <% } %>
                     </div>
 
                     <div class="full-box">
                         <label for="senha">Senha:</label>
-                        <input type="password" name="senha" id="senha"
-                            placeholder="Digite a sua senha" required>
+                        <input
+                         type="password"
+                         name="senha"
+                         id="senha"
+                         placeholder="Digite a sua senha"
+                         class="form-control <%= locals.errors && errors.senha ? 'is-invalid' : '' %>" 
+                         value="<%= locals.values && values.senha ? values.senha : '' %>"
+                         >
+                         <% if(locals.errors && errors.senha) { %>
+                            <span class="invalid-feedback">
+                                <%= errors.senha.msg %>
+                            </span>
+                         <% } %>
                     </div>
 
                     <div class="full-box d-flex end-center">
@@ -61,12 +83,12 @@
         </div>
         <div class="form-right">
             <div class="border-dog"></div>
-            <img src="./images/dog-login.svg" alt="Cachorro vestido com uma blusa amarela">
+            <img src="/images/cat-login.png" alt="Cachorro vestido com uma blusa amarela">
         </div>
     </section>
 
     <%- include('./partials/footer') %>
 
-    <script src="./javascripts/header.js"></script>
+    <script src="/javascripts/header.js"></script>
 </body>
 </html>
