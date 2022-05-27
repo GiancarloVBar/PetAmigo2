@@ -3,196 +3,56 @@
   box-sizing: border-box;
 }
 
-.space{
-  height: 70px;
-  background-color: #1A5163;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.container{
+.container {
   background-color: #1a5163;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 95px;
 }
-
 
 .select-box {
   display: flex;
   width: 70%;
   max-width: 273px;
   flex-direction: column;
-  
 }
 
-.select-box .options-container {
- background: #E1EFF3;
-  color: #1a5163;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-
-  order: 1;
-} 
-
-.select-box .options-container2 {
- background: #E1EFF3;
-  color: #1a5163;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-  order: 1;
-} 
-
-.select-box .options-container3 {
- background: #E1EFF3;
-  color: #1a5163;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-  order: 1;
-}
-
-.selected, .selected2, .selected3 {
-  background: #E1EFF3;
-  color: #1a5163;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  position: relative;  
-  order: 0;
-}
-
-.selected::after {
-  content: "";
-  /* background: url("../images/seta-icon.svg"); */
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-
-  transition: all 0.4s;
-}
-.selected2::after {
-  content: "";
-  /* background: url("../images/seta-icon.svg"); */
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-  transition: all 0.4s;
-}
-
-.selected3::after {
-  content: "";
-  /* background: url("../images/seta-icon.svg"); */
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-  transition: all 0.4s;
-}
-
-.select-box .options-container.ativo {
-  max-height: 140px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
-.select-box .options-container2.ativo {
-  max-height: 140px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
-.select-box .options-container3.ativo {
-  max-height: 140px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
- .seta {
-  transform: rotateX(180deg);
-  top: -6px;
-}
-
-/* .select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: #0d141f;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
-  border-radius: 0 8px 8px 0;
-} */
-
-.select-box, .option, .option2, .option3,
-.selected, .selected2, .selected3 {
+.select-box,
+.selected {
   padding: 5px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
 
-.select-box .option:hover {
-  background: #414b57;
+.selected {
+  padding-left: 30px;
+  background: #E1EFF3;
+  color: #1a5163;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  position: relative;
+  order: 0;
+  height: 34px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('/images/seta-icon.svg  ') no-repeat #eeeeee;
+  background-position: 255px center;
 }
 
-.select-box .option2:hover {
-  background: #414b57;
-}
-
-.select-box .option3:hover {
-  background: #414b57;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  display: none;
-}
-
-.select-box .option2 .radio {
-  display: none;
-}
-
-.select-box .option3 .radio {
-  display: none;
-}
-
-.container p{
+.container p {
   font-size: 14px;
   line-height: 16.4px;
-  letter-spacing: 10%;
   color: #fff;
   margin-top: 25px;
 }
 
-.par{
+.pet-name {
   display: flex;
   width: 68%;
   max-width: 273px;

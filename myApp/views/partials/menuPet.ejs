@@ -1,31 +1,14 @@
 <div class="container pet">
-  <div class="par">
-  <p>Pet</p>
-</div>
+  <div class="pet-name">
+    <p>Pet</p>
+  </div>
   <div class="select-box">
-      <div class="options-container">
-          <% menuPet.forEach(item => { %>
-          <div class="option">
-          <img src="./images/pet-icon.svg" alt="icone animal">
-        <input
-          type="radio"
-          class="radio"
-          id="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-          name="pet"
-          value="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"
-        />
-        <label for="<%= item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")%>"><%= item %></label>
-      <img class="hidden" src="./images/seta-icon.svg" alt="icone seta">
-
-      </div>
-      <% });%> 
-    </div>  
-
-    <div class="selected">
-      <img src="./images/pet-icon.svg" alt="icone animal">
-      Selecionar
-      <img class="imgSeta" src="./images/seta-icon.svg" alt="icone seta">
-
-    </div>
+    <select class="selected" name="pet" id="pet">
+      <option value="">&#128062; Selecionar</option>
+      <option value="gato">🐈 Gato</option>
+      <option value="cachorro">🐕 Cachorro</option>
+      <option value="roedor">&#128001; Roedor</option>
+      <option value="passaro">&#128038; Pássaro</option>
+    </select>
   </div>
 </div>
