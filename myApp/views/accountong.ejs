@@ -41,75 +41,77 @@
                     <div class="row col-sm-12">
                         <div class="form-group">
                             <label for="razaoSocial">Nome ou Razão Social:</label>
-                            <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required value="<%= razao_social %>">
+                            <input type="text" name="razaoSocial" id="razaoSocial" readonly data-min-length="2" required
+                                value="<%= razao_social %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-6">
                             <label for="responsavel">Nome Completo do Responsável:</label>
-                            <input type="text" name="responsavel" id="responsavel" required value="<%= responsavel %>">
+                            <input type="text" name="responsavel" id="responsavel" readonly required
+                                value="<%= responsavel %>">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="cnpj">CNPJ:</label>
-                            <input type="text" name="cnpj" id="cnpj" required value="<%= cnpj %>">
+                            <input type="text" name="cnpj" id="cnpj" readonly required value="<%= cnpj %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="telefone">Telefone:</label>
-                            <input type="phone" name="telefone" id="telefone"  value="<%= telefone %>">
+                            <input type="phone" name="telefone" id="telefone" readonly value="<%= telefone %>">
                         </div>
 
                         <div class="col-sm-5">
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" required value="<%= email %>">
+                            <input type="email" name="email" id="email" readonly required value="<%= email %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password" id="password" required value="<%= senha %>">
+                            <input type="password" name="password" id="password" readonly required value="<%= senha %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-2">
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" id="cep" required value="<%= cep %>">
+                            <input type="text" name="cep" id="cep" readonly required value="<%= cep %>">
                         </div>
 
                         <div class="col-sm-8">
                             <label for="rua">Endereço:</label>
-                            <input type="text" name="rua" id="rua" required value="<%= endereco %>">
+                            <input type="text" name="rua" id="rua" readonly required value="<%= endereco %>">
                         </div>
 
                         <div class="col-sm-2">
                             <label for="numero">Número:</label>
-                            <input type="text" name="numero" id="numero" required value="<%= numero %>">
+                            <input type="text" name="numero" id="numero" readonly required value="<%= numero %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-2">
                             <label for="complemento">Complemento:</label>
-                            <input type="text" name="complemento" id="complemento" value="<%= complemento %>">
+                            <input type="text" name="complemento" id="complemento" readonly value="<%= complemento %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" required value="<%= bairro %>">
+                            <input type="text" name="bairro" id="bairro" readonly required value="<%= bairro %>">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
+                            <input type="text" name="cidade" id="cidade" readonly required value="<%= cidade %>">
                         </div>
 
                         <div class="col-sm-2 estado">
                             <label for="UF">Estado:</label>
-                            <select id="UF" name="UF">
+                            <select disabled id="UF" name="UF">
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -145,51 +147,62 @@
                     <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-6">
                             <label for="local">Tipo de Local:</label>
-                            <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara" value="<%= tipo_local %>">
+                            <input type="text" name="local" id="local" readonly required placeholder="Ex: Casa, Chácara"
+                                value="<%= tipo_local %>">
                         </div>
 
                         <div class="col-sm-6">
                             <label for="funcionamento">Há quantos anos a sua ONG funciona?</label>
-                            <input type="text" name="funcionamento" id="funcionamento" required value="<%= anos_de_funcionamento %>">
+                            <input type="text" name="funcionamento" id="funcionamento" readonly required
+                                value="<%= anos_de_funcionamento %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12">
                         <div class="form-group">
                             <label for="animais">Quantos e quais animais a ONG possui?</label>
-                            <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos" value="<%= quantidade_animais %>">
+                            <input type="text" name="animais" id="animais" readonly required
+                                placeholder="Ex: Dez cachorros e dez gatos" value="<%= quantidade_animais %>">
                         </div>
                     </div>
 
                     <div class="row col-sm-12 mb-4">
                         <div class="form-group">
                             <label for="historia">Nos conte a história da ONG</label>
-                            <textarea class="form-control" id="historia" rows="12"><%= historia %></textarea>
+                            <textarea class="form-control" id="historia" readonly rows="12"><%= historia %></textarea>
                         </div>
                     </div>
 
-                    <button class="col-sm-2 mb-2 mt-3 btn btn-light" type="button" data-toggle="modal" data-target="#editModal">
+                    <button class="col-sm-2 mb-2 mt-3 btn btn-light" type="button" data-toggle="modal"
+                        data-target="#editModal">
                         <img src="/images/edit_button.svg" alt="Alterar dados">
                         Alterar dados
                     </button>
-                    <button class="col-sm-2 mb-2 btn btn-light" type="button" data-toggle="modal" data-target="#passwordModal">
+                    <button class="col-sm-2 mb-2 btn btn-light" type="button" data-toggle="modal"
+                        data-target="#passwordModal">
                         <img src="/images/password_button.svg" alt="Alterar senha">
                         Alterar senha
                     </button>
-                    <button class="col-sm-2 mb-2 btn btn-light" type="button" data-toggle="modal" data-target="#deleteModal">
+                    <button class="col-sm-2 mb-2 btn btn-light" type="button" data-toggle="modal"
+                        data-target="#deleteModal">
                         <img src="/images/delete_button.svg" alt="Excluir conta">
                         Excluir conta
                     </button>
-                    <button class="col-sm-2 btn btn-orange" type="button">
-                        Ver pets da ONG
-                    </button>
-                    <button class="col-sm-2 btn btn-orange" type="button">
-                        Cadastrar pet
-                    </button>
+                    <a href="/accountong/pets">
+                        <button class="col-sm-2 mb-2 btn btn-orange" type="button">
+                            Ver pets da ONG
+                        </button>
+                    </a>
+                    <a href="/accountong/petsCadastrar">
+                        <button class="col-sm-2 btn btn-orange" type="button">
+                            Cadastrar pet
+                        </button>
+                    </a>
                 </form>
             </div>
             <form action="/accountong/edit/<%= ong.id %>?_method=PUT" method="post" id="login-form" class="form">
-                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -201,64 +214,66 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="razaoSocial">Nome ou Razão Social:</label>
-                                    <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required value="<%= razao_social %>">
+                                    <input type="text" name="razaoSocial" id="razaoSocial" data-min-length="2" required
+                                        value="<%= razao_social %>">
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="responsavel">Nome Completo do Responsável:</label>
-                                    <input type="text" name="responsavel" id="responsavel" required value="<%= responsavel %>">
+                                    <input type="text" name="responsavel" id="responsavel" required
+                                        value="<%= responsavel %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="cnpj">CNPJ:</label>
                                     <input type="text" name="cnpj" id="cnpj" required value="<%= cnpj %>">
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="telefone">Telefone:</label>
-                                    <input type="phone" name="telefone" id="telefone"  value="<%= telefone %>">
+                                    <input type="phone" name="telefone" id="telefone" value="<%= telefone %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="email">Email:</label>
                                     <input type="email" name="email" id="email" required value="<%= email %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="password">Senha:</label>
                                     <input type="password" name="password" id="password" required value="<%= senha %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="cep">CEP:</label>
                                     <input type="text" name="cep" id="cep" required value="<%= cep %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="rua">Endereço:</label>
                                     <input type="text" name="rua" id="rua" required value="<%= endereco %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="numero">Número:</label>
                                     <input type="text" name="numero" id="numero" required value="<%= numero %>">
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="complemento">Complemento:</label>
                                     <input type="text" name="complemento" id="complemento" value="<%= complemento %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="bairro">Bairro:</label>
                                     <input type="text" name="bairro" id="bairro" required value="<%= bairro %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="cidade">Cidade:</label>
                                     <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
                                 </div>
-        
+
                                 <div class="form-group estado">
                                     <label for="UF">Estado:</label>
                                     <select id="UF" name="UF">
@@ -292,22 +307,25 @@
                                         <option value="TO">Tocantins</option>
                                     </select>
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="local">Tipo de Local:</label>
-                                    <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara" value="<%= tipo_local %>">
+                                    <input type="text" name="local" id="local" required placeholder="Ex: Casa, Chácara"
+                                        value="<%= tipo_local %>">
                                 </div>
-        
+
                                 <div class="form-group">
                                     <label for="funcionamento">Há quantos anos a sua ONG funciona?</label>
-                                    <input type="text" name="funcionamento" id="funcionamento" required value="<%= anos_de_funcionamento %>">
+                                    <input type="text" name="funcionamento" id="funcionamento" required
+                                        value="<%= anos_de_funcionamento %>">
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="animais">Quantos e quais animais a ONG possui?</label>
-                                    <input type="text" name="animais" id="animais" required placeholder="Ex: Dez cachorros e dez gatos" value="<%= quantidade_animais %>">
+                                    <input type="text" name="animais" id="animais" required
+                                        placeholder="Ex: Dez cachorros e dez gatos" value="<%= quantidade_animais %>">
                                 </div>
-            
+
                                 <div class="form-group">
                                     <label for="historia">Nos conte a história da ONG</label>
                                     <textarea class="form-control" id="historia" rows="12"><%= historia %></textarea>
@@ -322,7 +340,8 @@
                 </div>
             </form>
             <form action="/accountong/password/<%= ong.id %>?_method=PUT" method="post" id="login-form" class="form">
-                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -354,7 +373,8 @@
                 </div>
             </form>
             <form action="/accountong/delete/<%= ong.id %>?_method=DELETE" method="post" id="login-form">
-                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">

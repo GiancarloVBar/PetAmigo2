@@ -202,6 +202,12 @@
     width: 100%;
 }
 
+.form a {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+}
+
 .form .fisica, .form .ong {
     border-radius: 50%;
     height: 2.5rem;
