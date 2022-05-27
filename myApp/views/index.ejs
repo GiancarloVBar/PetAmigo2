@@ -30,18 +30,38 @@
     </div>
     
     <!-- DROPDOWN MENU -->
-    <form class="form-home"  method="POST">
-    <%- include('./partials/menuPet') %>
-    <%- include('./partials/tamanhoPet') %>
-    <%- include('./partials/localizacao') %>
-    
-    <div class="search-container">
-        <button type="submit" class="search-box">
-                <img src="./images/lupa-icon.svg" alt="">
-                Buscar
-             </button> 
-    </div>
-</form>    
+    <form class="form-home" action="/search" method="POST">
+        <!-- <%- include('./partials/menuPet') %>
+        <%- include('./partials/tamanhoPet') %>
+        <%- include('./partials/localizacao') %> -->
+        
+        <select name="pet" id="pet">Selecione
+            <option value="gato">Gato</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="passaro">Pássaro</option>
+        </select>
+
+        <select name="tamanho" id="tamanho">Selecione
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select>
+
+        <select name="localizacao" id="localizacao">Selecione
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+        </select>
+
+
+
+        <div class="search-container">
+            <button type="submit" class="search-box">
+                    <img src="./images/lupa-icon.svg" alt="">
+                    Buscar
+                </button> 
+        </div>
+    </form>    
    
     <!-- Middle Container -->
     <div class="middle-container">

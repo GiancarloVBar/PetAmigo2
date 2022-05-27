@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <h1>Funcionalidade em TESTE!</h1>
+    <ul>
+        <% Users.forEach(user => { %>
+            
+            <li>Usuário: <%= user.nome %> </li>
+            <li>Id: <%= user.id %> </li>
+            <li>Email: <%= user.email %> </li>
+            <li>Senha: <%= user.senha %> </li>
+            <li>Endereço:</li>
+            <li>CEP: <%= user.cep %></li>
+            <li>Rua: <%= user.endereco %></li>
+            <li>Número: <%= user.numero %></li>
+            <li>Cidade: <%= user.cidade %></li>
+            <br>
+       <% }) %>
+    </ul>
+</body>
+</html>

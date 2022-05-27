@@ -208,7 +208,10 @@ HEADER - STYLES
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 13px;
-    /* display: none; */
+}
+
+#menu a{
+color: #ffffff;
 }
 
 #menu a:visited{

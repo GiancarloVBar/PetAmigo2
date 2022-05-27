@@ -2,16 +2,23 @@ const express = require('express');
 const router = express.Router();
 const SignupController = require('../controllers/SignupController');
 const UsersController = require('../controllers/UsersController');
-const AddressController = require('../controllers/AddressController');
-const { checkUserPermission } = require('../middlewares/UserValidator');
+const OngController = require('../controllers/OngController');
+const PetsController = require('../controllers/PetsController');
+const pfFormValidator = require('../middlewares/pfFormValidator');
+const OngFormValidator = require('../middlewares/ongFormValidator');
+
+
 
 /* GET home page. */
 router.get('/signuppf', SignupController.signuppfView);
-router.post('/signuppf', UsersController.store);
-
-router.post('/signuppf/:id', checkUserPermission, AddressController.address_store);
-router.get('/signuppf/:id', checkUserPermission, AddressController.index);
+router.post('/signuppf',pfFormValidator, UsersController.store);
 
 router.get('/signupong', SignupController.signupongView);
+router.get('/signupong/:ongs_id/getOngs', PetsController.getPets);
+router.post('/signupong', OngFormValidator, OngController.store);
+
+router.post('/signupong/:ongs_id/pets', PetsController.petStore);
+
+
 
 module.exports = router;

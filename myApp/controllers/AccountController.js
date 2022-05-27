@@ -23,15 +23,64 @@ const AccountController = {
             alergias: req.session.usuario.alergias,
             criancas: req.session.usuario.criancas,
             outros_pets: req.session.usuario.outros_pets,
-            cep: req.session.usuario.addresses[0]?.cep,
-            endereco: req.session.usuario.addresses[0]?.endereco,
-            numero: req.session.usuario.addresses[0]?.numero,
-            complemento: req.session.usuario.addresses[0]?.complemento,
-            bairro: req.session.usuario.addresses[0]?.bairro,
-            cidade: req.session.usuario.addresses[0]?.cidade,
-            estado: req.session.usuario.addresses[0]?.estado,
-            tipo_local: req.session.usuario.addresses[0]?.tipo_local
+            cep: req.session.usuario.cep,
+            endereco: req.session.usuario.endereco,
+            numero: req.session.usuario.numero,
+            complemento: req.session.usuario.complemento,
+            bairro: req.session.usuario.bairro,
+            cidade: req.session.usuario.cidade,
+            estado: req.session.usuario.estado,
+            tipo_local: req.session.usuario.tipo_local,
         });
+    },
+    async updatePfaccount(req,res) {
+        
+            const { id } = req.params;
+            
+            const {
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            } = req.body;
+    
+            await User.update({
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            },
+            {
+              where: {id}
+            });
+            
+            res.redirect('/accountpf')
     },
     async updatePasswordAccountpf(req, res) {
         const { id } = req.params;
@@ -86,15 +135,25 @@ const AccountController = {
             anos_de_funcionamento: req.session.ong.anos_de_funcionamento,
             quantidade_animais: req.session.ong.quantidade_animais,
             historia: req.session.ong.historia,
-            cep: req.session.ong.address?.cep,
-            endereco: req.session.ong.address?.endereco,
-            numero: req.session.ong.address?.numero,
-            complemento: req.session.ong.address?.complemento,
-            bairro: req.session.ong.address?.bairro,
-            cidade: req.session.ong.address?.cidade,
-            estado: req.session.ong.address?.estado,
-            tipo_local: req.session.ong.address?.tipo_local
+            cep: req.session.ong.cep,
+            endereco: req.session.ong.endereco,
+            numero: req.session.ong.numero,
+            complemento: req.session.ong.complemento,
+            bairro: req.session.ong.bairro,
+            cidade: req.session.ong.cidade,
+            estado: req.session.ong.estado,
+            tipo_local: req.session.ong.tipo_local
         });
+    },
+
+    petsOngView: (req, res) => {
+        res.render('petsOng', { title: 'Pets ONG' })
+    },
+    petsOngEditarView: (req, res) => {
+    res.render('petsOngEditar', { title: 'Pets ONG Editar' })
+    },
+    petsOngCadastrarView: (req, res) => {
+    res.render('petsOngCadastrar', { title: 'Pets ONG Cadastrar' })
     }
 }
 
