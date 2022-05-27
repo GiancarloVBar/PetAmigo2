@@ -199,6 +199,15 @@
     border-radius: 10px;
     height: 3rem;
     letter-spacing: 1px;
+}
+
+.form .btn {
+    width: 100%
+}
+
+.form a {
+    text-decoration: none;
+    color: #fff;
     width: 100%;
 }
 
