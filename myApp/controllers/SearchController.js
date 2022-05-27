@@ -1,4 +1,9 @@
-const  { siglas, nomeEstados, menuTamanho, menuPet }  = require('../public/javascripts/info')
+const {
+   siglas,
+   nomeEstados,
+   menuTamanho,
+   menuPet
+} = require('../public/javascripts/info')
 
 const SearchController = {
    searchView: (req, res) => {

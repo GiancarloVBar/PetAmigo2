@@ -10,6 +10,7 @@
    </head>
    <body>
       <!-- HEADER -->
+      <%- include('./partials/header') %>
 
       <!-- PESQUISA DOS ANIMAIS -->
       <!-- ESPAÇO -->
@@ -25,8 +26,6 @@
 
       <!-- DROPDOWN MENU -->
       <form class="form-home" method="POST">
-
-
          <div class="search-container">
             <button type="submit" class="search-box">
                <img src="./images/lupa-icon.svg" alt="" />
@@ -130,12 +129,16 @@
                      <p>RJ</p>
                   </div>
                </div>
-               <a href="#"><button type="button" class="adotar">Adotar</button></a>
+               <a href="#"
+                  ><button type="button" class="adotar">Adotar</button></a
+               >
             </div>
          </section>
       </main>
       <!-- FOOTER -->
       <%- include('./partials/footer') %>
-      <script src="./javascripts/header.js"></script>
+      <script src="/javascripts/header.js"></script>
+      <script src="/javascripts/info.js"></script>
+      <script src="/javascripts/dropdown.js"></script>
    </body>
 </html>

@@ -38,6 +38,7 @@
    padding-inline: 10px;
 
    position: fixed;
+   top: 0;
    z-index: 200;
 
    overflow: overlay;
@@ -140,11 +141,13 @@
 /* MENU HANBURGER */
 #btn-mobile {
    background: none;
+   cursor: pointer;
 }
 
 #btn-mobile-x {
    background: none;
    display: none;
+   cursor: pointer;
 }
 
 #header.on #btn-mobile img {
@@ -290,6 +293,7 @@ RESPONSIVIDADE - 376px a 650px - MOBILE L
 */
 
 @media (min-width: 376px) {
+
    section.blue-index {
       height: 235px;
    }
