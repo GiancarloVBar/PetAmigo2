@@ -14,8 +14,34 @@
 
       <!-- PESQUISA DOS ANIMAIS -->
  
+      <!-- ESPAÇO -->
+      <div class="space"></div>
+
+      <div class="top-container">
+         <h1>Pet Amigo</h1>
+         <p>
+            Adote um pet <br />
+            para o seu lar
+         </p>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <!-- <form class="form-home" method="POST"> -->
+         
+         
+
+         <div class="search-container">
+            <button type="submit" class="search-box">
+               <img src="./images/lupa-icon.svg" alt="" />
+               Buscar
+            </button>
+         </div>
+      </form>
       <!--FICHA DOS ANIMAIS-->
       <main class="dados-animais">
+         
+         <% pets.forEach( pet =>{ %>
+
          <section class="ficha">
             <img src="./images/search/dog.png" alt="Foto do pet" />
 
@@ -23,43 +49,43 @@
                <div class="campo">
                   <h4>Nome:</h4>
                   <div class="dado">
-                     <p>Bob</p>
+                     <p><%= pet.nome %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Espécie:</h4>
                   <div class="dado">
-                     <p>Cachorro</p>
+                     <p><%= pet.especie %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Raça:</h4>
                   <div class="dado">
-                     <p>Sem raça definida</p>
+                     <p><%= pet.raca %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Tamanho:</h4>
                   <div class="dado">
-                     <p>Médio porte</p>
+                     <p><%= pet.tamanho %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Cor:</h4>
                   <div class="dado">
-                     <p>Preto/marrom/branco</p>
+                     <p><%= pet.cor %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Data de nascimento:</h4>
                   <div class="dado">
-                     <p>06/2020</p>
+                     <p><%= pet.nascimento %></p>
                   </div>
                </div>
                <div class="campo">
                   <h4>Sexo:</h4>
                   <div class="dado">
-                     <p>Macho</p>
+                     <p><%= pet.sexo %></p>
                   </div>
                </div>
                <a href="#"
@@ -67,9 +93,9 @@
                >
             </div>
          </section>
-         <section class="ficha">
-            <img src="./images/search/dog2.png" alt="Foto do pet" />
+         <% }) %>
 
+<<<<<<< HEAD
             <div class="dados">
                <div class="campo">
                   <h4>Nome:</h4>
@@ -222,6 +248,10 @@
                >
             </div>
          </section>
+=======
+         
+
+>>>>>>> 15133dc6af0dfa156a4061373d6824c47fb68ce1
       </main>
       <!-- FOOTER -->
       <%- include('./partials/footer') %>

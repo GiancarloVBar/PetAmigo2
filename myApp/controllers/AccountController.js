@@ -37,6 +37,89 @@ const AccountController = {
    },
    async updatePfaccount(req, res) {
       const { id } = req.params
+    accountpfView: (req,res)=>{
+        erro = req.session.erro;
+        sucesso = req.session.sucesso;
+        delete req.session.sucesso;
+        delete req.session.erro;
+        res.render('accountpf', {
+            title: 'Minha Conta - PF',
+            usuario: req.session.usuario,
+            ong: req.session.ong,
+            erro,
+            sucesso,
+            nome: req.session.usuario.nome,
+            email: req.session.usuario.email,
+            cpf: req.session.usuario.cpf,
+            nascimento: new Date(req.session.usuario.nascimento).toJSON().slice(0, 10),
+            celular: req.session.usuario.celular,
+            senha: req.session.usuario.senha,
+            profissao: req.session.usuario.profissao,
+            alergias: req.session.usuario.alergias,
+            criancas: req.session.usuario.criancas,
+            outros_pets: req.session.usuario.outros_pets,
+            cep: req.session.usuario.cep,
+            endereco: req.session.usuario.endereco,
+            numero: req.session.usuario.numero,
+            complemento: req.session.usuario.complemento,
+            bairro: req.session.usuario.bairro,
+            cidade: req.session.usuario.cidade,
+            estado: req.session.usuario.estado,
+            tipo_local: req.session.usuario.tipo_local,
+        });
+    },
+    async updatePfaccount(req,res) {
+        
+            const { id } = req.params;
+            
+            const {
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            } = req.body;
+    
+            await User.update({
+                nome,
+                email,
+                cpf,
+                nascimento,
+                celular,
+                profissao,
+                alergias,
+                criancas,
+                outros_pets,
+                cep,
+                endereco,
+                numero,
+                complemento,
+                bairro, 
+                cidade,
+                estado,
+                tipo_local
+            },
+            {
+              where: {id}
+            });
+            
+            res.redirect('/accountpf')
+    },
+    async updatePasswordAccountpf(req, res) {
+        const { id } = req.params;
+        const {senha_antiga, nova_senha, confirmar_senha} = req.body;
 
       const {
          nome,
