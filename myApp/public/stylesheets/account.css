@@ -196,9 +196,15 @@
 
 .form button {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
+    height: 3rem;
     letter-spacing: 1px;
     width: 100%;
+}
+
+.form .fisica, .form .ong {
+    border-radius: 50%;
+    height: 2.5rem;
 }
 
 .btn-light:hover {
