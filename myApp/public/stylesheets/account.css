@@ -180,8 +180,8 @@
     border-color: #1A5163;
 }
 
-.form input[type="submit"], .modal-footer button[type="submit"] {
-    background-color: #FC9685;
+.form input[type="submit"], .modal-footer button[type="submit"], .btn-orange {
+    background: #FC9685;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -189,8 +189,9 @@
     letter-spacing: 1px;
 }
 
-.form input[type="submit"]:hover, .modal-footer button[type="submit"]:hover {
+.form input[type="submit"]:hover, .modal-footer button[type="submit"]:hover, .btn-orange:hover {
     background: linear-gradient(to right, #ff4225, #fc6048);
+    color: #fff;
 }
 
 .form button {
@@ -201,11 +202,11 @@
     width: 100%;
 }
 
-.form button a:hover, .form button:hover {
+.btn-light:hover {
     color: #38a9cf !important;
 }
 
-.form button a, .form button {
+.btn-light {
     color: #1A5163;
 }
 

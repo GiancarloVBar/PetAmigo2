@@ -6,7 +6,7 @@ const { validationResult } = require('express-validator');
 module.exports = {
      store: async(req,res) => {
         const errors = validationResult(req);
-        
+
         if(!errors.isEmpty()){
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
