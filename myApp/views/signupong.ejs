@@ -334,7 +334,7 @@
                             class="<%= locals.errors && errors.anos_de_funcionamento? 'is-invalid' : '' %>"
                             value="<%= locals.values && values.anos_de_funcionamento? values.anos_de_funcionamento: '' %>"
                             >
-                            <% if(locals.errors && errors.anos_de_funcionamento { %>
+                            <% if(locals.errors && errors.anos_de_funcionamento) { %>
                                 <span class="invalid-feedback">
                                     <%= errors.anos_de_funcionamento.msg %>
                                 </span>
