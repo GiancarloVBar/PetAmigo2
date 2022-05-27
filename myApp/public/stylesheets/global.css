@@ -21,7 +21,11 @@
    text-decoration: none;
 }
 
-/*------------------HEADER-------------------*/
+/* 
+------------------------------------------------------
+HEADER
+------------------------------------------------------
+*/
 
 #header {
    display: flex;
@@ -177,195 +181,11 @@ a {
 
 /* 
 ------------------------------------------------------
-FOOTER - STYLES
+RESPONSIVIDADE HEADER
 ------------------------------------------------------
 */
-
-footer {
-   width: 100%;
-}
-
-footer > div.stroke {
-   background-color: #1a5163;
-   height: 0.3px;
-   width: 95vw;
-   margin: auto;
-}
-
-footer > div.footer-menu {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-
-   margin-block: 20px;
-   gap: 20px;
-}
-
-footer nav {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-}
-
-footer .footer-menu nav h3 {
-   font-family: var(--fonte-roboto);
-   font-weight: 700;
-   font-size: 1.2rem;
-   line-height: 2.2rem;
-   color: var(--azul-escuro);
-}
-
-footer .footer-menu nav ul li a {
-   font-family: var(--fonte-roboto);
-   font-weight: 400;
-   font-size: 1.2rem;
-   line-height: 2.2rem;
-   color: var(--azul-escuro);
-}
-
-footer ul {
-   list-style: none;
-}
-
-footer .footer-menu nav ul li {
-   text-align: center;
-}
-
-footer .footer-menu nav:nth-child(3) ul {
-   display: flex;
-   gap: 10px;
-}
-
-footer .bottom-footer {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-
-   margin: 15px 10px;
-   text-align: center;
-}
-
-.bottom-footer #com-amor {
-   font-family: var(--fonte-roboto);
-   font-weight: 400;
-   font-size: 0.8rem;
-   line-height: 0.9rem;
-   letter-spacing: 0.1rem;
-}
-
-.bottom-footer #com-amor img {
-   position: relative;
-   top: 3px;
-}
-
-.bottom-footer #copy {
-   font-family: var(--fonte-baloo-2);
-   font-weight: 400;
-   font-size: 0.8rem;
-   line-height: 1rem;
-}
-
-/* *************************************
-RESPONSIVIDADES
-************************************* */
-
 /* 
-RESPONSIVIDADE - 320px a 375px - MOBILE S
-*/
-
-/* @media (min-width: 320px) {
-   footer > div.footer-menu {
-      text-indent: 12%;
-   }
-
-   footer > div.footer-menu > nav > h3 {
-      font-size: 10px;
-   }
-
-   footer > div.footer-menu > nav > ul > li > a {
-      font-size: 9px;
-   }
-
-   footer > div.bottom-footer /* > div.footer-logo  > img {
-      width: 15px;
-   }
-
-   footer > div.bottom-footer > span {
-      font-size: 12px;
-   }
-
-   footer > div.bottom-footer > p {
-      font-size: 7px;
-   }
-} */
-
-/* 
-RESPONSIVIDADE - 376px a 650px - MOBILE L
-*/
-
-@media (min-width: 376px) {
-   section.blue-index {
-      height: 235px;
-   }
-
-   section.blue-index > div.title > h1 {
-      font-size: 26px;
-   }
-
-   section.blue-index > div.title > h2 {
-      font-size: 20px;
-   }
-
-   section.blue-index > div.title > p {
-      font-size: 15px;
-   }
-
-   section.blue-index > div.search {
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-      height: 33px;
-   }
-
-   .pet > form > select,
-   .estado > form > select,
-   .tamanho > form > select {
-      font-size: 12px;
-      border-radius: 6px;
-   }
-
-   /* main */
-
-   footer > div.footer-menu {
-      text-indent: 13%;
-   }
-
-   footer > div.footer-menu > nav > h3 {
-      font-size: 11px;
-   }
-
-   footer > div.footer-menu > nav > ul > li > a {
-      font-size: 10px;
-   }
-
-   footer > div.bottom-footer /* > div.footer-logo */ > img {
-      width: 17px;
-   }
-
-   footer > div.bottom-footer > span {
-      font-size: 13px;
-   }
-
-   footer > div.bottom-footer > p {
-      font-size: 8px;
-   }
-}
-
-/* 
-RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
+650px a 768px - MOBILE L/TABLET
 */
 
 @media (min-width: 650px) {
@@ -430,7 +250,209 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
       background-color: #fc745f;
       transition: background-color 0.3s;
    }
+}
 
+/* 
+RESPONSIVIDADE - 769px a 1024px - Desktop HD
+*/
+
+@media (min-width: 769px) {
+   #menu {
+      font-size: 1.4rem;
+      gap: 2vw;
+   }
+
+   #login > a {
+      font-size: 1.4rem;
+   }
+
+   #login > button {
+      height: 35px;
+      width: 115px;
+   }
+
+   #login > button > a {
+      font-size: 1.4rem;
+   }
+}
+
+/* 
+------------------------------------------------------
+FOOTER
+------------------------------------------------------
+*/
+
+footer {
+   width: 100%;
+}
+
+footer > div.stroke {
+   background-color: #1a5163;
+   height: 0.3px;
+   width: 95vw;
+   margin: auto;
+}
+
+footer > div.footer-menu {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   margin-block: 2rem;
+   gap: 2rem;
+}
+
+footer nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+footer .footer-menu nav h3,
+footer .footer-menu nav .veja-mais h3 {
+   font-family: var(--fonte-roboto);
+   font-weight: 700;
+   font-size: 1.2rem;
+   line-height: 2.2rem;
+   color: var(--azul-escuro);
+   text-align: center;
+}
+
+#veja-mais-2 {
+   display: none;
+}
+
+footer .footer-menu nav ul li a {
+   font-family: var(--fonte-roboto);
+   font-weight: 400;
+   font-size: 1.2rem;
+   line-height: 2.2rem;
+   color: var(--azul-escuro);
+}
+
+footer ul {
+   list-style: none;
+}
+
+footer .footer-menu nav ul li {
+   text-align: center;
+}
+
+footer .footer-menu nav:nth-child(3) ul {
+   display: flex;
+   gap: 1rem;
+}
+
+footer .bottom-footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+
+   margin: 1.5rem 1rem;
+   text-align: center;
+}
+
+.bottom-footer #com-amor {
+   font-family: var(--fonte-roboto);
+   font-weight: 400;
+   font-size: 0.8rem;
+   line-height: 0.9rem;
+   letter-spacing: 0.1rem;
+}
+
+.bottom-footer #com-amor img {
+   position: relative;
+   top: 0.3rem;
+}
+
+.bottom-footer #copy {
+   font-family: var(--fonte-baloo-2);
+   font-weight: 400;
+   font-size: 0.8rem;
+   line-height: 1rem;
+}
+
+/* 
+------------------------------------------------------
+RESPONSIVIDADE FOOTER
+------------------------------------------------------
+*/
+
+/* 
+650px a 768px - MOBILE L/TABLET
+*/
+
+@media (min-width: 650px) {
+   footer div.footer-menu {
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .footer-menu #flex-nav-1 {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+   }
+
+   footer .footer-menu nav #veja-mais-2 {
+      display: block;
+      text-align: center;
+   }
+
+   footer .footer-menu nav:nth-child(3) ul {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+/* 
+RESPONSIVIDADE - 769px a 1024px - Desktop HD
+*/
+
+/* 
+RESPONSIVIDADE - 376px a 650px - MOBILE L
+*/
+
+@media (min-width: 376px) {
+   section.blue-index {
+      height: 235px;
+   }
+
+   section.blue-index > div.title > h1 {
+      font-size: 26px;
+   }
+
+   section.blue-index > div.title > h2 {
+      font-size: 20px;
+   }
+
+   section.blue-index > div.title > p {
+      font-size: 15px;
+   }
+
+   section.blue-index > div.search {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      height: 33px;
+   }
+
+   .pet > form > select,
+   .estado > form > select,
+   .tamanho > form > select {
+      font-size: 12px;
+      border-radius: 6px;
+   }
+}
+
+/* 
+RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
+*/
+
+@media (min-width: 650px) {
    section.blue-index {
       height: 300px;
    }
@@ -445,36 +467,6 @@ RESPONSIVIDADE - 650px a 768px - MOBILE L/TABLET
 
    section.blue-index > p {
       font-size: 19px;
-   }
-
-   /* main */
-
-   footer > div.footer-menu {
-      text-indent: 17%;
-   }
-
-   footer > div.footer-menu > nav > ul {
-      line-height: 90%;
-   }
-
-   footer > div.footer-menu > nav > h3 {
-      font-size: 13px;
-   }
-
-   footer > div.footer-menu > nav > ul > li > a {
-      font-size: 11px;
-   }
-
-   footer > div.bottom-footer /* > div.footer-logo */ > img {
-      width: 19px;
-   }
-
-   footer > div.bottom-footer > span {
-      font-size: 15px;
-   }
-
-   footer > div.bottom-footer > p {
-      font-size: 9px;
    }
 }
 
