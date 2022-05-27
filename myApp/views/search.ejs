@@ -10,31 +10,10 @@
    </head>
    <body>
       <!-- HEADER -->
+      <%- include('./partials/header') %>
 
       <!-- PESQUISA DOS ANIMAIS -->
-      <!-- ESPAÇO -->
-      <div class="space"></div>
-
-      <div class="top-container">
-         <h1>Pet Amigo</h1>
-         <p>
-            Adote um pet <br />
-            para o seu lar
-         </p>
-      </div>
-
-      <!-- DROPDOWN MENU -->
-      <form class="form-home" method="POST">
-         
-         
-
-         <div class="search-container">
-            <button type="submit" class="search-box">
-               <img src="./images/lupa-icon.svg" alt="" />
-               Buscar
-            </button>
-         </div>
-      </form>
+ 
       <!--FICHA DOS ANIMAIS-->
       <main class="dados-animais">
          <section class="ficha">
@@ -83,7 +62,9 @@
                      <p>Macho</p>
                   </div>
                </div>
-               <a href="#"><button type="button" class="ver_mais">Ver mais</button></a>
+               <a href="#"
+                  ><button type="button" class="ver_mais">Ver mais</button></a
+               >
             </div>
          </section>
          <section class="ficha">
@@ -132,7 +113,9 @@
                      <p>Macho</p>
                   </div>
                </div>
-               <a href="#"><button type="button" class="ver_mais">Ver mais</button></a>
+               <a href="#"
+                  ><button type="button" class="ver_mais">Ver mais</button></a
+               >
             </div>
          </section>
 
@@ -182,7 +165,9 @@
                      <p>Macho</p>
                   </div>
                </div>
-               <a href="#"><button type="button" class="ver_mais">Ver mais</button></a>
+               <a href="#"
+                  ><button type="button" class="ver_mais">Ver mais</button></a
+               >
             </div>
          </section>
 
@@ -232,13 +217,16 @@
                      <p>Macho</p>
                   </div>
                </div>
-               <a href="#"><button type="button" class="ver_mais">Ver mais</button></a>
+               <a href="#"
+                  ><button type="button" class="ver_mais">Ver mais</button></a
+               >
             </div>
          </section>
-
       </main>
       <!-- FOOTER -->
       <%- include('./partials/footer') %>
       <script src="./javascripts/header.js"></script>
+      <script src="./javascripts/info.js"></script>
+      <script src="./javascripts/dropdown.js"></script>
    </body>
 </html>
