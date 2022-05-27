@@ -12,10 +12,16 @@ const SignupController = {
         });
     },
     signupongView: (req,res)=>{
+
+        const [ errors ] = req.flash('errors');
+        const [ values ] = req.flash('values');
+
         res.render('signupong',{
             title: 'Registrar - ONG',
             usuario: req.session.usuario,
-            ong: req.session.ong
+            ong: req.session.ong,
+            errors,
+            values
         });
     }
 }
