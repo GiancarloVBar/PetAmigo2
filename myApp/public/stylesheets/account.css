@@ -199,7 +199,10 @@
     border-radius: 10px;
     height: 3rem;
     letter-spacing: 1px;
-    width: 100%;
+}
+
+.form .btn {
+    width: 100%
 }
 
 .form a {
