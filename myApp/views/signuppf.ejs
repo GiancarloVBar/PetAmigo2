@@ -263,7 +263,12 @@
 
                         <div class="col-sm-2">
                             <label for="UF">Estado:</label>
-                            <select id="UF" name="estado">
+                            <select 
+                            id="UF" 
+                            name="estado"
+                            class="<%= locals.errors && errors.cidade ? 'is-invalid' : '' %>"
+                            value="<%= locals.values && values.cidade ? values.cidade : '' %>" 
+                            >
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -293,6 +298,11 @@
                                 <option value="SE">Sergipe</option>
                                 <option value="TO">Tocantins</option>
                             </select>
+                            <% if(locals.errors && errors.estado) { %>
+                                <span class="invalid-feedback">
+                                    <%= errors.estado.msg %>
+                                </span>
+                             <% } %>
                         </div>
 
                         <div class="col-sm-6">
