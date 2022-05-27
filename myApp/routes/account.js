@@ -12,7 +12,7 @@ router.delete('/accountpf/delete/:id', checkUserPermission, checkIsUser, Account
 router.get('/accountong', checkUserAuthenticated, checkIsOng, AccountController.accountOngView);
 router.get('/accountong/pets', checkUserAuthenticated, checkIsOng, AccountController.petsOngView);
 router.get('/accountong/pets/editar', checkUserAuthenticated, checkIsOng, AccountController.petsOngEditarView);
-router.get('/accountong/pets/cadastrar', checkUserAuthenticated, checkIsOng, AccountController.petsOngCadastrarView);
+router.get('/accountong/petsCadastrar', checkUserAuthenticated, checkIsOng, AccountController.petsOngCadastrarView);
 router.put('/accountong/edit/:id', checkUserPermission, checkIsOng, AccountController.updateOngAccount)
 router.put('/accountong/password/:id', checkUserPermission, checkIsOng, AccountController.updatePasswordAccountOng);
 router.delete('/accountong/delete/:id', checkUserPermission, checkIsOng, AccountController.deleteAccountOng);
