@@ -1,7 +1,25 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer')
 const AccountController = require('../controllers/AccountController');
 const { checkUserAuthenticated, checkUserPermission, checkIsUser, checkIsOng } = require('../middlewares/UserValidator');
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, 'uploads/')
+    },
+    filename: function(req, file, cb) {
+        const extensaoArquivo = file.originalname.split('.')[1];
+
+        const novoNomeArquivo = require('crypto')
+            .randomBytes(64)
+            .toString('hex');
+
+        cb(null, `${novoNomeArquivo}.${extensaoArquivo}`);
+    }
+});
+
+const upload = multer({ storage });
 
 /* GET home page. */
 router.get('/accountpf', checkUserAuthenticated, checkIsUser, AccountController.accountPfView);
@@ -12,10 +30,11 @@ router.delete('/accountpf/delete/:id', checkUserPermission, checkIsUser, Account
 router.get('/accountong', checkUserAuthenticated, checkIsOng, AccountController.accountOngView);
 
 
-router.get('/accountong/:ongs_id/pets', AccountController.petsOngView);
+router.get('/accountong/:id/pets', checkUserAuthenticated, checkIsOng, AccountController.petsOngView);
 
-router.get('/accountong/pets/editar', checkUserAuthenticated, checkIsOng, AccountController.petsOngEditarView);
-router.get('/accountong/petsCadastrar', checkUserAuthenticated, checkIsOng, AccountController.petsOngCadastrarView);
+router.get('/accountong/pets/edit/:id', checkUserAuthenticated, AccountController.petsOngEditarView);
+router.get('/accountong/pets/cadastrar', checkUserAuthenticated, checkIsOng, AccountController.petsOngCadastrarView);
+router.post('/accountong/pets/cadastrar', checkUserAuthenticated, checkIsOng, upload.single('foto'), AccountController.petsOngCadastrar);
 router.put('/accountong/edit/:id', checkUserPermission, checkIsOng, AccountController.updateOngAccount)
 router.put('/accountong/password/:id', checkUserPermission, checkIsOng, AccountController.updatePasswordAccountOng);
 router.delete('/accountong/delete/:id', checkUserPermission, checkIsOng, AccountController.deleteAccountOng);

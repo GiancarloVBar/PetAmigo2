@@ -234,26 +234,23 @@ const AccountController = {
     },
 
     petsOngView: async (req, res) => {
-        const { ongs_id } = req.params;
+        const { id } = req.params;
        
         const pets = await Pet.findAll({
-    
-                where: {
-                  ongs_id
-                },
-                include: {
-                    association: 'ongs_pets',
-                }
-            
-            })
+            where: {
+                ongs_id: id
+            },
+            include: {
+                association: 'ongs_pets',
+            }
+        })
             
         res.render('petsOng', {
             title: 'Pets ONG',
             usuario: req.session.usuario,
             ong: req.session.ong,
-            ongs_id,            
+            id,            
             pets,
-            
         })
     },
     petsOngEditarView: (req, res) => {
@@ -305,6 +302,25 @@ const AccountController = {
             estado: req.session.ong.estado,
             tipo_local: req.session.ong.tipo_local
         })
+    },
+    async petsOngCadastrar(req, res) {
+        const { filename } = req.file;
+        const { nome, idade, especie, raca, tamanho, cor, nascimento, sexo } = req.body;
+
+        await Pet.create({
+            ongs_id: req.session.ong.id,
+            nome,
+            idade,
+            especie,
+            raca,
+            tamanho,
+            cor,
+            nascimento,
+            sexo,
+            foto: filename
+        });
+
+        return res.redirect("/accountong/"+req.session.ong.id+"/pets");
     }
 }
 
