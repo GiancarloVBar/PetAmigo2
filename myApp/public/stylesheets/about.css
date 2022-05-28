@@ -8,21 +8,22 @@
 }
 
 .main-left {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   text-align: start;
   position: absolute;
   top: 100px;
   left: 100px;
   width: 60%;
+ 
 }
 
 .main-left h1 {
-  font-weight: 500;
+  font-weight: 600;
   color: white;
-  width: 600px;
-  height: 100px;
-  font-size: 50px;
+  width: 300px;
+  height: 200px;
+  font-size: 40px;
   margin-top: 15px;
 }
 
@@ -32,7 +33,7 @@
   width: 600px;
   height: 100px;
   font-size: 24px;
-  margin-top: 15px;
+  margin-top: 65px;
 
 }
 
@@ -43,7 +44,7 @@
   border: 1px solid #FC9B8B;
   border-radius: 5px;
   height: 45px;
-  margin-top: 18px;
+  margin-top: 100px;
 }
 
 .main-button-left:hover {
@@ -115,13 +116,14 @@
 
 .h5 {
   border-left: 3px solid #fc745f;
-  height: 100px;
+  height: 200px;
 }
 
 .h5 h3 {
   font-weight: 500;
   color: rgba(26, 81, 99, 255);
   margin-left: 10px;
+  height: 3px;
 
 }
 
@@ -143,7 +145,7 @@
   width: 250px;
   height: 250px;
   right: 15px;
-  bottom: -100px;
+  bottom: -150px;
   right: 30px;
 }
 
@@ -158,6 +160,7 @@
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
   box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
+  
 }
 
 .texts {
@@ -190,6 +193,8 @@
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
   box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
+  
+ 
 }
 
 .dados-ongs-three {
@@ -203,26 +208,27 @@
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
   box-shadow: 5px 5px 0px 0px #f0efef, 10px 10px 0px 0px;
+  
 }
 
 .h5 h3 {
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 20px;
 }
 
 .dados-ongs {
   right: 230px;
-  top: 650px;
+  top: 900px;
 }
 
 .dados-ongs-two {
-  top: 570px;
+  top: 805px;
   right: 90px;
 }
 
 .dados-ongs-three {
-  right: 60px;
-  top: 720px;
+  right: 20px;
+  top:  950px;
 }
 
 /*@media screen and (max-width: 480px) {
