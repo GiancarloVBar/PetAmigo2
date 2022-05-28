@@ -25,13 +25,17 @@
 
          <% pets.forEach(pet=> { %>
             <section class="ficha">
-               <!-- <img src="/images/search/dog.png" alt="Foto do pet" /> -->
+               <img src="/uploads/<%= pet.foto %>" alt="Foto do pet" />
 
                <div class="dados">
                   <div class="campo">
                      <label for="nome">Nome:</label>
                      <input type="text" required readonly class="dado" name="nome" id="nome" data-min-length="2"
                         value="<%= pet.nome %>">
+                  </div>
+                  <div class="campo">
+                     <label for="idade">Idade:</label>
+                     <input type="text" required class="dado" name="idade" id="idade" value="<%= pet.idade %>">
                   </div>
                   <div class="campo">
                      <label for="especie">Espécie:</label>
@@ -54,8 +58,8 @@
                         value="<%= pet.cor %>">
                   </div>
                   <div class="campo">
-                     <label for="datanascimento">Data de Nascimento:</label>
-                     <input type="text" required readonly class="dado" name="datanascimento" id="datanascimento"
+                     <label for="nascimento">Data de Nascimento:</label>
+                     <input type="text" required readonly class="dado" name="nascimento" id="nascimento"
                         data-min-length="2" value="<%= pet.idade %>">
                   </div>
                   <div class="campo">

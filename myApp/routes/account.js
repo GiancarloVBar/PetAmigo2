@@ -33,6 +33,8 @@ router.get('/accountong', checkUserAuthenticated, checkIsOng, AccountController.
 router.get('/accountong/:id/pets', checkUserAuthenticated, checkIsOng, AccountController.petsOngView);
 
 router.get('/accountong/pets/edit/:id', checkUserAuthenticated, AccountController.petsOngEditarView);
+router.post('/accountong/pets/edit/:id', checkUserAuthenticated, upload.single('foto'), AccountController.petsOngEditar);
+router.get('/accountong/pets/delete/:id', checkUserAuthenticated, AccountController.petsOngDelete);
 router.get('/accountong/pets/cadastrar', checkUserAuthenticated, checkIsOng, AccountController.petsOngCadastrarView);
 router.post('/accountong/pets/cadastrar', checkUserAuthenticated, checkIsOng, upload.single('foto'), AccountController.petsOngCadastrar);
 router.put('/accountong/edit/:id', checkUserPermission, checkIsOng, AccountController.updateOngAccount)

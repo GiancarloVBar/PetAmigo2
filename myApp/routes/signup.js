@@ -6,7 +6,6 @@ const OngController = require('../controllers/OngController');
 const PetsController = require('../controllers/PetsController');
 const pfFormValidator = require('../middlewares/pfFormValidator');
 const OngFormValidator = require('../middlewares/ongFormValidator');
-const AccountController = require('../controllers/AccountController');
 
 /* GET home page. */
 router.get('/signuppf', SignupController.signuppfView);

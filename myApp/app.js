@@ -50,10 +50,9 @@ app.use('/contato', contactRouter)
 app.use('/about', aboutRouter)
 app.use('/login', loginRouter)
 app.use('/ongs', ongsRouter)
-
 app.use('/logout', logoutRouter)
-
 app.use('/users', usersRouter)
+app.use('/uploads', express.static('uploads'))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

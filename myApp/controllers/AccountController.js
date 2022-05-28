@@ -253,30 +253,56 @@ const AccountController = {
             pets,
         })
     },
-    petsOngEditarView: (req, res) => {
+    async petsOngEditarView(req, res) {
+        const { id } = req.params;
+       
+        const pet = await Pet.findOne({
+            where: {
+                id
+            }
+        })
+
         res.render('petsOngEditar', {
             title: 'Pets ONG Editar',
             usuario: req.session.usuario,
             ong: req.session.ong,
-            razao_social: req.session.ong.razao_social,
-            email: req.session.ong.email,
-            responsavel: req.session.ong.responsavel,
-            cnpj: req.session.ong.cnpj,
-            telefone: req.session.ong.telefone,
-            celular: req.session.ong.celular,
-            senha: req.session.ong.senha,
-            anos_de_funcionamento: req.session.ong.anos_de_funcionamento,
-            quantidade_animais: req.session.ong.quantidade_animais,
-            historia: req.session.ong.historia,
-            cep: req.session.ong.cep,
-            endereco: req.session.ong.endereco,
-            numero: req.session.ong.numero,
-            complemento: req.session.ong.complemento,
-            bairro: req.session.ong.bairro,
-            cidade: req.session.ong.cidade,
-            estado: req.session.ong.estado,
-            tipo_local: req.session.ong.tipo_local
+            pet: pet
         })
+    },
+    async petsOngEditar(req, res) {
+        const { id } = req.params;
+        const filename = req.file?.filename;
+        const { nome, idade, especie, raca, tamanho, cor, nascimento, sexo } = req.body;
+        
+        await Pet.update({
+            ongs_id: req.session.ong.id,
+            nome,
+            idade,
+            especie,
+            raca,
+            tamanho,
+            cor,
+            nascimento,
+            sexo,
+            foto: filename
+        },
+        {
+          where: {id}
+        });
+
+        return res.redirect("/accountong/"+req.session.ong.id+"/pets");
+    },
+    async petsOngDelete(req, res) {
+        const { id } = req.params;
+
+        await Pet.destroy({
+            where: {
+                id,
+                ongs_id: req.session.ong.id
+            }
+        });
+
+        return res.redirect("/accountong/"+req.session.ong.id+"/pets");
     },
     petsOngCadastrarView: (req, res) => {
         res.render('petsOngCadastrar', {
