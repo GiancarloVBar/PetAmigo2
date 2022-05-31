@@ -40,6 +40,10 @@
     margin: 0 !important;
 }
 
+#loginAlert {
+    margin: 41px 0px 0px 0px;
+}
+
 header .container {
     display: flex;
     width: 100vw;
