@@ -108,31 +108,6 @@
                     </div>
 
                     <div class="row col-sm-12 justify-content-between">
-                        <div class="col-sm-4">
-                            <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>">
-                        </div>
-
-                        <div class="col-sm-2">
-                            <label for="complemento">Complemento:</label>
-                            <input type="text" name="complemento" id="complemento" required value="<%= complemento %>"
-                                readonly disabled>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" required value="<%= bairro %>" readonly
-                                disabled>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" required value="<%= cidade %>" readonly
-                                disabled>
-                        </div>
-                    </div>
-
-                    <div class="row col-sm-12 justify-content-between">
                         <div class="col-sm-3">
                             <label for="UF">Estado:</label>
                             <select id="UF" name="estado">
@@ -172,20 +147,20 @@
                             <input type="text" name="tipo_local" id="local" required placeholder="Ex: Casa, apartamento, chácara" value="<%= tipo_local %>">
                         </div>
 
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <label for="profissao">Profissão:</label>
                             <input type="text" name="profissao" id="profissao" required value="<%= profissao %>"
                                 readonly disabled>
                         </div>
+                    </div>
 
+                    <div class="row col-sm-12">
                         <div class="col-sm-3">
                             <label for="alergia">Possui alguma alergia ?</label>
                             <input type="text" name="alergias" id="alergia" required value="<%= alergias %>" readonly
                                 disabled>
                         </div>
-                    </div>
 
-                    <div class="row col-sm-12">
                         <div class="col-sm-4">
                             <label for="crianca">Há crianças em sua residência? Quantas?</label>
                             <input type="text" name="crianca" id="criancas" required value="<%= criancas %>" readonly
