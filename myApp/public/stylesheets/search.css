@@ -1,41 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&family=Roboto:wght@400;700&display=swap');
-
-:root {
-   --azul-escuro: #1a5163;
-   --azul-claro: #e1eff3;
-   --laranja-rosa: #fc9685;
-   --cinza-paragraph: #686868;
-
-   --fonte-baloo-2: 'Baloo 2', cursive;
-   --fonte-roboto: 'Roboto', sans-serif;
-
-   font-size: 62.5%; /*1 rem = 10px*/
-}
-
-* {
-   box-sizing: border-box;
-   border: 0;
-   outline: 0;
-   padding: 0;
-   margin: 0;
-}
-
-body {
-   width: 100%;
-   height: auto;
-}
-
 /*DADOS DOS ANIMAIS*/
 .dados-animais {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-
    width: 100%;
 }
 
-main .ficha {
+.dados-animais .ficha {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -47,13 +19,19 @@ main .ficha {
    max-width: 300px;
 }
 
-main .ficha img {
+.dados-animais .ficha img {
    display: flex;
    flex-direction: column;
    gap: 15px;
-
    width: 9rem;
    height: 9rem;
+   border-radius: 20%;
+}
+
+.title {
+   width: 100%;
+   text-align: center;
+   color: var(--azul-escuro);
 }
 
 .ficha .dados {
@@ -64,7 +42,7 @@ main .ficha img {
    gap: 0.6rem;
 }
 
-.ficha .dados .campo h4 {
+.ficha .dados .campo label {
    font-family: var(--fonte-baloo-2);
    font-size: 1.2rem;
    line-height: 1.9rem;
@@ -76,18 +54,12 @@ main .ficha img {
 
 .ficha .dados .campo .dado {
    border: 0.5px solid var(--azul-escuro);
-
    display: flex;
    align-items: center;
    padding: 0.5rem;
-
    width: 25rem;
    height: 2.5rem;
-
    border-radius: 5px;
-}
-
-.ficha .dados .campo .dado p {
    color: var(--cinza-paragraph);
    font-family: var(--fonte-roboto);
    font-size: 1.2rem;
@@ -99,20 +71,16 @@ main .ficha img {
 .ficha .ver_mais {
    align-self: center;
    margin-top: 1.8rem;
-
    background-color: #1a5163;
    color: white;
-
    border-radius: 10px;
    width: 10rem;
    height: 2.5rem;
-
    font-family: var(--fonte-roboto);
    font-size: 1.2rem;
    line-height: 1.6rem;
    letter-spacing: 5%;
    font-weight: 700;
-
    cursor: pointer;
 }
 
@@ -126,7 +94,7 @@ main .ficha img {
       flex-wrap: wrap;
    }
 
-   main .ficha {
+   .dados-animais .ficha {
       margin: 5rem 0;
    }
 

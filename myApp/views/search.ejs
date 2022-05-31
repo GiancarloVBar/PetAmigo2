@@ -1,257 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/stylesheets/global.css" />
-      <link rel="stylesheet" href="/stylesheets/search.css" />
-      <title><%= title %></title>
-   </head>
-   <body>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="/stylesheets/global.css" />
+   <link rel="stylesheet" href="/stylesheets/search.css" />
+   <link rel="stylesheet" href="/stylesheets/dropdown.css">
+   <link rel="stylesheet" href="/stylesheets/home.css" />
+   <title>
+      <%= title %>
+   </title>
+</head>
+
+<body>
+   <!-- HEADER -->
+   <%- include('./partials/header') %>
+
       <!-- HEADER -->
       <%- include('./partials/header') %>
 
-      <!-- PESQUISA DOS ANIMAIS -->
- 
-      <!-- ESPAÇO -->
-      <div class="space"></div>
-
-      <div class="top-container">
-         <h1>Pet Amigo</h1>
-         <p>
-            Adote um pet <br />
-            para o seu lar
-         </p>
-      </div>
-
-      <!-- DROPDOWN MENU -->
-      <!-- <form class="form-home" method="POST"> -->
-         
-         
-
-         <div class="search-container">
-            <button type="submit" class="search-box">
-               <img src="./images/lupa-icon.svg" alt="" />
-               Buscar
-            </button>
+         <div class="top-container">
+            <h1>Pet Amigo
+            </h1>
+            <p>Adote um pet <br> para o seu lar</p>
          </div>
-      </form>
-      <!--FICHA DOS ANIMAIS-->
-      <main class="dados-animais">
-         
-         <% pets.forEach( pet =>{ %>
 
-         <section class="ficha">
-            <img src="./images/search/dog.png" alt="Foto do pet" />
+         <!-- DROPDOWN MENU -->
+         <form class="form-home" action="/search" method="POST">
+            <%- include('./partials/menuPet') %>
+               <%- include('./partials/tamanhoPet') %>
+                  <%- include('./partials/localizacao') %>
+                     <div class="search-container">
+                        <button type="submit" class="search-box">
+                           <img src="/images/lupa-icon.svg" alt="">
+                           Buscar
+                        </button>
+                     </div>
+         </form>
 
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p><%= pet.nome %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p><%= pet.especie %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p><%= pet.raca %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p><%= pet.tamanho %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p><%= pet.cor %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p><%= pet.nascimento %></p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p><%= pet.sexo %></p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="ver_mais">Ver mais</button></a
-               >
-            </div>
-         </section>
-         <% }) %>
+         <div class="title">
+            <h1>Animais para adoção</h1>
+         </div>
 
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="ver_mais">Ver mais</button></a
-               >
-            </div>
-         </section>
+         <!--FICHA DOS ANIMAIS-->
+         <main class="dados-animais">
+            <% pets.forEach( pet=>{ %>
+               <section class="ficha">
+                  <img src="/uploads/<%= pet.foto %>" alt="Foto do pet" />
 
-         <section class="ficha">
-            <img src="./images/search/dog3.png" alt="Foto do pet" />
+                  <div class="dados">
+                     <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" required readonly class="dado" name="nome" id="nome" data-min-length="2"
+                           value="<%= pet.nome %>">
+                     </div>
+                     <div class="campo">
+                        <label for="idade">Idade:</label>
+                        <input type="text" required class="dado" name="idade" id="idade" value="<%= pet.idade %>">
+                     </div>
+                     <div class="campo">
+                        <label for="especie">Espécie:</label>
+                        <input type="text" required readonly class="dado" name="especie" id="especie"
+                           data-min-length="2" value="<%= pet.especie %>">
+                     </div>
+                     <div class="campo">
+                        <label for="raca">Raça:</label>
+                        <input type="text" required readonly class="dado" name="raca" id="raca" data-min-length="2"
+                           value="<%= pet.raca %>">
+                     </div>
+                     <div class="campo">
+                        <label for="tamanho">Tamanho:</label>
+                        <input type="text" required readonly class="dado" name="tamanho" id="tamanho"
+                           data-min-length="2" value="<%= pet.tamanho %>">
+                     </div>
+                     <div class="campo">
+                        <label for="cor">Cor:</label>
+                        <input type="text" required readonly class="dado" name="tamanho" id="tamanho"
+                           data-min-length="2" value="<%= pet.cor %>">
+                     </div>
+                     <div class="campo">
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="text" required readonly class="dado" name="nascimento" id="nascimento"
+                           data-min-length="2" value="<%= pet.idade %>">
+                     </div>
+                     <div class="campo">
+                        <label for="sexo">Sexo:</label>
+                        <input type="text" required readonly class="dado" name="sexo" id="sexo" data-min-length="2"
+                           value="<%= pet.sexo %>">
+                     </div>
+                     <a href="#">
+                        <button type="submit" class="ver_mais">
+                           Adotar
+                        </button>
+                     </a>
+                  </div>
+               </section>
+               <% }) %>
+         </main>
+         <!-- FOOTER -->
+         <%- include('./partials/footer') %>
+            <script src="/javascripts/header.js"></script>
+</body>
 
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="ver_mais">Ver mais</button></a
-               >
-            </div>
-         </section>
-
-         <section class="ficha">
-            <img src="./images/search/dog4.png" alt="Foto do pet" />
-
-            <div class="dados">
-               <div class="campo">
-                  <h4>Nome:</h4>
-                  <div class="dado">
-                     <p>Bob</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Espécie:</h4>
-                  <div class="dado">
-                     <p>Cachorro</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Raça:</h4>
-                  <div class="dado">
-                     <p>Sem raça definida</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Tamanho:</h4>
-                  <div class="dado">
-                     <p>Médio porte</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Cor:</h4>
-                  <div class="dado">
-                     <p>Preto/marrom/branco</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Data de nascimento:</h4>
-                  <div class="dado">
-                     <p>06/2020</p>
-                  </div>
-               </div>
-               <div class="campo">
-                  <h4>Sexo:</h4>
-                  <div class="dado">
-                     <p>Macho</p>
-                  </div>
-               </div>
-               <a href="#"
-                  ><button type="button" class="ver_mais">Ver mais</button></a
-               >
-            </div>
-         </section>
-         
-
-      </main>
-      <!-- FOOTER -->
-      <%- include('./partials/footer') %>
-      <script src="./javascripts/header.js"></script>
-   </body>
 </html>

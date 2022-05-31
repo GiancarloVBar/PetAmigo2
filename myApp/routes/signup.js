@@ -12,7 +12,7 @@ router.get('/signuppf', SignupController.signuppfView);
 router.post('/signuppf',pfFormValidator, UsersController.store);
 
 router.get('/signupong', SignupController.signupongView);
-router.get('/signupong/:ongs_id/getOngs', PetsController.getPets);
+// router.get('/signupong/:ongs_id/getOngs', AccountController.petsOngView);
 router.post('/signupong', OngFormValidator, OngController.store);
 
 router.post('/signupong/:ongs_id/pets', PetsController.petStore);

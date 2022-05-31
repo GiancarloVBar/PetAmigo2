@@ -1,16 +1,20 @@
 .container {
   background: linear-gradient(45deg, rgba(26, 81, 99, 255), rgba(26, 81, 99, 255));
-  margin-bottom: 10rem;
+  margin-bottom: 1rem;
   font-family: 'Baloo 2', "roboto";
   font-style: normal;
   color: #ffff;
-  padding-bottom: 6rem;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  height: 360vh;
 }
+
 .title {
   padding: 8rem 0 5rem 0;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 }
+
 .text {
   text-align: justify;
   padding-bottom: 6rem;
@@ -20,10 +24,12 @@
   color: rgba(26, 81, 99, 255);
   font-size: 19px;
 }
+
 span {
   color: #FC9685;
   font-size: 19px;
 }
+
 .balao {
   background-color: #ffff;
   border-top: 20px;
@@ -32,6 +38,7 @@ span {
   margin-top: 20px;
   text-align: justify;
 }
+
 @media (max-width: 720px) {
   .text {
     margin: 0 2rem 0 2rem;

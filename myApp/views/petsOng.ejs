@@ -17,53 +17,60 @@
    <%- include('./partials/header') %>
 
       <!--FICHA DOS ANIMAIS-->
-      <div class="title">
+      <div class="h1">
          <h1>Pets para adoção</h1>
       </div>
 
       <main class="dados-animais-ong">
-         <section class="ficha">
-            <img src="/images/search/dog.png" alt="Foto do pet" />
 
-            <div class="dados">
-               <div class="campo">
-                  <label for="nome">Nome:</label>
-                  <input type="text" required readonly class="dado" name="nome" id="nome" data-min-length="2"
-                     value="Bob">
+         <% pets.forEach(pet=> { %>
+            <section class="ficha">
+               <img src="/uploads/<%= pet.foto %>" alt="Foto do pet" />
+
+               <div class="dados">
+                  <div class="campo">
+                     <label for="nome">Nome:</label>
+                     <input type="text" required readonly class="dado" name="nome" id="nome" data-min-length="2"
+                        value="<%= pet.nome %>">
+                  </div>
+                  <div class="campo">
+                     <label for="idade">Idade:</label>
+                     <input type="text" required class="dado" name="idade" id="idade" value="<%= pet.idade %>">
+                  </div>
+                  <div class="campo">
+                     <label for="especie">Espécie:</label>
+                     <input type="text" required readonly class="dado" name="especie" id="especie" data-min-length="2"
+                        value="<%= pet.especie %>">
+                  </div>
+                  <div class="campo">
+                     <label for="raca">Raça:</label>
+                     <input type="text" required readonly class="dado" name="raca" id="raca" data-min-length="2"
+                        value="<%= pet.raca %>">
+                  </div>
+                  <div class="campo">
+                     <label for="tamanho">Tamanho:</label>
+                     <input type="text" required readonly class="dado" name="tamanho" id="tamanho" data-min-length="2"
+                        value="<%= pet.tamanho %>">
+                  </div>
+                  <div class="campo">
+                     <label for="cor">Cor:</label>
+                     <input type="text" required readonly class="dado" name="tamanho" id="tamanho" data-min-length="2"
+                        value="<%= pet.cor %>">
+                  </div>
+                  <div class="campo">
+                     <label for="nascimento">Data de Nascimento:</label>
+                     <input type="text" required readonly class="dado" name="nascimento" id="nascimento"
+                        data-min-length="2" value="<%= pet.idade %>">
+                  </div>
+                  <div class="campo">
+                     <label for="sexo">Sexo:</label>
+                     <input type="text" required readonly class="dado" name="sexo" id="sexo" data-min-length="2"
+                        value="<%= pet.sexo %>">
+                  </div>
+                  <a href="/accountong/pets/edit/<%= pet.id %>"><button type="button" class="editar">Editar</button></a>
                </div>
-               <div class="campo">
-                  <label for="especie">Espécie:</label>
-                  <input type="text" required readonly class="dado" name="especie" id="especie" data-min-length="2"
-                     value="Cachorro">
-               </div>
-               <div class="campo">
-                  <label for="raca">Raça:</label>
-                  <input type="text" required readonly class="dado" name="raca" id="raca" data-min-length="2"
-                     value="Sem raça definida">
-               </div>
-               <div class="campo">
-                  <label for="tamanho">Tamanho:</label>
-                  <input type="text" required readonly class="dado" name="tamanho" id="tamanho" data-min-length="2"
-                     value="Médio porte">
-               </div>
-               <div class="campo">
-                  <label for="cor">Cor:</label>
-                  <input type="text" required readonly class="dado" name="tamanho" id="tamanho" data-min-length="2"
-                     value="Preto/marrom/branco">
-               </div>
-               <div class="campo">
-                  <label for="datanascimento">Data de Nascimento:</label>
-                  <input type="text" required readonly class="dado" name="datanascimento" id="datanascimento"
-                     data-min-length="2" value="06/2020">
-               </div>
-               <div class="campo">
-                  <label for="sexo">Sexo:</label>
-                  <input type="text" required readonly class="dado" name="sexo" id="sexo"
-                     data-min-length="2" value="Macho">
-               </div>
-               <a href="/accountong/pets/editar"><button type="button" class="editar">Editar</button></a>
-            </div>
-         </section>
+            </section>
+            <% }) %>
       </main>
 
       <!-- FOOTER -->

@@ -114,8 +114,8 @@ const pfValidateRegister = [
     .notEmpty()
     .withMessage('Preencha esse campo!')
     .bail()
-    .isLength({ min: 3, max: 45 })
-    .withMessage('O estado deve ter entre 3 e 45 caracteres!'),
+    .isLength({ min: 2, max: 2 })
+    .withMessage('O estado deve ter 2 caracteres!'),
     
     body('tipo_local')
     .notEmpty()

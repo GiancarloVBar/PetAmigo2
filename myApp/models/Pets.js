@@ -36,6 +36,10 @@ class pets extends Model {
                type: DataTypes.STRING(1),
                allowNull: true
             },
+            foto: {
+               type: DataTypes.STRING(255),
+               allowNull: false
+            },
             created_at: {
                type: DataTypes.DATE,
             },

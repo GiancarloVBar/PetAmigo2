@@ -35,41 +35,56 @@ petStore: async(req,res)=>{
     return res.json(pet)
 },
 
-getPets: async(req,res)=>{
-    const { ongs_id } = req.params;
-    const ongs = await Ong.findByPk(ongs_id, {
-        include: {
-            association: 'ongs_pets'
-        }
-    });
 
-    return res.json(ongs)
-},
 
-search: async(req,res)=>{
-    const { pet, tamanho, localizacao  } = req.body
+search: async(req, res) => {
+    const { pet, tamanho, localizacao } = req.body
 
-    try{
-       
-       const pets = await Pet.findAll({
-        
-           include:{
-               association: 'ongs_pets',
-               attributes:['estado'],
-               where:{
-                     estado: localizacao 
-               }
-            },
-            where:{
-                especie: pet,
-                tamanho
+    let pets = [];
+    try {
+        if (localizacao) {
+            let where = {}
+
+            if (pet) {
+                where.especie = pet
             }
-        })
+
+            if (tamanho) {
+                where.tamanho = tamanho
+            }
+
+            pets = await Pet.findAll({
+                include: {
+                    association: 'ongs_pets',
+                    attributes: ['estado'],
+                    where: {
+                       estado: localizacao 
+                    }
+                },
+                where
+            })
+        } else {
+            let where = {}
+
+            if (pet) {
+                where.especie = pet
+            }
+
+            if (tamanho) {
+                where.tamanho = tamanho
+            }
+
+            pets = await Pet.findAll({
+                where
+            })
+        }
+        
         await res.render('search', {
-             title: 'Search - PetAmigo',
-             pets
-             })
-             console.log(pets);
+            title: 'Search - PetAmigo',
+            usuario: req.session.usuario,
+            ong: req.session.ong,
+            pets
+        });
     }
     catch(err){
         return res.json(err)

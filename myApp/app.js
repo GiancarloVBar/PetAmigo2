@@ -15,7 +15,6 @@ const logoutRouter = require('./routes/logout')
 const signupRouter = require('./routes/signup')
 const footerRouter = require('./routes/footer')
 const accountRouter = require('./routes/account')
-const searchRouter = require('./routes/search')
 const ongsRouter = require('./routes/ongs')
 const usersRouter = require('./routes/users')
 
@@ -49,13 +48,11 @@ app.use('/', signupRouter)
 app.use('/', accountRouter)
 app.use('/contato', contactRouter)
 app.use('/about', aboutRouter)
-app.use('/search', searchRouter)
 app.use('/login', loginRouter)
 app.use('/ongs', ongsRouter)
-
 app.use('/logout', logoutRouter)
-
 app.use('/users', usersRouter)
+app.use('/uploads', express.static('uploads'))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
